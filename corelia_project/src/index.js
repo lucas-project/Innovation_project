@@ -3,6 +3,16 @@ import ReactDOM from "react-dom";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 
+
+// eslint-disable-next-line
+// import "swiper/css/bundle";
+import { Swiper, SwiperSlide } from "swiper/react";
+import 'swiper/swiper-bundle.min.css'
+import 'swiper/swiper.min.css'
+
+import "./components/styles.css";
+
+
 ReactDOM.render(
   <React.StrictMode>
     <App />

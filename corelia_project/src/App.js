@@ -23,8 +23,8 @@ const App = () => {
       <header>
         <GlobalStyle />
         <NotificationHeader
-          contentBold='Learn from A$14.99'
-          contentLight='Browse thousands of courses in a wide variety of in-demand topics.'
+          contentBold='Start from A$14.99'
+          contentLight='Browse thousands of repertoires in a wide variety of collections.'
           bgColor='#8ed1dc'
         />
         <TopBar />
