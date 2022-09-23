@@ -12,11 +12,10 @@ import GlobalStyle from "./components/GlobalStyle";
 import CurrentLearning from "./components/CurrentLearning";
 
 import LearningNext from "./components/LearningNext";
-import EnrolledSuggestions from "./components/EnrolledSuggestions";
-import WishlistCourses from "./components/WishlistCourses";
-import StudentsViewing from "./components/StudentsViewing";
+import HomeRepertoire from "./components/home-repertoire";
+import HomeComposer from "./components/home-composer";
+import HomeInstrument from "./components/home-instrument";
 
-//test
 const App = () => {
   return (
     <div className='App'>
@@ -35,9 +34,9 @@ const App = () => {
         <CurrentLearning />
        
         <LearningNext />
-        <EnrolledSuggestions />
-        <WishlistCourses />
-        <StudentsViewing />
+        <HomeRepertoire />
+        <HomeComposer />
+        <HomeInstrument />
       
       </main>
       <footer>
