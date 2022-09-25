@@ -10,8 +10,7 @@ const TeachBar = () => {
         <div className='left-content'>
           <h4>A promotion for female composer</h4>
           <p>
-            Create an online video course, reach students across the globe, and
-            earn money
+            Create an account and connect to thousands of other classical music lovers.
           </p>
         </div>
         <div className='right-content'>
