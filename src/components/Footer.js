@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-import LogoImg from "../img/udemy-2-logo.png";
+import LogoImg from "../img/Corelia Project_Master Logo_Colour_PNG.png";
 
 const Footer = () => {
   return (

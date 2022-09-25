@@ -1,14 +1,13 @@
 import Logo from "./Logo";
 import SearchBar from "./SearchBar";
-
 import styled from "styled-components";
 
 const TopBar = () => {
   return (
     <StyledTopBar>
-      <Logo className='bar-logo' width='2rem' />
+      {/*<Logo className='bar-logo' width='2rem' />*/}
       <span>
-        <a href='#'>Categories</a>
+        <a href='#'>Login</a>
       </span>
       <span className='search'>
         <SearchBar />

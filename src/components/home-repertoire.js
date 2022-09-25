@@ -16,7 +16,7 @@ import "./styles.css";
 // import required modules
 import { Pagination, Navigation } from "swiper";
 
-const EnrolledSuggestions = () => {
+const HomeRepertoire = () => {
   const courses = [
     {
       courseImage: reactImg,
@@ -68,17 +68,17 @@ const EnrolledSuggestions = () => {
 
   const courses2 = [
     {
-      courseImage: reactImg,
+      courseImage: dataImg,
       courseTitle: "1",
       courseAuthor: "John Smilga",
       courseRating: "4.7",
       ratingNumbers: "341",
      
-      tag: "Bestseller",
+      tag: "Highest rating",
       tagColor: "#ffe799",
     },
     {
-      courseImage: htmlImg,
+      courseImage: reactImg,
       courseTitle: "2",
       courseAuthor: "Code And Create, George Lomidze, Lasha Nozadze",
       courseRating: "4.6",
@@ -86,7 +86,7 @@ const EnrolledSuggestions = () => {
      
     },
     {
-      courseImage: dataImg,
+      courseImage: cssAnimImg,
       courseTitle: "3",
       courseAuthor: "Luis Ramirez Jr",
       courseRating: "4.6",
@@ -104,7 +104,7 @@ const EnrolledSuggestions = () => {
       tagColor: "#ffe799",
     },
     {
-      courseImage: cssAnimImg,
+      courseImage: htmlImg,
       courseTitle: "5",
       courseAuthor: "Supriyo Kundu",
       courseRating: "4.6",
@@ -160,4 +160,4 @@ const mystyle = {
 
 
 
-export default EnrolledSuggestions;
+export default HomeRepertoire;

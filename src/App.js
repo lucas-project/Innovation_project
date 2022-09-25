@@ -1,52 +1,41 @@
-import NotificationHeader from "./components/NotificationHeader";
-import TopBar from "./components/TopBar";
-import CategoriesBar from "./components/CategoriesBar";
-import Hero from "./components/Hero";
+import React, { useState } from "react";
+import Navbar from "./components/nav/Navbar/Navbar";
+import Composer from "./components/nav/Composer/Composer";
+import Repertoire from "./components/nav/Repertoire/Repertoire";
+import Instrument from "./components/nav/Instrument/Instrument";
+import Recommendation from "./components/nav/Recommendation/Recommendation";
+import Forum from "./components/nav/Forum/Forum";
+import Home from "./components/nav/Home/Home";
+import Sidebar from "./components/nav/Sidebar/Sidebar";
+import { Routes, Route, Link} from "react-router-dom";
 
-// Footer Components
-import TeachBar from "./components/TeachBar";
 
-import Footer from "./components/Footer";
-
-import GlobalStyle from "./components/GlobalStyle";
-import CurrentLearning from "./components/CurrentLearning";
-
-import LearningNext from "./components/LearningNext";
-import EnrolledSuggestions from "./components/EnrolledSuggestions";
-import WishlistCourses from "./components/WishlistCourses";
-import StudentsViewing from "./components/StudentsViewing";
-
-//test
 const App = () => {
+    const [isopen, setisopen] = useState(false);
+    const toggle = () => {
+        setisopen(!isopen);
+    };
   return (
-    <div className='App'>
-      <header>
-        <GlobalStyle />
-        <NotificationHeader
-          contentBold='Start from A$14.99'
-          contentLight='Browse thousands of repertoires in a wide variety of collections.'
-          bgColor='#8ed1dc'
-        />
-        <TopBar />
-        <CategoriesBar />
-        <Hero />
-      </header>
-      <main>
-        <CurrentLearning />
-       
-        <LearningNext />
-        <EnrolledSuggestions />
-        <WishlistCourses />
-        <StudentsViewing />
+    <>
+    <Navbar toggle={toggle} />
+      <Sidebar isopen={isopen} toggle={toggle} />
+
+      <Routes>
+
+        <Route path="/home" element={<Home />} />
+          <Route path="/composer" element={<Composer />} />
+          <Route path="/repertoire" element={<Repertoire />} />
+          <Route path="/instrument" element={<Instrument />} />
+          <Route path="/recommendation" element={<Recommendation />} />
+          <Route path="/forum" element={<Forum />} />
+
+      </Routes>
       
-      </main>
-      <footer>
-        <TeachBar />
-       
-        <Footer />
-      </footer>
-    </div>
+        <br/><br/><br/>
+        </>
+    
   );
+
 };
 
 export default App;
