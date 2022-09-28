@@ -1,2 +1,2 @@
 How to use:
-npm run server
+npx run server
