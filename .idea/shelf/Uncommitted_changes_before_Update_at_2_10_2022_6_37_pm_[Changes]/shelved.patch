@@ -1,0 +1,66 @@
+Index: server/routes/composers.js
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>const _ = require('lodash');\r\nconst { Composer, validate } = require('../models/composer');\r\nconst express = require('express');\r\nconst router = express.Router();\r\n\r\nrouter.get('/', async (req, res) => {\r\n    const composers = await Composer.find().sort('name');\r\n    res.send(composers);\r\n});\r\n\r\nrouter.post('/', async (req, res) => {\r\n    const { error } = validate(req.body);\r\n    if (error) return res.status(400).send(error.details[0].message);\r\n\r\n    const composer = new Composer(_.pick(req.body, ['name', 'date', 'nationality', 'website']));\r\n    await composer.save();\r\n\r\n    res.send(composer);\r\n});\r\n\r\nrouter.put('/:id', async (req, res) => {\r\n    const { error } = validate(req.body);\r\n    if (error) return res.status(400).send(error.details[0].message);\r\n\r\n    const composer = await Composer.findByIdAndUpdate(req.params.id, _.pick(req.body, ['name', 'date', 'nationality', 'website']), { new: true });\r\n\r\n    if (!composer) return res.status(404).send('The composer with the given ID was not found.');\r\n\r\n    res.send(composer);\r\n});\r\n\r\nrouter.delete('/:id', async (req, res) => {\r\n    const composer = await Composer.findByIdAndRemove(req.params.id);\r\n\r\n    if (!composer) return res.status(404).send('The composer with the given ID was not found.');\r\n\r\n    res.send(composer);\r\n});\r\n\r\nrouter.get('/:id', async (req, res) => {\r\n    const composer = await Composer.findById(req.params.id);\r\n\r\n    if (!composer) return res.status(404).send('The composer with the given ID was not found.');\r\n\r\n    res.send(composer);\r\n});\r\n\r\nmodule.exports = router; 
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/server/routes/composers.js b/server/routes/composers.js
+--- a/server/routes/composers.js	(revision 0b73a4c08b43056276436299c4b7d08ebc505f28)
++++ b/server/routes/composers.js	(date 1664695101062)
+@@ -12,7 +12,7 @@
+     const { error } = validate(req.body);
+     if (error) return res.status(400).send(error.details[0].message);
+ 
+-    const composer = new Composer(_.pick(req.body, ['name', 'date', 'nationality', 'website']));
++    const composer = new Composer(_.pick(req.body, ['name', 'born','death', 'nationality', 'website']));
+     await composer.save();
+ 
+     res.send(composer);
+@@ -22,7 +22,7 @@
+     const { error } = validate(req.body);
+     if (error) return res.status(400).send(error.details[0].message);
+ 
+-    const composer = await Composer.findByIdAndUpdate(req.params.id, _.pick(req.body, ['name', 'date', 'nationality', 'website']), { new: true });
++    const composer = await Composer.findByIdAndUpdate(req.params.id, _.pick(req.body, ['name', 'born','death', 'nationality', 'website']), { new: true });
+ 
+     if (!composer) return res.status(404).send('The composer with the given ID was not found.');
+ 
+Index: server/models/composer.js
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>const Joi = require('joi');\r\nconst mongoose = require('mongoose');\r\n\r\nconst Composer = mongoose.model('Composer', new mongoose.Schema({\r\n    name: {\r\n        type: String,\r\n        required: true,\r\n        minlength: 2,\r\n        maxlength: 255,\r\n    },\r\n    date: {\r\n        type: String,\r\n        required: true,\r\n        minlength: 1,\r\n        maxlength: 50,\r\n    },\r\n    nationality: {\r\n        type: String,\r\n        required: true,\r\n        minlength: 2,\r\n        maxlength: 50,\r\n    },\r\n    website: {\r\n        type: String,\r\n        minlength: 2,\r\n        maxlength: 255,\r\n    }\r\n}));\r\n\r\nfunction validateComposer(composer) {\r\n    const schema = Joi.object({\r\n        name: Joi.string().min(2).max(255).required(),\r\n        date: Joi.string().min(1).max(50).required(),\r\n        nationality: Joi.string().min(2).max(50).required(),\r\n        website: Joi.string().min(2).max(255),\r\n    });\r\n\r\n    return schema.validate(composer);\r\n}\r\n\r\nexports.Composer = Composer;\r\nexports.validate = validateComposer;
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/server/models/composer.js b/server/models/composer.js
+--- a/server/models/composer.js	(revision 0b73a4c08b43056276436299c4b7d08ebc505f28)
++++ b/server/models/composer.js	(date 1664695101070)
+@@ -8,9 +8,14 @@
+         minlength: 2,
+         maxlength: 255,
+     },
+-    date: {
+-        type: String,
+-        required: true,
++    born: {
++        type: Number,
++        //required: true,
++        minlength: 1,
++        maxlength: 50,
++    },
++    death: {
++        type: Number,
+         minlength: 1,
+         maxlength: 50,
+     },
+@@ -30,7 +35,8 @@
+ function validateComposer(composer) {
+     const schema = Joi.object({
+         name: Joi.string().min(2).max(255).required(),
+-        date: Joi.string().min(1).max(50).required(),
++        born: Joi.number().min(1).max(50),
++        death: Joi.number().min(1).max(50),
+         nationality: Joi.string().min(2).max(50).required(),
+         website: Joi.string().min(2).max(255),
+     });

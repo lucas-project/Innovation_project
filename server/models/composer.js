@@ -10,7 +10,6 @@ const Composer = mongoose.model('Composer', new mongoose.Schema({
     },
     born: {
         type: Number,
-        //required: true,
         minlength: 1,
         maxlength: 50,
     },
