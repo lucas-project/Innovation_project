@@ -1,3 +1,5 @@
+const auth = require('../middleware/auth');
+const admin = require('../middleware/admin');
 const _ = require('lodash');
 const { Piece, validate } = require('../models/piece');
 const { Composer } = require('../models/composer');
@@ -9,7 +11,7 @@ router.get('/', async (req, res) => {
     res.send(pieces);
 });
 
-router.post('/', async (req, res) => {
+router.post('/', auth, async (req, res) => {
     const { error } = validate(req.body);
     if (error) return res.status(400).send(error.details[0].message);
 
@@ -22,24 +24,38 @@ router.post('/', async (req, res) => {
             _id: composer._id,
             name: composer.name,
         },
+        duration: req.body.duration,
+        year: req.body.year,
+        instruments: req.body.instruments,
+        recordingLink: req.body.recordingLink,
+        publisher: req.body.publisher,
+        scoreLink: req.body.scoreLink,
     });
     await piece.save();
 
     res.send(piece);
 });
 
-router.put('/:id', async (req, res) => {
+router.put('/:id', [auth, admin], async (req, res) => {
     const { error } = validate(req.body);
     if (error) return res.status(400).send(error.details[0].message);
 
-    const piece = await Piece.findByIdAndUpdate(req.params.id, _.pick(req.body, ['name', 'date', 'nationality', 'website']), { new: true });
+    const piece = await Piece.findByIdAndUpdate(req.params.id, {
+        name: req.body.name,
+        duration: req.body.duration,
+        year: req.body.year,
+        instruments: req.body.instruments,
+        recordingLink: req.body.recordingLink,
+        publisher: req.body.publisher,
+        scoreLink: req.body.scoreLink,
+    }, { new: true });
 
     if (!piece) return res.status(404).send('The piece with the given ID was not found.');
 
     res.send(piece);
 });
 
-router.delete('/:id', async (req, res) => {
+router.delete('/:id', [auth, admin], async (req, res) => {
     const piece = await Piece.findByIdAndRemove(req.params.id);
 
     if (!piece) return res.status(404).send('The piece with the given ID was not found.');

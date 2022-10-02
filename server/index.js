@@ -3,6 +3,7 @@ const users = require('./routes/users');
 const auth = require('./routes/auth');
 const composers = require('./routes/composers');
 const pieces = require('./routes/pieces');
+const search = require('./routes/search');
 const express = require('express');
 const app = express();
 
@@ -16,6 +17,7 @@ app.use('/api/users', users);
 app.use('/api/auth', auth);
 app.use('/api/composers', composers);
 app.use('/api/pieces', pieces);
+app.use('/api/search', search);
 
 const port = process.env.PORT || 3000;
 app.listen(port, () => console.log(`Listening on port ${port}...`));

@@ -1,3 +1,5 @@
+const auth = require('../middleware/auth');
+const admin = require('../middleware/admin');
 const _ = require('lodash');
 const { Composer, validate } = require('../models/composer');
 const express = require('express');
@@ -8,7 +10,7 @@ router.get('/', async (req, res) => {
     res.send(composers);
 });
 
-router.post('/', async (req, res) => {
+router.post('/', [auth, admin], async (req, res) => {
     const { error } = validate(req.body);
     if (error) return res.status(400).send(error.details[0].message);
 
@@ -18,7 +20,7 @@ router.post('/', async (req, res) => {
     res.send(composer);
 });
 
-router.put('/:id', async (req, res) => {
+router.put('/:id', [auth, admin], async (req, res) => {
     const { error } = validate(req.body);
     if (error) return res.status(400).send(error.details[0].message);
 
@@ -29,7 +31,7 @@ router.put('/:id', async (req, res) => {
     res.send(composer);
 });
 
-router.delete('/:id', async (req, res) => {
+router.delete('/:id', [auth, admin], async (req, res) => {
     const composer = await Composer.findByIdAndRemove(req.params.id);
 
     if (!composer) return res.status(404).send('The composer with the given ID was not found.');
