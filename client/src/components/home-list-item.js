@@ -1,9 +1,9 @@
 import styled from "styled-components";
 import { Container } from "../styles";
 
-import CourseCard from "./CourseCard";
+import HomeListItemDetail from "./home-list-item-detail";
 
-const Courses = ({ heading, link, courses }) => {
+const HomeListItem = ({ heading, link, courses }) => {
   return (
     <Container>
       <StyledCourses>
@@ -14,7 +14,7 @@ const Courses = ({ heading, link, courses }) => {
         <div className='suggested-courses'>
           {courses.map((course) => {
             return (
-              <CourseCard
+              <HomeListItemDetail
                 courseImage={course.courseImage}
                 title={course.courseTitle}
                 author={course.courseAuthor}
@@ -73,4 +73,4 @@ const StyledCourses = styled.div`
   }
 `;
 
-export default Courses;
+export default HomeListItem;

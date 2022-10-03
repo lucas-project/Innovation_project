@@ -1,10 +1,12 @@
 const asyncHandler = require('express-async-handler')
+const composer = require('../models/composer')
 //@desc get composer
 //@route GET api/composer
 //@access Private
 
 const getComposer = asyncHandler(async (req, res)=>{
-    res.status(200).json({message:'get composer'})
+    const composers = await composer.find()
+    res.status(200).json(composers)
 })
 
 //@desc set composer
@@ -12,10 +14,6 @@ const getComposer = asyncHandler(async (req, res)=>{
 //@access Private
 
 const setComposer = asyncHandler(async (req, res)=>{
-    if(!req.body.text){
-        res.status(400)
-        throw new Error("Empty input")
-    }
     res.status(200).json({message:'set composer'})
 })
 
@@ -24,7 +22,14 @@ const setComposer = asyncHandler(async (req, res)=>{
 //@access Private
 
 const updateComposer = asyncHandler(async (req, res)=>{
-    res.status(200).json({message:'update composer'})
+    // res.status(200).json({message:'update composer'})
+    const composer = await composer.findById(req.params.id)
+
+    if (!composer){}
+    res.status(400)
+    throw new Error("Composer not found")
+
+
 })
 
 //@desc delete composer

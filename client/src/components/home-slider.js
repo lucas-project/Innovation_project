@@ -2,20 +2,20 @@ import styled from "styled-components";
 import { Container } from "../styles";
 import heroImg from "../img/main_hero.jpg";
 
-import ContentCard from "./ContentCard";
+import HomeFooterJoinUsBarDetail from "./home-footer-joinUs-bar-detail";
 
-const Hero = () => {
+const HomeSlider = () => {
   return (
     <Container>
       <StyledHero>
         <div className='hero-content'>
-          <ContentCard>
+          <HomeFooterJoinUsBarDetail>
             <h3>
               Know the Power of <br /> Female Composers
             </h3>
             <p>Start moving toward where you want to be.</p>
             <p>A community for all classical music lovers</p>
-          </ContentCard>
+          </HomeFooterJoinUsBarDetail>
         </div>
       </StyledHero>
     </Container>
@@ -103,4 +103,4 @@ const StyledHero = styled.div`
   }
 `;
 
-export default Hero;
+export default HomeSlider;

@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-const ContentCard = ({ children }) => {
+const HomeFooterJoinUsBarDetail = ({ children }) => {
   return <StyledContentCard>{children}</StyledContentCard>;
 };
 
@@ -11,4 +11,4 @@ const StyledContentCard = styled.div`
   box-shadow: 0 1px 5px rgba(0, 0, 0, 0.3);
 `;
 
-export default ContentCard;
+export default HomeFooterJoinUsBarDetail;

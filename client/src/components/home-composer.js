@@ -1,4 +1,4 @@
-import Courses from "./Courses";
+import HomeListItem from "./home-list-item";
 
 import djangoEcomImg from "../img/django_ecommerce.jpg";
 import djangoFullImg from "../img/django_fullstack.jpg";
@@ -130,8 +130,8 @@ const HomeComposer = () => {
             modules={[Pagination, Navigation]}
             className="mySwiper"
         >
-          <SwiperSlide><Courses courses={courses}/></SwiperSlide>
-          <SwiperSlide><Courses courses={courses2}/></SwiperSlide>
+          <SwiperSlide><HomeListItem courses={courses}/></SwiperSlide>
+          <SwiperSlide><HomeListItem courses={courses2}/></SwiperSlide>
         </Swiper>
       </>
   );

@@ -1,12 +1,12 @@
 import styled from "styled-components";
 import { Link } from "../styles";
 
-import ContentBar from "./ContentBar";
+import HomeFooterJoinUsBar from "./home-footer-joinUs-bar";
 
-const TeachBar = () => {
+const HomeFooterJoinUs = () => {
   return (
     <StyledTeachBar>
-      <ContentBar>
+      <HomeFooterJoinUsBar>
         <div className='left-content'>
           <h4>A promotion for female composer</h4>
           <p>
@@ -16,7 +16,7 @@ const TeachBar = () => {
         <div className='right-content'>
           <Link href='#'>Join us as composer</Link>
         </div>
-      </ContentBar>
+      </HomeFooterJoinUsBar>
     </StyledTeachBar>
   );
 };
@@ -43,4 +43,4 @@ const StyledTeachBar = styled.div`
   }
 `;
 
-export default TeachBar;
+export default HomeFooterJoinUs;

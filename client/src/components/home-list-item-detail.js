@@ -1,11 +1,9 @@
 import styled from "styled-components";
 
-const CourseCard = ({
+const HomeListItemDetail = ({
   courseImage,
   title,
   author,
-  rating,
-  ratingNum,
   price,
   discount,
   tag,
@@ -20,18 +18,6 @@ const CourseCard = ({
         <div className='course-content'>
           <h5>{title}</h5>
           <p>{author}</p>
-          <div className='rating-details'>
-            <p>
-              {/* {rating} */}
-              {/* <span className='stars'>
-                <i class='fas fa-star'></i>
-                <i class='fas fa-star'></i>
-                <i class='fas fa-star'></i>
-               
-              </span>
-              <span className='ratNum'>({ratingNum})</span> */}
-            </p>
-          </div>
 
           <h5>
             {discount}
@@ -122,4 +108,4 @@ const StyledCourseCard = styled.a`
   }
 `;
 
-export default CourseCard;
+export default HomeListItemDetail;

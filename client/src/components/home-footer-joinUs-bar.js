@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-const ContentBar = ({ children }) => {
+const HomeFooterJoinUsBar = ({ children }) => {
   return <StyledContentBar>{children}</StyledContentBar>;
 };
 
@@ -17,4 +17,4 @@ const StyledContentBar = styled.div`
   }
 `;
 
-export default ContentBar;
+export default HomeFooterJoinUsBar;
