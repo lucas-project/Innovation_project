@@ -1,6 +1,5 @@
 const auth = require('../middleware/auth');
 const admin = require('../middleware/admin');
-const _ = require('lodash');
 const { Piece, validate } = require('../models/piece');
 const { Composer } = require('../models/composer');
 const express = require('express');

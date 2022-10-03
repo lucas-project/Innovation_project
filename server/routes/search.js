@@ -16,7 +16,7 @@ router.get('/:key', async (req, res) => {
         }
     );
 
-    result.concat(await Piece.find(
+    result = result.concat(await Piece.find(
         {
             "$or": [
                 { name: { $regex: reg } },

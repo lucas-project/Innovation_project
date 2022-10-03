@@ -27,7 +27,7 @@ const Composer = mongoose.model('Composer', new mongoose.Schema({
     biography: {
         type: String,
         minlength: 2,
-        maxlength: 1024,
+        maxlength: 10000,
     },
 }));
 
@@ -37,7 +37,7 @@ function validateComposer(composer) {
         date: Joi.number().min(1).max(50),
         nationality: Joi.string().min(2).max(50).required(),
         website: Joi.string().min(2).max(255),
-        biography: Joi.string().min(2).max(1024),
+        biography: Joi.string().min(2).max(10000),
     });
 
     return schema.validate(composer);
