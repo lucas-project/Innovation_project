@@ -29,7 +29,7 @@ const AlbumItemsPage = () => {
         setIsLoading(true);
         const fetchData = async () => {
             const result = await fetch(
-                `https://jsonplaceholder.typicode.com/photos`
+                `https://jsonplaceholder.typicode.com/photos?albumId=${albumId}`
             );
             const resultJson = await result.json();
             setItems(resultJson);
