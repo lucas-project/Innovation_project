@@ -8,7 +8,8 @@ import Forum from "./components/pages/Forum/Forum";
 import Home from "./components/pages/Home/Home";
 import Sidebar from "./components/pages/Sidebar/Sidebar";
 import { Routes, Route, Link} from "react-router-dom";
-
+import 'bootstrap/dist/css/bootstrap.min.css';
+import "bootstrap/dist/js/bootstrap.bundle.min";
 
 const App = () => {
     const [isopen, setisopen] = useState(false);
@@ -22,12 +23,12 @@ const App = () => {
 
       <Routes>
 
-        <Route path="/home" element={<Home />} />
-          <Route path="/composer" element={<Composer />} />
-          <Route path="/repertoire" element={<Repertoire />} />
-          <Route path="/instrument" element={<Instrument />} />
-          <Route path="/recommendation" element={<Recommendation />} />
-          <Route path="/forum" element={<Forum />} />
+        <Route path="/" element={<Home />} />
+        <Route path="/composer" element={<Composer />} />
+        <Route path="/repertoire" element={<Repertoire />} />
+        <Route path="/instrument" element={<Instrument />} />
+        <Route path="/recommendation" element={<Recommendation />} />
+        <Route path="/forum" element={<Forum />} />
 
       </Routes>
       
