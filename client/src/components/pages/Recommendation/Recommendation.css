@@ -1,0 +1,9 @@
+.card img{
+    /* float:left;  */
+    width:18rem; 
+    height:16rem; 
+    background-position: center top; 
+}
+.card{
+    height:30rem;
+}
