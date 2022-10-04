@@ -1,5 +1,5 @@
 import Logo from "./Logo";
-import SearchBar from "./SearchBar";
+import HomeTopBarSearchBar from "./home-topBar-searchBar";
 import styled from "styled-components";
 
 const TopBar = () => {
@@ -10,7 +10,7 @@ const TopBar = () => {
         <a href='#'>Login</a>
       </span>
       <span className='search'>
-        <SearchBar />
+        <HomeTopBarSearchBar />
       </span>
 
       <span className='top-links'>

@@ -1,14 +1,14 @@
 import React from "react";
 
-import TopBar from "../../TopBar";
+import TopBar from "../../home-topBar";
 
-import Hero from "../../Hero";
+import HomeSlider from "../../home-slider";
 // Footer Components
-import TeachBar from "../../TeachBar";
+import HomeFooterJoinUs from "../../home-footer-joinUs";
 import Footer from "../../Footer";
 import GlobalStyle from "../../GlobalStyle";
-import CurrentLearning from "../../CurrentLearning";
-import LearningNext from "../../LearningNext";
+
+import HomePopularTag from "../../home-popular-tag";
 import HomeRepertoire from "../../home-repertoire";
 import HomeComposer from "../../home-composer";
 import HomeInstrument from "../../home-instrument";
@@ -21,19 +21,19 @@ const home = () => {
       <header>
         <GlobalStyle />
         <TopBar />
-        <Hero />
+        <HomeSlider />
       </header>
 
       <main>
-        <CurrentLearning />
-        <LearningNext />
+
+        <HomePopularTag />
         <HomeRepertoire />
         <HomeComposer />
         <HomeInstrument />
       </main>
 
       <footer>
-        <TeachBar />
+        <HomeFooterJoinUs />
         <Footer />
       </footer>
     </div>

@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-const LinkCard = ({ name }) => {
+const HomePopularTagCard = ({ name }) => {
   return (
     <StyledLinkCard>
       <a href='#'>{name}</a>
@@ -24,4 +24,4 @@ const StyledLinkCard = styled.div`
   }
 `;
 
-export default LinkCard;
+export default HomePopularTagCard;

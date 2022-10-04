@@ -1,4 +1,4 @@
-import Courses from "./Courses";
+import HomeListItem from "./home-list-item";
 
 import reactImg from "../img/styled_components.jpg";
 import htmlImg from "../img/html_css.jpg";
@@ -143,13 +143,13 @@ const mystyle = {
         className="mySwiper"
       >
         
-        <SwiperSlide><Courses courses={courses}/></SwiperSlide>
-        <SwiperSlide><Courses courses={courses2}/></SwiperSlide>
+        <SwiperSlide><HomeListItem courses={courses}/></SwiperSlide>
+        <SwiperSlide><HomeListItem courses={courses2}/></SwiperSlide>
         
         
       </Swiper>
     </>
-    // <Courses
+    // <HomeListItem
     //   heading='Top Repertoires '
     //   link='" Recommendation of today"'
       

@@ -1,8 +1,8 @@
 import styled from "styled-components";
 import { Container } from "../styles";
-import LinkCard from "./LinkCard";
+import HomePopularTagCard from "./home-popular-tag-card";
 
-const LearningNext = () => {
+const HomePopularTag = () => {
   const learningTopics = [
     "Cello",
     "Dina Peters",
@@ -22,7 +22,7 @@ const LearningNext = () => {
         <h5>Topics recommended for you</h5>
         <div className='learning-cards'>
           {learningTopics.map((topic) => {
-            return <LinkCard name={topic} />;
+            return <HomePopularTagCard name={topic} />;
           })}
         </div>
       </StyledLearningNext>
@@ -76,4 +76,4 @@ const StyledLearningNext = styled.div`
   }
 `;
 
-export default LearningNext;
+export default HomePopularTag;

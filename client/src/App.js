@@ -1,12 +1,12 @@
 import React, { useState } from "react";
-import Navbar from "./components/nav/Navbar/Navbar";
-import Composer from "./components/nav/Composer/Composer";
-import Repertoire from "./components/nav/Repertoire/Repertoire";
-import Instrument from "./components/nav/Instrument/Instrument";
-import Recommendation from "./components/nav/Recommendation/Recommendation";
-import Forum from "./components/nav/Forum/Forum";
-import Home from "./components/nav/Home/Home";
-import Sidebar from "./components/nav/Sidebar/Sidebar";
+import Navbar from "./components/pages/Navbar/Navbar";
+import Composer from "./components/pages/Composer/Composer-mongodb";
+import Repertoire from "./components/pages/Repertoire/Repertoire";
+import Instrument from "./components/pages/Instrument/Instrument";
+import Recommendation from "./components/pages/Recommendation/Recommendation";
+import Forum from "./components/pages/Forum/Forum";
+import Home from "./components/pages/Home/Home";
+import Sidebar from "./components/pages/Sidebar/Sidebar";
 import { Routes, Route, Link} from "react-router-dom";
 
 

@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-const SearchBar = () => {
+const HomeTopBarSearchBar = () => {
   return (
     <StyledSearch>
       <i class='fas fa-search'></i>{" "}
@@ -73,4 +73,4 @@ const StyledSearch = styled.div`
   }
 `;
 
-export default SearchBar;
+export default HomeTopBarSearchBar;
