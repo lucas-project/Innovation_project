@@ -11,6 +11,8 @@ import { Routes, Route, Link} from "react-router-dom";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import "bootstrap/dist/js/bootstrap.bundle.min";
 
+import Ailis from "./components/pages/Recommendation/Ailis"
+
 const App = () => {
     const [isopen, setisopen] = useState(false);
     const toggle = () => {
@@ -29,6 +31,7 @@ const App = () => {
         <Route path="/instrument" element={<Instrument />} />
         <Route path="/recommendation" element={<Recommendation />} />
         <Route path="/forum" element={<Forum />} />
+        <Route path="/recommendation/ailis" element={<Ailis />} />
 
       </Routes>
       
