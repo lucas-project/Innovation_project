@@ -23,8 +23,7 @@ const App = () => {
       <Sidebar isopen={isopen} toggle={toggle} />
 
       <Routes>
-
-        <Route path="/home" element={<Home />} />
+        <Route path="/" element={<Home />} />
           <Route path="/composer" element={<Composer />} />
           <Route path="/repertoire" element={<Repertoire />} />
           <Route path="/instrument" element={<Instrument />} />

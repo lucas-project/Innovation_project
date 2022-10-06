@@ -3,7 +3,7 @@ import { Link, useParams } from "react-router-dom";
 
 import Card from "../Composer/Card";
 
-import "../Composer/AlbumItemsPage.css";
+import "./Repertoire.css";
 
 const AlbumItemsPage = () => {
     // const displayItem = 20;

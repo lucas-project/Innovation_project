@@ -1,9 +1,7 @@
 import React, { useState, useEffect, useRef } from "react";
 import { Link, useParams } from "react-router-dom";
-
 import Card from "./Card";
-
-import "./AlbumItemsPage.css";
+import "./Composer-mongodb.css";
 
 const AlbumItemsPage = () => {
     // const displayItem = 20;
@@ -142,13 +140,17 @@ const AlbumItemsPage = () => {
             </p>
             <div className="items-container">
                 {items.map((item, index) => (
+                    <div>
                     <Card key={item.id} onClick={() => onItemHandler(item.id, index)}>
                         <img
                             src={"https://via.placeholder.com/100x70.png"}
                             alt={`data thumbnail`}
                         />
                         <h6>#{item.id}</h6>
+
                     </Card>
+                    <p>some titles</p>
+                    </div>
                 ))}
             </div>
             {isShowing && (
@@ -168,6 +170,7 @@ const AlbumItemsPage = () => {
                             <h1>#{itemFound.id}</h1>
                             <h3>{itemFound.title}</h3>
                         </div>
+
                     </div>
                     <button className="forwardButton" onClick={forwardHandler}>
                         &#62;

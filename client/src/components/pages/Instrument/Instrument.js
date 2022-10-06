@@ -3,29 +3,19 @@ import { Link, useParams } from "react-router-dom";
 
 import Card from "../Composer/Card";
 
-import "../Composer/AlbumItemsPage.css";
+import "./Instrument.css";
 
 const AlbumItemsPage = () => {
-    // const displayItem = 20;
-    // const itemFound = useRef();
     const [itemFound, setItemFound] = useState();
     const selectedCardIndex = useRef();
 
     const [items, setItems] = useState([]);
-    // const [pages, setPages] = useState([]);
-    // const [startNum, setStartNum] = useState(0);
-    // const [endNum, setEndNum] = useState(displayItem);
     const [isLoading, setIsLoading] = useState(false);
     const [isShowing, setIsShowing] = useState(false);
 
     const { albumId } = useParams();
 
     useEffect(() => {
-        // if (items.length > 0) {
-        //   setIsLoading(false);
-        // } else {
-        //   setIsLoading(true);
-        // }
         setIsLoading(true);
         const fetchData = async () => {
             const result = await fetch(
@@ -38,26 +28,7 @@ const AlbumItemsPage = () => {
         fetchData();
     }, [itemFound, albumId]);
 
-    // const pageHandler = event => {
-    //   event.preventDefault();
-    //   const value = event.target.value;
-
-    //   if (value === "previous") {
-    //     if (startNum !== 0 && endNum !== displayItem) {
-    //       setStartNum(startNum - displayItem);
-    //       setEndNum(endNum - displayItem);
-    //     } else {
-    //       return;
-    //     }
-    //   } else if (value === "next") {
-    //     setStartNum(startNum + displayItem);
-    //     setEndNum(endNum + displayItem);
-    //   }
-    // };
-
     const onItemHandler = (value, index) => {
-        // console.log(value);
-        // itemFound.current = items.find(item => item.id === value);
         setItemFound(items.find(item => item.id === value));
         // console.log(itemFound.current);
         selectedCardIndex.current = index;
@@ -71,9 +42,6 @@ const AlbumItemsPage = () => {
         console.log("after forward", selectedCardIndex.current);
 
         if (selectedCardIndex.current < items.length) {
-            // itemFound.current = items.find(
-            //   (item, index) => index === selectedCardIndex.current
-            // );
             setItemFound(
                 items.find((item, index) => index === selectedCardIndex.current)
             );
@@ -116,20 +84,6 @@ const AlbumItemsPage = () => {
                     </button>
                 </Link>
 
-                {/* <button
-          className="controller-button"
-          value="previous"
-          onClick={pageHandler}
-        >
-          previous
-        </button>
-        <button
-          className="controller-button"
-          value="next"
-          onClick={pageHandler}
-        >
-          next
-        </button> */}
             </div>
             {isLoading && (
                 <div className="loading">
