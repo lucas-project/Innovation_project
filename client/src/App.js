@@ -11,7 +11,9 @@ import { Routes, Route, Link} from "react-router-dom";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import "bootstrap/dist/js/bootstrap.bundle.min";
 
-import Ailis from "./components/pages/Recommendation/Ailis"
+import Ailis from "./components/pages/Recommendation/Ailis";
+// import './App.scss';
+
 
 const App = () => {
     const [isopen, setisopen] = useState(false);
@@ -32,6 +34,7 @@ const App = () => {
         <Route path="/recommendation" element={<Recommendation />} />
         <Route path="/forum" element={<Forum />} />
         <Route path="/recommendation/ailis" element={<Ailis />} />
+
 
       </Routes>
       
