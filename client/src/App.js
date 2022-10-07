@@ -8,8 +8,6 @@ import Forum from "./components/pages/Forum/Forum";
 import Home from "./components/pages/Home/Home";
 import Sidebar from "./components/pages/Sidebar/Sidebar";
 import { Routes, Route, Link} from "react-router-dom";
-import AlbumItemsPage from "./components/pages/Composer/AlbumItemsPage";
-
 
 
 const App = () => {
@@ -29,7 +27,7 @@ const App = () => {
           <Route path="/instrument" element={<Instrument />} />
           <Route path="/recommendation" element={<Recommendation />} />
           <Route path="/forum" element={<Forum />} />
-          <Route path="/photos" element={<AlbumItemsPage />} />
+          {/*<Route path="/photos" element={<AlbumItemsPage />} />*/}
       </Routes>
       
         <br/><br/><br/>
