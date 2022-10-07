@@ -3,9 +3,22 @@ import styled from "styled-components";
 import Dropdown from 'react-bootstrap/Dropdown';
 import DropdownButton from 'react-bootstrap/DropdownButton';
 import Collapse from 'react-bootstrap/Collapse';
+import { Link } from "react-router-dom";
+
+
 
 const Search = () => {
+    const [searchInput, setSearchInput] = useState('');
+    const searchItems = (searchValue) => {
+        setSearchInput(searchValue);
+        console.log(searchValue);
+        // APIData.filter((item) => {
+        //     return Object.values(item).join('').toLowerCase().includes(searchInput.toLowerCase())
+        // })
+            
+    }
     const [open, setOpen] = useState(false);
+    // const [query, searchItems] = useState("");
     return (
     <StyledSearch>
         <div class="container mt-2">
@@ -15,16 +28,6 @@ const Search = () => {
                 <h5>Search to explore the greatest female composers</h5>
                 <div class="row g-3 mt-2">
                   <div class="col-md-3">
-                      {/* <div class="dropdown">
-                        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-expanded="false">
-                          Search By Any
-                        </button>
-                        <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                          <li><a class="dropdown-item" href="#">By Name</a></li>
-                          <li><a class="dropdown-item" href="#">By Piece</a></li>
-                          <li><a class="dropdown-item" href="#">By Year</a></li>
-                        </ul>
-                      </div> */}
                     <DropdownButton id="dropdown-basic-button" title="Search By Any">
                       <Dropdown.Item href="#/action-1">By Name</Dropdown.Item>
                       <Dropdown.Item href="#/action-2">By Piece</Dropdown.Item>
@@ -32,36 +35,14 @@ const Search = () => {
                     </DropdownButton>
                   </div>
                   <div class="col-md-6">
-                      <input type="text" class="form-control" placeholder="Enter keywords..."/>
+                      <input type="text" class="form-control" value={searchInput} onChange={(e) => searchItems(e.target.value)} placeholder="Enter keywords..."/>
                   </div>
                   <div class="col-md-3">
-                      <button class="btn btn-secondary btn-block">Search Results</button>
+                    <Link to={{pathname: "/Search/" + "?keywords=" + searchInput, state: {searchInput}}}><button class="btn btn-secondary btn-block" type='submit'>Search Results</button></Link>
+                      
                   </div>   
                 </div>
-                <div class="mt-3">
-                          
-                                      {/* <a data-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample" class="advanced">
-                                        Advance Search With Filters <i class="fa fa-angle-down"></i>
-                                      </a>
-                                    
-  
-                                    <div class="collapse" id="collapseExample">
-                                      <div class="card card-body">
-                                        <div class="row">
-                                            <div class="col-md-4">
-                                                <input type="text" placeholder="Property ID" class="form-control"/>
-                                            </div>
-                                            <div class="col-md-4">
-                                                <input type="text" class="form-control" placeholder="Search by MAP"/>
-                                            </div>
-                                            <div class="col-md-4">
-                                                <input type="text" class="form-control" placeholder="Search by Country"/>
-                                            </div>
-                                            
-                                        </div>
-  
-                                      </div>
-                                    </div> */}
+                <div class="mt-3">      
                   <a
                       onClick={() => setOpen(!open)}
                       aria-controls="advancedSearch"
@@ -92,6 +73,8 @@ const Search = () => {
   
     );
 };
+
+
 
 const StyledSearch = styled.div`
 padding-top: 5rem;
