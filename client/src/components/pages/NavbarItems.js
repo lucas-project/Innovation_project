@@ -23,6 +23,10 @@ const navbarItems = [
     title: "Forum",
     link: "/Forum",
   },
+  {
+    title: "Search",
+    link: "/Search",
+  },
 
 ];
 

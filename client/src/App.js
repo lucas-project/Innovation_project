@@ -12,7 +12,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import "bootstrap/dist/js/bootstrap.bundle.min";
 
 import Ailis from "./components/pages/Recommendation/Ailis";
-// import './App.scss';
+import Search from "./components/pages/Search/Search";
 
 
 const App = () => {
@@ -34,6 +34,7 @@ const App = () => {
         <Route path="/recommendation" element={<Recommendation />} />
         <Route path="/forum" element={<Forum />} />
         <Route path="/recommendation/ailis" element={<Ailis />} />
+        <Route path="/search" element={<Search />} />
 
 
       </Routes>
