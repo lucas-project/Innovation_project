@@ -26,7 +26,7 @@ const home = () => {
 
       <main>
 
-        <HomePopularTag />
+        {/*<HomePopularTag />*/}
         <HomeRepertoire />
         <HomeComposer />
         <HomeInstrument />

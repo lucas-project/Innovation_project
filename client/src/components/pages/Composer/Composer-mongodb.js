@@ -1,7 +1,9 @@
 import React, { useState, useEffect, useRef } from "react";
-import { Link, useParams } from "react-router-dom";
+import {Link, Route, useParams} from "react-router-dom";
 import Card from "./Card";
 import "./Composer-mongodb.css";
+import Forum from "../Forum/Forum";
+import Profile from "../Profile/Profile";
 
 const AlbumItemsPage = () => {
     // const displayItem = 20;
@@ -147,10 +149,15 @@ const AlbumItemsPage = () => {
                             alt={`data thumbnail`}
                         />
                         <h6>#{item.id}</h6>
+                        <p>some titles</p>
+                        <p>Some Description</p>
+                        <p>Some extra info</p>
+                        <Link to="/Profile">Profile</Link>
 
                     </Card>
-                    <p>some titles</p>
+
                     </div>
+
                 ))}
             </div>
             {isShowing && (

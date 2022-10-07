@@ -1,9 +1,5 @@
 const navbarItems = [
   {
-    title: "Home",
-    link: "/home",
-  },
-  {
     title: "Composer",
     link: "/Composer",
   },
@@ -22,7 +18,7 @@ const navbarItems = [
   {
     title: "Forum",
     link: "/Forum",
-  },
+  }
 
 ];
 

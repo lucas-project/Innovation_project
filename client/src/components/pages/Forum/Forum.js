@@ -47,6 +47,9 @@ const Forum = () => {
                         allowFullScreen="true"
                         allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe></div>
                     </Col>
+
+                </Row>
+                <Row style={rowstyle}>
                     <Col>
                         <blockquote className="twitter-tweet"><p lang="en" dir="ltr">Sunsets don&#39;t get much better
                             than this one over <a
@@ -61,15 +64,30 @@ const Forum = () => {
                             <script async src="https://platform.twitter.com/widgets.js" charSet="utf-8"></script>
                         </Helmet>
                     </Col>
-                </Row>
-                <Row style={rowstyle}>
-                    <Col>1 of 3</Col>
-                    <Col>2 of 3</Col>
-                    <Col>3 of 3</Col>
+                    <Col>
+                        <blockquote className="twitter-tweet"><p lang="en" dir="ltr">Go <a
+                            href="https://twitter.com/JSalke?ref_src=twsrc%5Etfw">@JSalke</a> and <a
+                            href="https://twitter.com/AmazonStudios?ref_src=twsrc%5Etfw">@AmazonStudios</a>! <a
+                            href="https://t.co/ycGoNE2Zne">https://t.co/ycGoNE2Zne</a></p>&mdash; Jeff Bezos
+                            (@JeffBezos) <a
+                                href="https://twitter.com/JeffBezos/status/1577732519856082944?ref_src=twsrc%5Etfw">October
+                                5, 2022</a></blockquote>
+                        <Helmet>
+                            <script async src="https://platform.twitter.com/widgets.js" charSet="utf-8"></script>
+                        </Helmet>
+                    </Col>
+                    <Col>
+                        <blockquote className="twitter-tweet"><p lang="en" dir="ltr">So damn cool. Congrats to MiMi and
+                            the whole Mars helicopter team. <a
+                                href="https://t.co/8KWQoLbtHV">https://t.co/8KWQoLbtHV</a></p>&mdash; Jeff Bezos
+                            (@JeffBezos) <a
+                                href="https://twitter.com/JeffBezos/status/1519789439224012802?ref_src=twsrc%5Etfw">April
+                                28, 2022</a></blockquote>
+                        <Helmet>
+                        <script async src="https://platform.twitter.com/widgets.js" charSet="utf-8"></script></Helmet></Col>
                 </Row>
             </Container>
         </div>
-
     );
 };
 
