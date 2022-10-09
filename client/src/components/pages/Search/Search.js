@@ -5,32 +5,81 @@ import styled from "styled-components";
 import Collapse from 'react-bootstrap/Collapse';
 import { Link } from "react-router-dom";
 import Form from 'react-bootstrap/Form';
+import { useNavigate} from "react-router-dom";
+import axios from 'axios';
 
 
 
 const Search = () => {
-    const [searchInput, setSearchInput] = useState('');
-    const [filterInput1, setFilterInput1] = useState('');
-    const [filterInput2, setFilterInput2] = useState('');
-    const [searchBy, setSearchBy] = useState('Any');
-    const searchItems = (searchValue) => {
-        setSearchInput(searchValue);
-        console.log(searchValue);
+    const navigate = useNavigate();
+    const [searchArray, setSearchArray] = useState(["","","","Any"]);
+    const [URL,setURL] = useState([""]);
+    // const [filterInput1, setFilterInput1] = useState('');
+    // const [filterInput2, setFilterInput2] = useState('');
+    // const [searchBy, setSearchBy] = useState('Any');
+    const searchItems = (searchValue,type) => {
+        let newSearchArray;
+        if (type === "searchInput"){
+            newSearchArray = [...searchArray];
+            newSearchArray[0] = searchValue;
+            setSearchArray(newSearchArray);
+        }
+        if (type === "filterInput1"){
+            newSearchArray = [...searchArray];
+            newSearchArray[1] = searchValue;
+            setSearchArray(newSearchArray);
+        }
+        if (type === "filterInput2"){
+            newSearchArray = [...searchArray];
+            newSearchArray[2] = searchValue;
+            setSearchArray(newSearchArray);
+        }
+        if (type === "searchBy"){
+            newSearchArray = [...searchArray];
+            newSearchArray[3] = searchValue;
+            setSearchArray(newSearchArray);
+        }
+        console.log(searchValue,type,searchArray);
         // APIData.filter((item) => {
         //     return Object.values(item).join('').toLowerCase().includes(searchInput.toLowerCase())
         // })
             
-    }
-    const filterItems1 = (filterValue1) => {
-        setFilterInput1(filterValue1);
-        console.log(filterValue1); 
-    }
-    const filterItems2 = (filterValue2) => {
-        setFilterInput2(filterValue2);
-        console.log(filterValue2); 
-    }
+    };
+    const onClickSearchHandler = () => {
+        generateSearchURL(searchArray);
+        console.log("clicked search",searchArray);
+    };
+    const generateSearchURL = (newValue) => {
+        const URL = `?keywords=${newValue[0]}+${newValue[1]}+${newValue[2]}&Searchby=${newValue[3]}`;
+        setURL(URL);
+        console.log(newValue,searchArray,URL);
+        navigate(URL);
+    };
+    // const filterItems1 = (filterValue1) => {
+    //     setFilterInput1(filterValue1);
+    //     console.log(filterValue1); 
+    // }
+    // const filterItems2 = (filterValue2) => {
+    //     setFilterInput2(filterValue2);
+    //     console.log(filterValue2); 
+    // }
+
     const [open, setOpen] = useState(false);
 
+    // onSearchClick (searchInput,filterInput1,filterInput2,searchBy) = [
+    //     searchInput,
+    //     filterInput1,
+    //     filterInput2,
+    //     searchBy
+    // ]
+    // {
+    //     axios
+    //     .get('http://localhost:3000/Search/'+ '?keywords=' + searchInput + '+' + filterInput1 + '+' + filterInput2 + '?Searchby=' + searchBy)
+    //     .then(res => {
+    //         console.log("Print-API-response: " + res.data);
+    //         setAPIData(res.data);
+    //       })
+    //   }
     // const [selectedItem, setSelectedItem] = useState(null);
     // const [query, searchItems] = useState("");
     return (
@@ -63,9 +112,9 @@ const Search = () => {
                         </DropdownButton> */}
                         <Form.Select aria-label="Default select example">
                             <option>Search By Any</option>
-                            <option value={searchBy} onSelect={() => setSearchBy("Name")}>Search By Name</option>
-                            <option value={searchBy} onSelect={() => setSearchBy("Piece")}>Search By Piece</option>
-                            <option value={searchBy} onSelect={() => setSearchBy("Year")}>Search By Year Of Piece</option>
+                            <option onSelect={() => searchItems("Name","searchBy")}>Search By Name</option>
+                            <option onSelect={() => searchItems("Piece","searchBy")}>Search By Piece</option>
+                            <option onSelect={() => searchItems("Year","searchBy")}>Search By Year Of Piece</option>
                         </Form.Select>
                     </div>
                     
@@ -86,11 +135,10 @@ const Search = () => {
                     <div class="col-md-6">
                   {/* // onChange={() => setSearchInput(searchInput)}  */}
                   {/* onChange={(e) => searchItems(e.target.value)}  */}
-                      <input type="text" class="form-control" value={searchInput} onChange={(e) => searchItems(e.target.value)} placeholder="Enter keywords..."/>
+                      <input type="text" class="form-control" onChange={(e) => searchItems(e.target.value,"searchInput")} placeholder="Enter keywords..."/>
                   </div>
                   <div class="col-md-3">
-                    <Link to={{pathname: "/Search/" + "?keywords=" + searchInput + "+" + filterInput1 + "+" + filterInput2 + "?Searchby=" + searchBy}}><button class="btn btn-secondary btn-block" type='submit'>Search Results</button></Link>
-                      
+                    <button class="btn btn-secondary btn-block"  onClick={onClickSearchHandler} type='submit'>Search Results</button>
                   </div>   
                 </div>
                 <div class="mt-3">      
@@ -106,10 +154,10 @@ const Search = () => {
                       <div class="card card-body">
                         <div class="row">
                           <div class="col-md-6">
-                            <input type="text" placeholder="Nationality" class="form-control" value={filterInput1} onChange={(e) => filterItems1(e.target.value)}/>
+                            <input type="text" placeholder="Nationality" class="form-control" onChange={(e) => searchItems(e.target.value,"filterInput1")}/>
                           </div>
                           <div class="col-md-6">
-                            <input type="text" class="form-control" placeholder="Instrument" value={filterInput2}  onChange={(e) => filterItems2(e.target.value)}/>
+                            <input type="text" class="form-control" placeholder="Instrument" onChange={(e) => searchItems(e.target.value,"filterInput2")}/>
                           </div>    
                         </div>
                       </div>
