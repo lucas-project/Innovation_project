@@ -1,12 +1,12 @@
 import React from "react";
 
-const Ailis = () => {
+const Flute = () => {
     return (
 
         <div style={{ position: "absolute", marginTop: "70px", fontSize: "20px" }}>
-            <br/><br/>Ailis
+            <br/><br/>Flute
         </div>
     );
 };
 
-export default Ailis;
+export default Flute;
