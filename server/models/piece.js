@@ -52,7 +52,13 @@ const Piece = mongoose.model('Piece', new mongoose.Schema({
         type: String,
         minlength: 2,
         maxlength: 255,
+    },
+    image: {
+        type: String,
+        minlength: 2,
+        maxlength: 255,
     }
+
 }));
 
 function validatePiece(piece) {
@@ -65,6 +71,7 @@ function validatePiece(piece) {
         recordingLink: Joi.string().min(2).max(255),
         publisher: Joi.string().min(2).max(255),
         scoreLink: Joi.string().min(2).max(255),
+        image: Joi.string().min(2).max(255),
     });
 
     return schema.validate(piece);

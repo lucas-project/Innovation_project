@@ -4,8 +4,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="59dfec90-93b5-41dd-956c-8d393c8b7fc3" name="Changes" comment="Change the composer schema">
+    <list default="true" id="59dfec90-93b5-41dd-956c-8d393c8b7fc3" name="Changes" comment="Update the piece schema">
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_30_09_2022_8_22_pm_[Changes]/shelved.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_30_09_2022_8_22_pm__Changes_.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2_10_2022_6_37_pm_[Changes]/shelved.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2_10_2022_6_37_pm__Changes_.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/models/composer.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/models/composer.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/models/piece.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/models/piece.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/routes/composers.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/routes/composers.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/routes/pieces.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/routes/pieces.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -28,20 +36,20 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "ToolWindowGit.ShowToolbar": "false",
-    "WebServerToolWindowFactoryState": "false",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;ToolWindowGit.ShowToolbar&quot;: &quot;false&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -51,6 +59,9 @@
       <option name="presentableId" value="Default" />
       <updated>1664512642253</updated>
       <workItem from="1664512645263" duration="16060000" />
+      <workItem from="1664837680099" duration="321000" />
+      <workItem from="1664926853208" duration="223000" />
+      <workItem from="1665440900011" duration="1341000" />
     </task>
     <task id="LOCAL-00001" summary="Change the composer schema">
       <created>1664696726089</created>
@@ -73,7 +84,14 @@
       <option name="project" value="LOCAL" />
       <updated>1664701603444</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Update the piece schema">
+      <created>1664837992157</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1664837992157</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -104,6 +122,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Change the composer schema" />
-    <option name="LAST_COMMIT_MESSAGE" value="Change the composer schema" />
+    <MESSAGE value="Update the piece schema" />
+    <option name="LAST_COMMIT_MESSAGE" value="Update the piece schema" />
   </component>
 </project>

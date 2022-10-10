@@ -29,6 +29,11 @@ const Composer = mongoose.model('Composer', new mongoose.Schema({
         minlength: 2,
         maxlength: 10000,
     },
+    image: {
+        type: String,
+        minlength: 2,
+        maxlength: 255,
+    }
 }));
 
 function validateComposer(composer) {
@@ -38,6 +43,7 @@ function validateComposer(composer) {
         nationality: Joi.string().min(2).max(50).required(),
         website: Joi.string().min(2).max(255),
         biography: Joi.string().min(2).max(10000),
+        image: Joi.string().min(2).max(255),
     });
 
     return schema.validate(composer);

@@ -47,6 +47,7 @@ router.put('/:id', [auth, admin], async (req, res) => {
         recordingLink: req.body.recordingLink,
         publisher: req.body.publisher,
         scoreLink: req.body.scoreLink,
+        image:req.body.image,
     }, { new: true });
 
     if (!piece) return res.status(404).send('The piece with the given ID was not found.');
