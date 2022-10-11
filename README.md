@@ -11,6 +11,7 @@ cd client
 npm i
 npm start
 #后端启动
+cd server
 npm i
 npm start
 
