@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useRef } from "react";
 import {Link, Route, useParams} from "react-router-dom";
-import Card from "./Card";
-import "./Composer-mongodb.css";
+import Card from "../../Card";
+import "./Profile.css";
 import Forum from "../Forum/Forum";
 import Profile from "../Profile/Profile";
 
@@ -141,6 +141,13 @@ const AlbumItemsPage = () => {
                 photos to explore. Enjoy!
             </p>
             <div className="items-container">
+                <p>Composer Name: {albumId}</p>
+                <p>Nationality:</p>
+                <p>Introduction:</p>
+                <br/>
+                <h3>Featured works:</h3>
+                <br/>
+                <br/>
                 {items.map((item, index) => (
                     <div>
                     <Card key={item.id} onClick={() => onItemHandler(item.id, index)}>
@@ -174,7 +181,7 @@ const AlbumItemsPage = () => {
                             alt={`data pic`}
                         />
                         <div>
-                            <h1>#{itemFound.id}</h1>
+                            <h1>Repertoire{itemFound.id}</h1>
                             <h3>{itemFound.title}</h3>
                         </div>
 

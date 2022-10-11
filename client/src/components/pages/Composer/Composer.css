@@ -1,3 +1,19 @@
+
+.albums-container {
+    width: 1000px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(4, 35%);
+    column-gap: 4%;
+    padding-top: 100px;
+    column-gap: 5%;
+    row-gap: 25px;
+}
+
+.albums-card {
+    min-height: 198px;
+}
+
 .loading {
     background: rgba(0, 0, 0, 0.8);
     top: 0;
@@ -151,3 +167,4 @@
 card {
     padding: 50px;
 }
+

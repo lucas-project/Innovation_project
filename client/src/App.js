@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import Navbar from "./components/pages/Navbar/Navbar";
-import Composer from "./components/pages/Composer/Composer-mongodb";
+import Composer from "./components/pages/Composer/Composer";
 import Repertoire from "./components/pages/Repertoire/Repertoire";
 import Instrument from "./components/pages/Instrument/Instrument";
 import Recommendation from "./components/pages/Recommendation/Recommendation";
@@ -9,6 +9,7 @@ import Home from "./components/pages/Home/Home";
 import Sidebar from "./components/pages/Sidebar/Sidebar";
 import { Routes, Route, Link} from "react-router-dom";
 import Profile from "./components/pages/Profile/Profile";
+import ComposerMongodb from "./components/pages/Composer/Profile";
 
 
 const App = () => {
@@ -29,8 +30,7 @@ const App = () => {
           <Route path="/recommendation" element={<Recommendation />} />
           <Route path="/forum" element={<Forum />} />
           <Route path="/profile" element={<Profile />} />
-
-          {/*<Route path="/photos" element={<AlbumItemsPage />} />*/}
+          <Route path="composer/:albumId/photos" element={<ComposerMongodb />} />
       </Routes>
       
         <br/><br/><br/>

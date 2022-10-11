@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useRef } from "react";
 import { Link, useParams } from "react-router-dom";
 
-import Card from "../Composer/Card";
+import Card from "../../Card";
 
 import "./Instrument.css";
 
