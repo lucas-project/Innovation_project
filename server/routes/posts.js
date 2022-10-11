@@ -34,7 +34,12 @@ router.put('/:id', [auth, admin], async (req, res) => {
 
     const post = await Post.findByIdAndUpdate(req.params.id, {
         title: req.body.title,
-        body: req.body.body
+        body: req.body.body,
+        iframe: "<iframe\n" +
+            "src=\"https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2F20531316728%2Fposts%2F10154009990506729%2F&width=500&show_text=true&height=274&appId\"\n" +
+            "width=\"500\" height=\"300\" style={iframestyle} scrolling=\"no\" frameBorder=\"0\"\n" +
+            "allowFullScreen=\"true\"\n" +
+            "allow=\"autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share\"></iframe>"
     }, { new: true });
 
     if (!post) return res.status(404).send('The post with the given ID was not found.');
