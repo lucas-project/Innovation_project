@@ -8,6 +8,7 @@ const posts = require('./routes/posts');
 const comments = require('./routes/comments');
 const express = require('express');
 const app = express();
+const cors = require('cors');
 
 mongoose.connect('mongodb+srv://maye:2110301186@cluster0.csodksa.mongodb.net/?retryWrites=true&w=majority')
     // mongoose.connect('mongodb://localhost:27017/corelia')
@@ -15,6 +16,7 @@ mongoose.connect('mongodb+srv://maye:2110301186@cluster0.csodksa.mongodb.net/?re
     .catch(err => console.error('Could not connect to MongoDB...'));
 
 app.use(express.json());
+app.use(cors());
 app.use('/api/users', users);
 app.use('/api/auth', auth);
 app.use('/api/composers', composers);
