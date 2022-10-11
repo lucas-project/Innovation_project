@@ -6,8 +6,6 @@
   <component name="ChangeListManager">
     <list default="true" id="59dfec90-93b5-41dd-956c-8d393c8b7fc3" name="Changes" comment="Update the piece schema">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/server/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/server/package.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -55,7 +53,7 @@
       <workItem from="1664512645263" duration="16060000" />
       <workItem from="1664837680099" duration="321000" />
       <workItem from="1664926853208" duration="223000" />
-      <workItem from="1665440900011" duration="9431000" />
+      <workItem from="1665440900011" duration="10556000" />
     </task>
     <task id="LOCAL-00001" summary="Change the composer schema">
       <created>1664696726089</created>
@@ -99,7 +97,14 @@
       <option name="project" value="LOCAL" />
       <updated>1665467441734</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Update the piece schema">
+      <created>1665467716696</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1665467716696</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -116,7 +121,7 @@
                   <entry key="branch">
                     <value>
                       <list>
-                        <option value="local-work-lucas" />
+                        <option value="Server" />
                       </list>
                     </value>
                   </entry>
