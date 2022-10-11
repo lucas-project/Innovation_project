@@ -1,0 +1,244 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="7c003d22-b666-4e4f-82e9-be5f2c89ed56" name="Changes" comment="connect with latest server side">
+      <change afterPath="$PROJECT_DIR$/client/src/components/Card.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/components/Card.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/components/pages/Composer/Composer.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/components/pages/Composer/Composer.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/pages/Composer/Card.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/pages/Composer/Card.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/pages/Composer/Composer-mongodb.css" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/pages/Composer/Profile.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/pages/Composer/Composer-mongodb.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/pages/Composer/Profile.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/pages/Forum/Forum.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/pages/Forum/Forum.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/pages/Instrument/Instrument.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/pages/Instrument/Instrument.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/pages/Repertoire/Repertoire.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/pages/Repertoire/Repertoire.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/server/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/app.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/config/db.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/controller/composerController.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/middleware/authMiddleware.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/middleware/errorMiddleware.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/models/composer.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/models/composer.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/server/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/server/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/routes/composerRoutes.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/server.js" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="9cd42730b02be111c0d530dd967745041473cd67" />
+      </map>
+    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="RESET_MODE" value="HARD" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectId" id="2F9VII0yGP67METv2KOylPeqmSj" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
+    <property name="vue.rearranger.settings.migration" value="true" />
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="7c003d22-b666-4e4f-82e9-be5f2c89ed56" name="Changes" comment="" />
+      <created>1663904205488</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1663904205488</updated>
+      <workItem from="1663904207630" duration="1124000" />
+      <workItem from="1663913891267" duration="12184000" />
+      <workItem from="1663979544278" duration="956000" />
+      <workItem from="1663981038138" duration="6627000" />
+      <workItem from="1664065593286" duration="2666000" />
+      <workItem from="1664069021640" duration="2959000" />
+      <workItem from="1664186594236" duration="1753000" />
+      <workItem from="1664191495914" duration="957000" />
+      <workItem from="1664192477085" duration="49000" />
+      <workItem from="1664192660992" duration="6519000" />
+      <workItem from="1664199340515" duration="61000" />
+      <workItem from="1664199413400" duration="2480000" />
+      <workItem from="1664233428003" duration="1621000" />
+      <workItem from="1664250775634" duration="4000" />
+      <workItem from="1664257441084" duration="2176000" />
+      <workItem from="1664371788150" duration="8238000" />
+      <workItem from="1664503162004" duration="2842000" />
+      <workItem from="1664756148922" duration="10627000" />
+      <workItem from="1664771963546" duration="6451000" />
+      <workItem from="1664836594979" duration="2985000" />
+      <workItem from="1664857015448" duration="4085000" />
+      <workItem from="1664861536893" duration="9256000" />
+      <workItem from="1664953972296" duration="69000" />
+      <workItem from="1665051241643" duration="24268000" />
+      <workItem from="1665228340682" duration="99000" />
+      <workItem from="1665300629722" duration="3000" />
+      <workItem from="1665301000998" duration="1000" />
+      <workItem from="1665441035869" duration="4154000" />
+      <workItem from="1665459789667" duration="1417000" />
+    </task>
+    <task id="LOCAL-00001" summary="files restructured, all swipers fixed">
+      <created>1663904598170</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1663904598170</updated>
+    </task>
+    <task id="LOCAL-00002" summary="navigation bar added">
+      <created>1664066510482</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1664066510482</updated>
+    </task>
+    <task id="LOCAL-00003" summary="footer logo fixed">
+      <created>1664066991002</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1664066991002</updated>
+    </task>
+    <task id="LOCAL-00004" summary="small changes on styles">
+      <created>1664067831251</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1664067831251</updated>
+    </task>
+    <task id="LOCAL-00005" summary="Restructure project as client and server">
+      <created>1664069109574</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1664069109574</updated>
+    </task>
+    <task id="LOCAL-00006" summary="errorMiddleware.js added, async http request added">
+      <created>1664372349151</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1664372349151</updated>
+    </task>
+    <task id="LOCAL-00007" summary="mongodb connected">
+      <created>1664373828238</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1664373828238</updated>
+    </task>
+    <task id="LOCAL-00008" summary="rename files and folders, successfully applied dummy api in testing React router">
+      <created>1664796243278</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1664796243278</updated>
+    </task>
+    <task id="LOCAL-00009" summary="picture added to composer page">
+      <created>1664925270529</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1664925270529</updated>
+    </task>
+    <task id="LOCAL-00010" summary="repertoire page and instrument page template added">
+      <created>1664925708434</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1664925708434</updated>
+    </task>
+    <task id="LOCAL-00011" summary="independent styles applied to composer page, instrument page and repertoire page added">
+      <created>1665055620852</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1665055620852</updated>
+    </task>
+    <task id="LOCAL-00012" summary="twitter and facebook api integration testing success">
+      <created>1665105415581</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1665105415581</updated>
+    </task>
+    <task id="LOCAL-00013" summary="checkout point, to make composer page a album-like structure">
+      <created>1665120099175</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1665120099175</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="local-work-lucas" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+    <MESSAGE value="files restructured, all swipers fixed" />
+    <MESSAGE value="navigation bar added" />
+    <MESSAGE value="footer logo fixed" />
+    <MESSAGE value="small changes on styles" />
+    <MESSAGE value="Restructure project as client and server" />
+    <MESSAGE value="errorMiddleware.js added, async http request added" />
+    <MESSAGE value="mongodb connected" />
+    <MESSAGE value="rename files and folders, successfully applied dummy api in testing React router" />
+    <MESSAGE value="picture added to composer page" />
+    <MESSAGE value="repertoire page and instrument page template added" />
+    <MESSAGE value="independent styles applied to composer page, instrument page and repertoire page added" />
+    <MESSAGE value="twitter and facebook api integration testing success" />
+    <MESSAGE value="checkout point, to make composer page a album-like structure" />
+    <MESSAGE value="connect with latest server side" />
+    <option name="LAST_COMMIT_MESSAGE" value="connect with latest server side" />
+  </component>
+</project>

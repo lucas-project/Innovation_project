@@ -1,0 +1,101 @@
+Index: client/src/components/pages/Home/Home.js
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>import React from \"react\";\r\n\r\nimport TopBar from \"../../home-topBar\";\r\n\r\nimport HomeSlider from \"../../home-slider\";\r\n// Footer Components\r\nimport HomeFooterJoinUs from \"../../home-footer-joinUs\";\r\nimport Footer from \"../../Footer\";\r\nimport GlobalStyle from \"../../GlobalStyle\";\r\n\r\nimport HomePopularTag from \"../../home-popular-tag\";\r\nimport HomeRepertoire from \"../../home-repertoire\";\r\nimport HomeComposer from \"../../home-composer\";\r\nimport HomeInstrument from \"../../home-instrument\";\r\n\r\nconst home = () => {\r\n  return (\r\n   \r\n      <div className='App'>\r\n          <br/><br/><br/><br/><br/><br/><br/>\r\n      <header>\r\n        <GlobalStyle />\r\n        <TopBar />\r\n        <HomeSlider />\r\n      </header>\r\n\r\n      <main>\r\n\r\n        <HomePopularTag />\r\n        <HomeRepertoire />\r\n        <HomeComposer />\r\n        <HomeInstrument />\r\n      </main>\r\n\r\n      <footer>\r\n        <HomeFooterJoinUs />\r\n        <Footer />\r\n      </footer>\r\n    </div>\r\n    \r\n  );\r\n};\r\n\r\nexport default home;\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/client/src/components/pages/Home/Home.js b/client/src/components/pages/Home/Home.js
+--- a/client/src/components/pages/Home/Home.js	(revision 7b4667e42c7957567c63bf79560564d83ef681dc)
++++ b/client/src/components/pages/Home/Home.js	(date 1665110176612)
+@@ -26,7 +26,7 @@
+ 
+       <main>
+ 
+-        <HomePopularTag />
++        {/*<HomePopularTag />*/}
+         <HomeRepertoire />
+         <HomeComposer />
+         <HomeInstrument />
+Index: client/src/components/pages/Forum/Forum.js
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>import React from \"react\";\r\nimport Container from 'react-bootstrap/Container';\r\nimport Row from 'react-bootstrap/Row';\r\nimport Col from 'react-bootstrap/Col';\r\nimport 'bootstrap/dist/css/bootstrap.min.css';\r\nimport { Helmet } from \"react-helmet\";\r\n\r\n\r\nconst mystyle = {\r\n    marginLeft:\"10%\",\r\n    marginTop:\"15%\",\r\n    border:\"none\",\r\n    overflow:\"hidden\"\r\n};\r\nconst rowstyle = {\r\n    width:\"90%\",\r\n    height:\"auto\"\r\n}\r\n\r\nconst Forum = () => {\r\n    return (\r\n\r\n        <div style={{ position: \"absolute\", marginTop: \"70px\", fontSize: \"20px\" }}>\r\n            <Container>\r\n                <Row style={rowstyle}>\r\n                    <Col>\r\n                        <div>\r\n                        <iframe\r\n                        src=\"https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2F20531316728%2Fposts%2F10154009990506729%2F&width=500&show_text=true&height=274&appId\"\r\n                        width=\"500\" height=\"300\" style={mystyle} scrolling=\"no\" frameBorder=\"0\"\r\n                        allowFullScreen=\"true\"\r\n                        allow=\"autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share\"></iframe></div>\r\n                    </Col>\r\n                    <Col>\r\n                        <div>\r\n                        <iframe\r\n                        src=\"https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Fvicconcertorchestra%2Fposts%2Fpfbid0setWnySKyQHgdA1KpRLrgUCuXqQfVb95VuNr3D1QMEWUq4NJGjLTqWSDApYNxsbfl&show_text=true&width=500\"\r\n                        width=\"500\" height=\"532\" style={mystyle} scrolling=\"no\" frameBorder=\"0\"\r\n                        allowFullScreen=\"true\"\r\n                        allow=\"autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share\"></iframe></div>\r\n                    </Col>\r\n                    <Col>\r\n                        <div>\r\n                        <iframe\r\n                        src=\"https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2FAmlamusic%2Fposts%2Fpfbid02DTfo5brXefLqGnDo3bSXC2mA4c2EhoGWQB9KrDWeSGEG2XX6e62ikipvRfrPNWX3l&show_text=true&width=500\"\r\n                        width=\"500\" height=\"557\" style={mystyle} scrolling=\"no\" frameBorder=\"0\"\r\n                        allowFullScreen=\"true\"\r\n                        allow=\"autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share\"></iframe></div>\r\n                    </Col>\r\n                    <Col>\r\n                        <blockquote className=\"twitter-tweet\"><p lang=\"en\" dir=\"ltr\">Sunsets don&#39;t get much better\r\n                            than this one over <a\r\n                                href=\"https://twitter.com/GrandTetonNPS?ref_src=twsrc%5Etfw\">@GrandTetonNPS</a>. <a\r\n                                href=\"https://twitter.com/hashtag/nature?src=hash&amp;ref_src=twsrc%5Etfw\">#nature</a>\r\n                            <a href=\"https://twitter.com/hashtag/sunset?src=hash&amp;ref_src=twsrc%5Etfw\">#sunset</a> <a\r\n                                href=\"http://t.co/YuKy2rcjyU\">pic.twitter.com/YuKy2rcjyU</a></p>&mdash; US Department of\r\n                            the Interior (@Interior) <a\r\n                                href=\"https://twitter.com/Interior/status/463440424141459456?ref_src=twsrc%5Etfw\">May 5,\r\n                                2014</a></blockquote>\r\n                        <Helmet>\r\n                            <script async src=\"https://platform.twitter.com/widgets.js\" charSet=\"utf-8\"></script>\r\n                        </Helmet>\r\n                    </Col>\r\n                </Row>\r\n                <Row style={rowstyle}>\r\n                    <Col>1 of 3</Col>\r\n                    <Col>2 of 3</Col>\r\n                    <Col>3 of 3</Col>\r\n                </Row>\r\n            </Container>\r\n        </div>\r\n\r\n    );\r\n};\r\n\r\nexport default Forum;\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/client/src/components/pages/Forum/Forum.js b/client/src/components/pages/Forum/Forum.js
+--- a/client/src/components/pages/Forum/Forum.js	(revision 7b4667e42c7957567c63bf79560564d83ef681dc)
++++ b/client/src/components/pages/Forum/Forum.js	(date 1665105934718)
+@@ -47,6 +47,9 @@
+                         allowFullScreen="true"
+                         allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe></div>
+                     </Col>
++
++                </Row>
++                <Row style={rowstyle}>
+                     <Col>
+                         <blockquote className="twitter-tweet"><p lang="en" dir="ltr">Sunsets don&#39;t get much better
+                             than this one over <a
+@@ -61,11 +64,27 @@
+                             <script async src="https://platform.twitter.com/widgets.js" charSet="utf-8"></script>
+                         </Helmet>
+                     </Col>
+-                </Row>
+-                <Row style={rowstyle}>
+-                    <Col>1 of 3</Col>
+-                    <Col>2 of 3</Col>
+-                    <Col>3 of 3</Col>
++                    <Col>
++                        <blockquote className="twitter-tweet"><p lang="en" dir="ltr">Go <a
++                            href="https://twitter.com/JSalke?ref_src=twsrc%5Etfw">@JSalke</a> and <a
++                            href="https://twitter.com/AmazonStudios?ref_src=twsrc%5Etfw">@AmazonStudios</a>! <a
++                            href="https://t.co/ycGoNE2Zne">https://t.co/ycGoNE2Zne</a></p>&mdash; Jeff Bezos
++                            (@JeffBezos) <a
++                                href="https://twitter.com/JeffBezos/status/1577732519856082944?ref_src=twsrc%5Etfw">October
++                                5, 2022</a></blockquote>
++                        <Helmet>
++                            <script async src="https://platform.twitter.com/widgets.js" charSet="utf-8"></script>
++                        </Helmet>
++                    </Col>
++                    <Col>
++                        <blockquote className="twitter-tweet"><p lang="en" dir="ltr">So damn cool. Congrats to MiMi and
++                            the whole Mars helicopter team. <a
++                                href="https://t.co/8KWQoLbtHV">https://t.co/8KWQoLbtHV</a></p>&mdash; Jeff Bezos
++                            (@JeffBezos) <a
++                                href="https://twitter.com/JeffBezos/status/1519789439224012802?ref_src=twsrc%5Etfw">April
++                                28, 2022</a></blockquote>
++                        <Helmet>
++                        <script async src="https://platform.twitter.com/widgets.js" charSet="utf-8"></script></Helmet></Col>
+                 </Row>
+             </Container>
+         </div>
+Index: client/src/components/pages/NavbarItems.js
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>const navbarItems = [\r\n  {\r\n    title: \"Home\",\r\n    link: \"/home\",\r\n  },\r\n  {\r\n    title: \"Composer\",\r\n    link: \"/Composer\",\r\n  },\r\n  {\r\n    title: \"Repertoire\",\r\n    link: \"/Repertoire\",\r\n  },\r\n  {\r\n    title: \"Instrument\",\r\n    link: \"/Instrument\",\r\n  },\r\n  {\r\n    title: \"Recommendation\",\r\n    link: \"/Recommendation\",\r\n  },\r\n  {\r\n    title: \"Forum\",\r\n    link: \"/Forum\",\r\n  },\r\n\r\n];\r\n\r\nexport default navbarItems;\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/client/src/components/pages/NavbarItems.js b/client/src/components/pages/NavbarItems.js
+--- a/client/src/components/pages/NavbarItems.js	(revision 7b4667e42c7957567c63bf79560564d83ef681dc)
++++ b/client/src/components/pages/NavbarItems.js	(date 1665110495229)
+@@ -1,9 +1,5 @@
+ const navbarItems = [
+   {
+-    title: "Home",
+-    link: "/home",
+-  },
+-  {
+     title: "Composer",
+     link: "/Composer",
+   },
+@@ -22,7 +18,7 @@
+   {
+     title: "Forum",
+     link: "/Forum",
+-  },
++  }
+ 
+ ];
+ 
