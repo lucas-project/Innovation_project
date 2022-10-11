@@ -51,6 +51,7 @@ router.get('/piece/:key', async (req, res) => {
         {
             "$or": [
                 { name: { $regex: reg } },
+                { year: { $regex: reg } },
                 { instruments: { $regex: reg } }
             ]
         }

@@ -5,15 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="59dfec90-93b5-41dd-956c-8d393c8b7fc3" name="Changes" comment="Update the piece schema">
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_30_09_2022_8_22_pm_[Changes]/shelved.patch" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_30_09_2022_8_22_pm__Changes_.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2_10_2022_6_37_pm_[Changes]/shelved.patch" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2_10_2022_6_37_pm__Changes_.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/models/composer.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/models/composer.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/models/piece.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/models/piece.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/routes/composers.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/routes/composers.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/routes/pieces.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/routes/pieces.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/server/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/server/package.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -61,7 +55,7 @@
       <workItem from="1664512645263" duration="16060000" />
       <workItem from="1664837680099" duration="321000" />
       <workItem from="1664926853208" duration="223000" />
-      <workItem from="1665440900011" duration="1341000" />
+      <workItem from="1665440900011" duration="9431000" />
     </task>
     <task id="LOCAL-00001" summary="Change the composer schema">
       <created>1664696726089</created>
@@ -91,7 +85,21 @@
       <option name="project" value="LOCAL" />
       <updated>1664837992157</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Update the piece schema">
+      <created>1665442259156</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1665442259156</updated>
+    </task>
+    <task id="LOCAL-00006" summary="Update the piece schema">
+      <created>1665467441734</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1665467441734</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -108,7 +116,7 @@
                   <entry key="branch">
                     <value>
                       <list>
-                        <option value="main" />
+                        <option value="local-work-lucas" />
                       </list>
                     </value>
                   </entry>
