@@ -1,32 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="7c003d22-b666-4e4f-82e9-be5f2c89ed56" name="Changes" comment="connect with latest server side">
-      <change afterPath="$PROJECT_DIR$/client/src/components/Card.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/components/Card.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/components/pages/Composer/Composer.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/components/pages/Composer/Composer.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/index.js" afterDir="false" />
+    <list default="true" id="7c003d22-b666-4e4f-82e9-be5f2c89ed56" name="Changes" comment="testing server side data">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/pages/Composer/Card.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/pages/Composer/Card.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/pages/Composer/Composer-mongodb.css" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/pages/Composer/Profile.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/pages/Composer/Composer-mongodb.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/pages/Composer/Profile.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/pages/Forum/Forum.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/pages/Forum/Forum.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/pages/Instrument/Instrument.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/pages/Instrument/Instrument.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/pages/Composer/Composer.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/pages/Composer/Composer.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/pages/NavbarItems.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/pages/NavbarItems.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/src/components/pages/Repertoire/Repertoire.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/pages/Repertoire/Repertoire.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/server/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/README.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/app.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/config/db.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/controller/composerController.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/middleware/authMiddleware.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/middleware/errorMiddleware.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/models/composer.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/models/composer.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/server/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/server/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/server/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/server/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/routes/composerRoutes.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/server.js" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -36,7 +19,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="9cd42730b02be111c0d530dd967745041473cd67" />
+        <entry key="$PROJECT_DIR$" value="local-work-lucas" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -102,6 +85,7 @@
       <workItem from="1665301000998" duration="1000" />
       <workItem from="1665441035869" duration="4154000" />
       <workItem from="1665459789667" duration="1417000" />
+      <workItem from="1665464907225" duration="3476000" />
     </task>
     <task id="LOCAL-00001" summary="files restructured, all swipers fixed">
       <created>1663904598170</created>

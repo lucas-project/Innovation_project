@@ -10,7 +10,7 @@ const Composer = () => {
     useEffect(() => {
         setIsLoading(true);
         const fetchData = async () => {
-            const result = await fetch("https://jsonplaceholder.typicode.com/albums");
+            const result = await fetch("http://localhost:3000/api/composers");
             const resultJson = await result.json();
             const sliceResult = resultJson.slice(0, 10);
             setAlbums(sliceResult);
@@ -29,17 +29,18 @@ const Composer = () => {
             <div className="albums-container">
                 {albums.map(album => (
                     <Link
-                        to={`/${album.id}/photos`}
-                        key={album.id}
+                        to={`/${album.name}`}
+                        key={album.name}
                         style={{ textDecoration: "none", color: "black" }}
                     >
                         <Card className="albums-card">
                             <img
-                                src={"https://via.placeholder.com/168x118.png"}
+                                // src={"https://via.placeholder.com/168x118.png"}
+                                src={album.image}
                                 alt={`data thumbnail`}
                             />
-                            <h5>Composer {album.id}</h5>
-                            <h6>Composer {album.title}</h6>
+                            <h5>Composer {album.name}</h5>
+                            <h6>Composer {album.nationality}</h6>
                         </Card>
                     </Link>
                 ))}

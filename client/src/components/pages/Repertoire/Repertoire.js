@@ -11,20 +11,21 @@ const AlbumItemsPage = () => {
     const [items, setItems] = useState([]);
     const [isLoading, setIsLoading] = useState(false);
     const [isShowing, setIsShowing] = useState(false);
-    const { albumId } = useParams();
+    const { name } = useParams();
 
     useEffect(() => {
         setIsLoading(true);
         const fetchData = async () => {
             const result = await fetch(
-                `https://jsonplaceholder.typicode.com/photos`
+                // `https://jsonplaceholder.typicode.com/photos`
+                `http://localhost:3000/api/composers`
             );
             const resultJson = await result.json();
             setItems(resultJson);
             setIsLoading(false);
         };
         fetchData();
-    }, [itemFound, albumId]);
+    }, [itemFound, name]);
 
     const onItemHandler = (value, index) => {
         setItemFound(items.find(item => item.id === value));
@@ -85,18 +86,18 @@ const AlbumItemsPage = () => {
                 </div>
             )}
             <p className="page-title-message">
-                You have chosen <span>Album {albumId}</span>. Total of {items.length}{" "}
+                You have chosen <span>Album {name}</span>. Total of {items.length}{" "}
                 photos to explore. Enjoy!
             </p>
             <div className="items-container">
                 {items.map((item, index) => (
-                    <Card key={item.id} onClick={() => onItemHandler(item.id, index)}>
+                    <Card key={item.id} onClick={() => onItemHandler(item.biography, index)}>
                         <img
                             src={"https://via.placeholder.com/100x70.png"}
                             alt={`data thumbnail`}
                         />
-                        <h6>#{item.id}</h6>
-                        <h6>{item.title}</h6>
+                        <h6>#{item.name}</h6>
+                        <h6>{item.nationality}</h6>
                     </Card>
                 ))}
             </div>
@@ -114,8 +115,8 @@ const AlbumItemsPage = () => {
                             alt={`data pic`}
                         />
                         <div>
-                            <h1>#{itemFound.id}</h1>
-                            <h3>{itemFound.title}</h3>
+                            <h1>#{itemFound.name}</h1>
+                            <h3>{itemFound.nationality}</h3>
                         </div>
                     </div>
                     <button className="forwardButton" onClick={forwardHandler}>

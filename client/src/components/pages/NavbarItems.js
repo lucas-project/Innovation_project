@@ -1,7 +1,7 @@
 const navbarItems = [
   {
     title: "Composer",
-    link: "/Composer",
+    link: "/api/composers",
   },
   {
     title: "Repertoire",

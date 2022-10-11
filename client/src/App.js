@@ -24,13 +24,13 @@ const App = () => {
 
       <Routes>
         <Route path="/" element={<Home />} />
-          <Route path="/composer" element={<Composer />} />
+          <Route path="/api/composers" element={<Composer />} />
           <Route path="/repertoire" element={<Repertoire />} />
           <Route path="/instrument" element={<Instrument />} />
           <Route path="/recommendation" element={<Recommendation />} />
           <Route path="/forum" element={<Forum />} />
           <Route path="/profile" element={<Profile />} />
-          <Route path="composer/:albumId/photos" element={<ComposerMongodb />} />
+          <Route path="/composer/:id" element={<ComposerMongodb />} />
       </Routes>
       
         <br/><br/><br/>
