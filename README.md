@@ -12,6 +12,6 @@ npm i
 npm start
 #后端启动
 npm i
-npx run server
+npm start
 
 
