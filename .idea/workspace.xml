@@ -4,7 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="59dfec90-93b5-41dd-956c-8d393c8b7fc3" name="Changes" comment="Update the forum schema" />
+    <list default="true" id="59dfec90-93b5-41dd-956c-8d393c8b7fc3" name="Changes" comment="Update the posts.js">
+      <change afterPath="$PROJECT_DIR$/server/models/recommend.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/routes/recommends.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/models/composer.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/models/composer.js" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -51,7 +57,8 @@
       <workItem from="1664512645263" duration="16060000" />
       <workItem from="1664837680099" duration="321000" />
       <workItem from="1664926853208" duration="223000" />
-      <workItem from="1665440900011" duration="10871000" />
+      <workItem from="1665440900011" duration="12523000" />
+      <workItem from="1665532961541" duration="11673000" />
     </task>
     <task id="LOCAL-00001" summary="Change the composer schema">
       <created>1664696726089</created>
@@ -109,7 +116,14 @@
       <option name="project" value="LOCAL" />
       <updated>1665527922310</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="Update the posts.js">
+      <created>1665528325848</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1665528325848</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -142,6 +156,7 @@
     <MESSAGE value="Change the composer schema" />
     <MESSAGE value="Update the piece schema" />
     <MESSAGE value="Update the forum schema" />
-    <option name="LAST_COMMIT_MESSAGE" value="Update the forum schema" />
+    <MESSAGE value="Update the posts.js" />
+    <option name="LAST_COMMIT_MESSAGE" value="Update the posts.js" />
   </component>
 </project>
