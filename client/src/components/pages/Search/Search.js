@@ -21,15 +21,20 @@ const Search = () => {
     const [searchArray, setSearchArray] = useState(["","",""]);
     const [URL,setURL] = useState([""]);
     const [info,setInfo] = useState([]);
+    const [searchby,setSearchby] =useState([]);
     // const [filterInput1, setFilterInput1] = useState('');
     // const [filterInput2, setFilterInput2] = useState('');
     // const [searchBy, setSearchBy] = useState('Any');
+    // const onInputCommitHandler(){
+
+    // }
     const searchItems = (searchValue,type) => {
         let newSearchArray;
         if (type === "searchInput"){
             newSearchArray = [...searchArray];
             newSearchArray[0] = searchValue;
             setSearchArray(newSearchArray);
+            // setFilteredOptions(searchValue);
         }
         if (type === "filterInput1"){
             newSearchArray = [...searchArray];
@@ -50,18 +55,19 @@ const Search = () => {
     };
     const onClickSearchHandler = () => {
         generateSearchURL(searchArray);
+        setSearchby(searchArray[2]);
         console.log("clicked search",searchArray);
         // useEffect(() =>{
             axios
-            // .get('https://99b782be-a96c-4d7b-9225-d8515f657ddf.mock.pstmn.io/Search'+URL,{
-                .get('http://localhost:3000/api/composers')
+            .get('https://99b782be-a96c-4d7b-9225-d8515f657ddf.mock.pstmn.io/Search'+URL,{
+                // .get('http://localhost:3000/api/composers')
         //     params:{
         //         input:searchArray[0],
         //         nationality:searchArray[1],
         //         Instrument:searchArray[2],
         //         searchby:searchArray[3]
         //     }
-        // })
+        })
             .then(res =>{
                 setInfo(res.data);
                     console.log(res);
@@ -71,7 +77,7 @@ const Search = () => {
                     console.log(res.statusText);
             })
             .catch(err =>{
-                console.log("Err from get search result")
+                console.log("Error from getting data: "+err)
             })
         // });
     };
@@ -156,9 +162,10 @@ Dropdown
 </Dropdown.Menu>
 </Dropdown>
 </div> */}
-                                <div class="col-md-6">
+                                <div class="col-md-6" >
                                     {/* // onChange={() => setSearchInput(searchInput)}  */}
                                     {/* onChange={(e) => searchItems(e.target.value)}  */}
+                                    {/* options={options} */}
                                     <input type="text" class="form-control" onChange={(e) => searchItems(e.target.value, "searchInput")} placeholder="Enter keywords..." />
                                 </div>
                                 <div class="col-md-3">
@@ -177,16 +184,21 @@ Dropdown
                                     <div id="advancedSearch">
                                         <div class="card card-body">
                                             <div class="row">
-                                                <div class="col-md-6">
+                                                
                                                     {searchArray[2] == "Piece" ?(
-                                                    <input type="text" placeholder="Instrument" class="form-control" onChange={(e) => searchItems(e.target.value, "filterInput1")} />
+                                                    <div class="col-md-12">
+                                                    <input type="text" placeholder="Please input the instrument you want to search..." class="form-control" onChange={(e) => searchItems(e.target.value, "filterInput1")} />
+                                                    <input type="text" disabled class="form-control" placeholder="Nationality can be only searched with name." onChange={(e) => searchItems(e.target.value, "filterInput1")} />
+                                                    </div>
                                                     ):(
-                                                    <input type="text" class="form-control" placeholder="Nationality" onChange={(e) => searchItems(e.target.value, "filterInput1")} />
+                                                    <div class="col-md-12">
+                                                    <input type="text" disabled placeholder="Instruments can be only searched with piece." class="form-control" onChange={(e) => searchItems(e.target.value, "filterInput1")} />
+                                                    <input type="text" class="form-control" placeholder="Please input the nationality you want to search..." onChange={(e) => searchItems(e.target.value, "filterInput1")} />
+                                                    </div>
                                                     )
-                                                    
                                                     }
                                                     {/* <input type="text" placeholder="Nationality" class="form-control" onChange={(e) => searchItems(e.target.value, "filterInput1")} /> */}
-                                                </div>
+                                                
                                                 {/* <div class="col-md-6">
                                                     <input type="text" class="form-control" placeholder="Instrument" onChange={(e) => searchItems(e.target.value, "filterInput2")} />
                                                 </div> */}
@@ -202,18 +214,21 @@ Dropdown
         </StyledSearch>
         <Container style={{ position: "absolute", marginTop: "120px", fontSize: "20px" }}>
           <Row class="d-flex row">
-            {/* {info.length > 1? ( */}
-                {info.map((item) =>{
+            {searchby == "Name" ? (
+                info.map((item) =>{
                     console.log("mapped items");
                     return(
                         <div class="col col-3 d-flex justify-content-center">
                         {/* <div style={{ position: "absolute", margin: "170px", fontSize: "20px" }}> */}
                             <Card>
-                            <Card.Img variant="top" src={FluteImg} alt="https://www.classical-music.com/features/works/the-best-flute-solos-in-orchestral-works/"/>
+                            <Card.Img variant="top" src={item.image} alt="Image of the composer."/>
                             <Card.Body class="card-body">
                                 <Card.Title>{item.name}</Card.Title>
                                 <Card.Text>
-                                {item.nationality}
+                                Nationality: {item.nationality}.<br></br>
+                                Date: {item.date}.<br></br>
+                                Personal website: {item.website}.<br></br>
+                                Biography: {item.biography}.<br></br>
                                 </Card.Text>
                                 {/* <Link to='/recommendation/ailis'> */}
                                 <Button variant="primary" class="mt-auto btn" >View more details.</Button>
@@ -223,16 +238,36 @@ Dropdown
                         {/* </div> */}
                         </div> 
                     )
-                }
-                )}
-            {/* ):(searchArray.map((item) =>{
-                return(
-                    <h2>Your result will be displaying here.</h2>
+                })
+                ):(info.map((item) =>{
+                    return(
+                        <div class="col col-3 d-flex justify-content-center">
+                        {/* <div style={{ position: "absolute", margin: "170px", fontSize: "20px" }}> */}
+                            <Card>
+                            <Card.Img variant="top" src={item.image} alt="Image for this piece"/>
+                            <Card.Body class="card-body">
+                                <Card.Title>{item.name}</Card.Title>
+                                <Card.Text>
+                                Composer: {item.composer.name}.<br></br>
+                                Duration: {item.duration} mins.<br></br>
+                                Year: {item.year}<br></br>
+                                Instruments: {item.instrments}.<br></br>
+                                Publisher: {item.publisher}.<br></br>
+                                Score Link: {item.scoreLink}.<br></br>
+                                </Card.Text>
+                                {/* <Link to='/recommendation/ailis'> */}
+                                <a href={item.recordingLink}>
+                                <Button variant="primary" class="mt-auto btn">Explore now!</Button>
+                                </a>
+                                {/* </Link> */}
+                            </Card.Body>
+                            </Card>
+                        {/* </div> */}
+                        </div> 
+                    )
+                    })
                 )
-            })
-
-            )
-            } */}
+            }
           {/* {info.map(item => (
             <div class="col col-3 d-flex justify-content-center">
              <div style={{ position: "absolute", margin: "170px", fontSize: "20px" }}>
