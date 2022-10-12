@@ -5,7 +5,7 @@ import styled from "styled-components";
 import Collapse from 'react-bootstrap/Collapse';
 import { Link } from "react-router-dom";
 import Form from 'react-bootstrap/Form';
-import { useNavigate} from "react-router-dom";
+import {useNavigate} from "react-router-dom";
 import axios from 'axios';
 import Card from 'react-bootstrap/Card';
 //import { search } from '../../../../../server/routes/search';
@@ -18,10 +18,11 @@ import Container from 'react-bootstrap/Container';
 
 const Search = () => {
     const navigate = useNavigate();
-    const [searchArray, setSearchArray] = useState(["","",""]);
+    const [searchArray, setSearchArray] = useState(["","","composer"]);
     const [URL,setURL] = useState([""]);
     const [info,setInfo] = useState([]);
     const [searchby,setSearchby] =useState([]);
+    const [inputarea,setInputarea] = useState([]);
     // const [filterInput1, setFilterInput1] = useState('');
     // const [filterInput2, setFilterInput2] = useState('');
     // const [searchBy, setSearchBy] = useState('Any');
@@ -42,7 +43,9 @@ const Search = () => {
             setSearchArray(newSearchArray);
         }
         if (type === "searchBy"){
+            setInputarea("");
             newSearchArray = [...searchArray];
+            newSearchArray[1] = "";
             newSearchArray[2] = searchValue;
             setSearchArray(newSearchArray);
             console.log("recognize search by");
@@ -59,22 +62,23 @@ const Search = () => {
         console.log("clicked search",searchArray);
         // useEffect(() =>{
             axios
-            .get('https://99b782be-a96c-4d7b-9225-d8515f657ddf.mock.pstmn.io/Search'+URL,{
-                // .get('http://localhost:3000/api/composers')
-        //     params:{
-        //         input:searchArray[0],
-        //         nationality:searchArray[1],
-        //         Instrument:searchArray[2],
-        //         searchby:searchArray[3]
-        //     }
-        })
+            .get('https://99b782be-a96c-4d7b-9225-d8515f657ddf.mock.pstmn.io'+URL
+            //     .get('http://localhost:3000/api'+URL,{
+            // params:{
+            //     input:searchArray[0],
+            //     filter:searchArray[1],
+            //     searchby:searchArray[2]
+            // }
+        // }
+        )
             .then(res =>{
                 setInfo(res.data);
-                    console.log(res);
-                    console.log(res.data);
-                    console.log(res.data.name);
-                    console.log(res.status);
-                    console.log(res.statusText);
+                console.log(info,"this is info");
+                    // console.log(res);
+                    // console.log(res.data);
+                    // console.log(res.data.name);
+                    // console.log(res.status);
+                    // console.log(res.statusText);
             })
             .catch(err =>{
                 console.log("Error from getting data: "+err)
@@ -82,7 +86,7 @@ const Search = () => {
         // });
     };
     const generateSearchURL = (newValue) => {
-        const URL = `?keywords=${newValue[0]}+${newValue[1]}&Searchby=${newValue[2]}`;
+        const URL = `/search/${newValue[2]}/${newValue[0]}/${newValue[1]}`;//searchby input filter
         setURL(URL);
         console.log(newValue,searchArray,URL);
         navigate(URL);
@@ -147,8 +151,8 @@ Dropdown
 <Dropdown.Item href="#/a">By Year of Pieceee</Dropdown.Item>
 </DropdownButton> */}
                                     <Form.Select aria-label="Default select example" onClick={(e) => searchItems(e.target.value, "searchBy")}>
-                                        <option value="Name">Search By Name</option>
-                                        <option value="Piece">Search By Piece</option>
+                                        <option value="composer">Search By Composer</option>
+                                        <option value="piece">Search By Piece</option>
                                         {/* <option value="Year">Search By Year Of Piece</option> */}
                                     </Form.Select>
                                 </div>
@@ -184,15 +188,14 @@ Dropdown
                                     <div id="advancedSearch">
                                         <div class="card card-body">
                                             <div class="row">
-                                                
-                                                    {searchArray[2] == "Piece" ?(
+                                                    {searchArray[2] === "piece" ?(
                                                     <div class="col-md-12">
                                                     <input type="text" placeholder="Please input the instrument you want to search..." class="form-control" onChange={(e) => searchItems(e.target.value, "filterInput1")} />
-                                                    <input type="text" disabled class="form-control" placeholder="Nationality can be only searched with name." onChange={(e) => searchItems(e.target.value, "filterInput1")} />
+                                                    <input value={inputarea} type="text" disabled class="form-control" placeholder="Nationality can be only searched with name." onChange={(e) => searchItems(e.target.value, "filterInput1")} />
                                                     </div>
                                                     ):(
                                                     <div class="col-md-12">
-                                                    <input type="text" disabled placeholder="Instruments can be only searched with piece." class="form-control" onChange={(e) => searchItems(e.target.value, "filterInput1")} />
+                                                    <input type="text" value={inputarea} disabled placeholder="Instruments can be only searched with piece." class="form-control" onChange={(e) => searchItems(e.target.value, "filterInput1")} />
                                                     <input type="text" class="form-control" placeholder="Please input the nationality you want to search..." onChange={(e) => searchItems(e.target.value, "filterInput1")} />
                                                     </div>
                                                     )
@@ -214,11 +217,11 @@ Dropdown
         </StyledSearch>
         <Container style={{ position: "absolute", marginTop: "120px", fontSize: "20px" }}>
           <Row class="d-flex row">
-            {searchby == "Name" ? (
+            {searchby === "composer" ? (
                 info.map((item) =>{
                     console.log("mapped items");
                     return(
-                        <div class="col col-3 d-flex justify-content-center">
+                        <div class="col col-4 d-flex justify-content-center">
                         {/* <div style={{ position: "absolute", margin: "170px", fontSize: "20px" }}> */}
                             <Card>
                             <Card.Img variant="top" src={item.image} alt="Image of the composer."/>
@@ -231,8 +234,9 @@ Dropdown
                                 Biography: {item.biography}.<br></br>
                                 </Card.Text>
                                 {/* <Link to='/recommendation/ailis'> */}
+                                <Link to = {`/api/composers/${item.id}`}>
                                 <Button variant="primary" class="mt-auto btn" >View more details.</Button>
-                                {/* </Link> */}
+                                </Link>
                             </Card.Body>
                             </Card>
                         {/* </div> */}
@@ -241,7 +245,7 @@ Dropdown
                 })
                 ):(info.map((item) =>{
                     return(
-                        <div class="col col-3 d-flex justify-content-center">
+                        <div class="col col-4 d-flex justify-content-center">
                         {/* <div style={{ position: "absolute", margin: "170px", fontSize: "20px" }}> */}
                             <Card>
                             <Card.Img variant="top" src={item.image} alt="Image for this piece"/>

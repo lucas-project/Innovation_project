@@ -14,6 +14,7 @@ import "bootstrap/dist/js/bootstrap.bundle.min";
 import Ailis from "./components/pages/Recommendation/Ailis";
 import Flute from "./components/pages/Instrument/Flute";
 import Search from "./components/pages/Search/Search";
+import InstrumentChild from "./components/pages/Instrument/InstrumentChild";
 
 
 const App = () => {
@@ -34,9 +35,11 @@ const App = () => {
         <Route path="/instrument" element={<Instrument />} />
         <Route path="/recommendation" element={<Recommendation />} />
         <Route path="/forum" element={<Forum />} />
+        
         <Route path="/recommendation/ailis" element={<Ailis />} />
-        <Route path="/search" element={<Search />} />
+        <Route path="/search/*" element={<Search />} />
         <Route path="/recommendation/flute" element={<Flute />} />
+        <Route path="/instrument/:instrument" element={<InstrumentChild />} />
 
 
       </Routes>

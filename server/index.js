@@ -8,9 +8,7 @@ const posts = require('./routes/posts');
 const comments = require('./routes/comments');
 const express = require('express');
 const app = express();
-var cors = require('cors');
-
-
+const cors = require('cors');
 
 mongoose.connect('mongodb+srv://maye:2110301186@cluster0.csodksa.mongodb.net/?retryWrites=true&w=majority')
     // mongoose.connect('mongodb://localhost:27017/corelia')

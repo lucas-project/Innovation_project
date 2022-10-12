@@ -5,27 +5,27 @@ const navbarItems = [
   },
   {
     title: "Composer",
-    link: "/Composer",
+    link: "/api/composer",
   },
   {
     title: "Repertoire",
-    link: "/Repertoire",
+    link: "/repertoire",
   },
   {
     title: "Instrument",
-    link: "/Instrument",
+    link: "/instrument",
   },
   {
     title: "Recommendation",
-    link: "/Recommendation",
+    link: "/recommendation",
   },
   {
     title: "Forum",
-    link: "/Forum",
+    link: "/forum",
   },
   {
     title: "Search",
-    link: "/Search",
+    link: "/search",
   },
 
 ];
