@@ -1,15 +1,26 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="7c003d22-b666-4e4f-82e9-be5f2c89ed56" name="Changes" comment="testing server side data">
+    <list default="true" id="7c003d22-b666-4e4f-82e9-be5f2c89ed56" name="Changes" comment="composers data from backend fetch successfully, repertoire needed to be done in next stage">
+      <change afterPath="$PROJECT_DIR$/client/src/components/pages/Instrument/Flute.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/components/pages/Instrument/InstrumentChild.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/components/pages/Recommendation/Ailis.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/components/pages/Recommendation/Recommendation.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/components/pages/Search/Search.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/img/Nicola.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/img/ailis.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/img/clarinet.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/img/flute.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_07_10_2022_1_50_pm__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_07_10_2022_1_50_pm__Changes_.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/client/public/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/App.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/src/components/pages/Composer/Composer.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/pages/Composer/Composer.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/pages/Composer/Profile.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/pages/Composer/Profile.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/pages/Instrument/Instrument.css" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/pages/Instrument/Instrument.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/pages/Instrument/Instrument.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/pages/Instrument/Instrument.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/src/components/pages/NavbarItems.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/pages/NavbarItems.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/pages/Repertoire/Repertoire.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/pages/Repertoire/Repertoire.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/server/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/server/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/pages/Recommendation/Recommendation.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/pages/Recommendation/Recommendation.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -86,6 +97,7 @@
       <workItem from="1665441035869" duration="4154000" />
       <workItem from="1665459789667" duration="1417000" />
       <workItem from="1665464907225" duration="3476000" />
+      <workItem from="1665556453635" duration="1187000" />
     </task>
     <task id="LOCAL-00001" summary="files restructured, all swipers fixed">
       <created>1663904598170</created>

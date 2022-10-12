@@ -1,135 +1,166 @@
-import React, { useState, useEffect, useRef } from "react";
-import { Link, useParams } from "react-router-dom";
+import React, { useState } from "react";
+import Button from 'react-bootstrap/Button';
+import Card from 'react-bootstrap/Card';
+import Container from 'react-bootstrap/Container';
+import Row from 'react-bootstrap/Row';
 
-import Card from "../../Card";
-
+import FluteImg from '../../../img/flute.jpg';
+import ClarinetImg from '../../../img/clarinet.jpg';
 import "./Instrument.css";
+import { useNavigate } from "react-router-dom";
+import InstrumentChild from "../../pages/Instrument/InstrumentChild";
 
-const AlbumItemsPage = () => {
-    const [itemFound, setItemFound] = useState();
-    const selectedCardIndex = useRef();
+const Instrument = () => {
 
-    const [items, setItems] = useState([]);
-    const [isLoading, setIsLoading] = useState(false);
-    const [isShowing, setIsShowing] = useState(false);
-
-    const { albumId } = useParams();
-
-    useEffect(() => {
-        setIsLoading(true);
-        const fetchData = async () => {
-            const result = await fetch(
-                `https://jsonplaceholder.typicode.com/photos`
-            );
-            const resultJson = await result.json();
-            setItems(resultJson);
-            setIsLoading(false);
-        };
-        fetchData();
-    }, [itemFound, albumId]);
-
-    const onItemHandler = (value, index) => {
-        setItemFound(items.find(item => item.id === value));
-        // console.log(itemFound.current);
-        selectedCardIndex.current = index;
-        console.log("on", selectedCardIndex.current);
-        setIsShowing(true);
-    };
-
-    const forwardHandler = () => {
-        console.log("init forward", selectedCardIndex.current);
-        selectedCardIndex.current += 1;
-        console.log("after forward", selectedCardIndex.current);
-
-        if (selectedCardIndex.current < items.length) {
-            setItemFound(
-                items.find((item, index) => index === selectedCardIndex.current)
-            );
-            console.log("get forward item", itemFound);
-        } else {
-            setIsShowing(false);
-            return;
+        let navigate = useNavigate(); 
+        const FluteRoute = () =>{ 
+        let path = '/instrument/flute'; 
+        navigate(path);
         }
-    };
+        const [URL,setURL] = useState([]);
+        // const [info,setInfo] = useState([]);
 
-    const backwardHandler = () => {
-        console.log("init backward", selectedCardIndex.current);
-        selectedCardIndex.current -= 1;
-        console.log("after backward", selectedCardIndex.current);
-
-        if (selectedCardIndex.current >= 0) {
-            // itemFound.current = items.find(
-            //   (item, index) => index === selectedCardIndex.current
-            // );
-            setItemFound(
-                items.find((item, index) => index === selectedCardIndex.current)
-            );
-            console.log("get backward item", itemFound);
-        } else {
-            setIsShowing(false);
-            return;
+        const onClickBrowseHandler= (e) =>{
+            // setInfo(e.target.value);
+            const URL = `${e.target.value}`;
+            setURL(URL);
+            //console.log(URL);
+            navigate(`/instrument/${URL}`,{state:{URL}});
+            
+            // return(
+            //     <div>
+            //          <InstrumentChild data={URL}/>
+                     {/* <div style={{ position: "absolute", marginTop: "70px", fontSize: "20px" }}>
+                     {
+                    info.map((item) =>{
+                        console.log(item,"mapped items");
+                        return(
+                            <div>
+                                {item.name}
+                            </div>
+                        )
+                    })
+                }
+                <br/><br/>
+            </div> */}
+            //     </div>
+            // )
         }
-    };
-
-    const offItemHandler = () => {
-        setIsShowing(false);
-    };
-
-    return (
-        <div>
-            <div className="controller-button-container">
-                <Link to="/">
-                    <button className="controller-button" value="home">
-                        All Albums
-                    </button>
-                </Link>
-
-            </div>
-            {isLoading && (
-                <div className="loading">
-                    <p>...loading</p>
-                </div>
-            )}
-            <p className="page-title-message">
-                You have chosen <span>Album {albumId}</span>. Total of {items.length}{" "}
-                photos to explore. Enjoy!
-            </p>
-            <div className="items-container">
-                {items.map((item, index) => (
-                    <Card key={item.id} onClick={() => onItemHandler(item.id, index)}>
-                        <img
-                            src={"https://via.placeholder.com/100x70.png"}
-                            alt={`data thumbnail`}
-                        />
-                        <h6>#{item.id}</h6>
+        return (
+        <Container style={{ position: "absolute", marginTop: "120px", fontSize: "20px" }}>
+          <Row class="d-flex row">
+            <div class="col col-3 d-flex justify-content-center">
+                {/* <div style={{ position: "absolute", margin: "170px", fontSize: "20px" }}> */}
+                    <Card>
+                    <Card.Img variant="top" src={FluteImg} alt="https://www.classical-music.com/features/works/the-best-flute-solos-in-orchestral-works/"/>
+                    <Card.Body class="card-body">
+                        <Card.Title>Flute</Card.Title>
+                        <Card.Text>
+                        Flute information.
+                        </Card.Text>
+                        {/* <Link to='/recommendation/ailis'> */}
+                        <Button variant="primary" class="mt-auto btn" value="flute" onClick={onClickBrowseHandler}>View more details.</Button>
+                        {/* </Link> */}
+                    </Card.Body>
                     </Card>
-                ))}
+                {/* </div> */}
             </div>
-            {isShowing && (
-                <div className="loading">
-                    <button className="backwardButton" onClick={backwardHandler}>
-                        &#60;
-                    </button>
-                    <div className="item-container">
-                        <button className="offItemButton" onClick={offItemHandler}>
-                            X
-                        </button>
-                        <img
-                            src={"https://via.placeholder.com/760x452.png"}
-                            alt={`data pic`}
-                        />
-                        <div>
-                            <h1>#{itemFound.id}</h1>
-                            <h3>{itemFound.title}</h3>
-                        </div>
-                    </div>
-                    <button className="forwardButton" onClick={forwardHandler}>
-                        &#62;
-                    </button>
-                </div>
-            )}
-        </div>
-    );
-};
+            <div class="col col-3 d-flex justify-content-center">
+            {/* <div style={{ position: "absolute", margin: "170px", fontSize: "20px" }}> */}
+                    <Card>
+                    <Card.Img variant="top" src={ClarinetImg} alt="https://www.thoughtco.com/history-of-the-clarinet-1991464" />
+                    <Card.Body class="card-body">
+                        <Card.Title>CLarinet</Card.Title>
+                        <Card.Text>
+                        Clarinet information.
+                        </Card.Text>
+                        <Button variant="primary" class="mt-auto btn" value="clarinet" onClick={onClickBrowseHandler}>View related pieces.</Button>
+                    </Card.Body>
+                    </Card>
+                {/* </div> */}
+            </div>
+            <div class="col col-3 d-flex justify-content-center">
+            {/* <div style={{ position: "absolute", margin: "170px", fontSize: "20px" }}> */}
+                    <Card>
+                    <Card.Img variant="top"  src="holder.js/100px180" />
+                    <Card.Body class="card-body">
+                        <Card.Title>Card Title</Card.Title>
+                        <Card.Text>
+                        Some quick example text to build on the card title and make up the
+                        bulk of the card's content.
+                        </Card.Text>
+                        <Button variant="primary" class="mt-auto btn">View more details.</Button>
+                    </Card.Body>
+                    </Card>
+                {/* </div> */}
+            </div>
+            <div class="col col-3 d-flex justify-content-center">
+            {/* <div style={{ position: "absolute", margin: "170px", fontSize: "20px" }}> */}
+                    <Card>
+                    <Card.Img variant="top"  src="holder.js/100px180" />
+                    <Card.Body class="card-body">
+                        <Card.Title>Card Title</Card.Title>
+                        <Card.Text>
+                        Some quick example text to build on the card title and make up the
+                        bulk of the card's content.
+                        </Card.Text>
+                        <Button variant="primary" class="mt-auto btn">View more details.</Button>
+                    </Card.Body>
+                    </Card>
+                {/* </div> */}
+            </div>
+          </Row><br></br>
+          <Row>
+            <div class="col col-3 d-flex justify-content-center">            
+             {/* <div style={{ position: "absolute", margin: "170px", fontSize: "20px" }}> */}
+                    <Card>
+                    <Card.Img variant="top" src="holder.js/100px180" />
+                    <Card.Body  class="card-body">
+                        <Card.Title>Card Title</Card.Title>
+                        <Card.Text>
+                        Some quick example text to build on the card title and make up the
+                        bulk of the card's content.
+                        </Card.Text>
+                        <Button variant="primary"  class="mt-auto btn">View more details.</Button>
+                    </Card.Body>
+                    </Card>
+                {/* </div> */}
+            </div>
+            <div class="col col-3 d-flex justify-content-center">            
+                {/* <div style={{ position: "absolute", margin: "170px", fontSize: "20px" }}> */}
+                    <Card>
+                    <Card.Img variant="top" src="holder.js/100px180" />
+                    <Card.Body  class="card-body">
+                        <Card.Title>Card Title</Card.Title>
+                        <Card.Text>
+                        Some quick example text to build on the card title and make up the
+                        bulk of the card's content.
+                        </Card.Text>
+                        <Button variant="primary"  class="mt-auto btn">View more details.</Button>
+                    </Card.Body>
+                    </Card>
+                {/* </div> */}
+            </div>
+            <div class="col col-3 d-flex justify-content-center">            
+            {/* <div style={{ position: "absolute", margin: "170px", fontSize: "20px" }}> */}
+                    <Card  class="card">
+                    <Card.Img variant="top" src="holder.js/100px180" />
+                    <Card.Body class="card-body">
+                        <Card.Title>Card Title</Card.Title>
+                        <Card.Text>
+                        Some quick example text to build on the card title and make up the
+                        bulk of the card's content.
+                        </Card.Text>
+                        <Button variant="primary" class="mt-auto btn">View more details.</Button>
+                    </Card.Body>
+                    </Card>
+                {/* </div> */}
+            </div>
+          </Row>
+        </Container>
+            
+        );
+    };
+    
 
-export default AlbumItemsPage;
+export default Instrument;

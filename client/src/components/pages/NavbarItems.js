@@ -5,20 +5,24 @@ const navbarItems = [
   },
   {
     title: "Repertoire",
-    link: "/Repertoire",
+    link: "/repertoire",
   },
   {
     title: "Instrument",
-    link: "/Instrument",
+    link: "/instrument",
   },
   {
     title: "Recommendation",
-    link: "/Recommendation",
+    link: "/recommendation",
   },
   {
     title: "Forum",
-    link: "/Forum",
-  }
+    link: "/forum",
+  },
+  {
+    title: "Search",
+    link: "/search",
+  },
 
 ];
 
