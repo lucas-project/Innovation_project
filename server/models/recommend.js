@@ -21,7 +21,7 @@ const Recommend = mongoose.model('Recommend', new mongoose.Schema({
     },
     image:{
         type: String,
-        minlength: 5,
+        minlength: 1,
         maxlength: 255,
     }
 }));
@@ -30,7 +30,7 @@ function validateRecommend(recommend) {
     const schema = Joi.object({
         title: Joi.string().min(1).max(255).required(),
         body: Joi.string().min(1).max(2000).required(),
-        image: Joi.string().min(2).max(255),
+        image: Joi.string().min(1).max(255),
     });
 
     return schema.validate(recommend);
