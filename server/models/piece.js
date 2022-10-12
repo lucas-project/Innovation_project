@@ -16,7 +16,7 @@ const Piece = mongoose.model('Piece', new mongoose.Schema({
                 minlength: 5,
                 maxlength: 255,
             },
-            _id:{
+            _id: {
                 type: String,
                 minlength: 5,
                 maxlength: 255
