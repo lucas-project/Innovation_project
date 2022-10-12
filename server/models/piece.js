@@ -8,9 +8,9 @@ const Piece = mongoose.model('Piece', new mongoose.Schema({
         minlength: 2,
         maxlength: 255,
     },
-    composer: [{
+    composer: {
         type: new mongoose.Schema({
-            name: {
+            came: {
                 type: String,
                 required: true,
                 minlength: 5,
@@ -22,7 +22,7 @@ const Piece = mongoose.model('Piece', new mongoose.Schema({
                 maxlength: 255
             }
         })
-    }],
+    },
     duration: {
         type: String,
         minlength: 1,
