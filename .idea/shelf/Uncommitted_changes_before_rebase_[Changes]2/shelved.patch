@@ -1,0 +1,57 @@
+Index: .idea/workspace.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<project version=\"4\">\r\n  <component name=\"AutoImportSettings\">\r\n    <option name=\"autoReloadType\" value=\"SELECTIVE\" />\r\n  </component>\r\n  <component name=\"ChangeListManager\">\r\n    <list default=\"true\" id=\"59dfec90-93b5-41dd-956c-8d393c8b7fc3\" name=\"Changes\" comment=\"testing\">\r\n      <change beforePath=\"$PROJECT_DIR$/.idea/workspace.xml\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/.idea/workspace.xml\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/server/routes/search.js\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/server/routes/search.js\" afterDir=\"false\" />\r\n    </list>\r\n    <option name=\"SHOW_DIALOG\" value=\"false\" />\r\n    <option name=\"HIGHLIGHT_CONFLICTS\" value=\"true\" />\r\n    <option name=\"HIGHLIGHT_NON_ACTIVE_CHANGELIST\" value=\"false\" />\r\n    <option name=\"LAST_RESOLUTION\" value=\"IGNORE\" />\r\n  </component>\r\n  <component name=\"Git.Settings\">\r\n    <option name=\"RECENT_BRANCH_BY_REPOSITORY\">\r\n      <map>\r\n        <entry key=\"$PROJECT_DIR$\" value=\"Server\" />\r\n      </map>\r\n    </option>\r\n    <option name=\"RECENT_GIT_ROOT_PATH\" value=\"$PROJECT_DIR$\" />\r\n    <option name=\"RESET_MODE\" value=\"HARD\" />\r\n  </component>\r\n  <component name=\"MarkdownSettingsMigration\">\r\n    <option name=\"stateVersion\" value=\"1\" />\r\n  </component>\r\n  <component name=\"ProjectId\" id=\"2FTOWgfKmmh3xdKDWDAujck4AkU\" />\r\n  <component name=\"ProjectViewState\">\r\n    <option name=\"hideEmptyMiddlePackages\" value=\"true\" />\r\n    <option name=\"showLibraryContents\" value=\"true\" />\r\n  </component>\r\n  <component name=\"PropertiesComponent\">{\r\n  &quot;keyToString&quot;: {\r\n    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,\r\n    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,\r\n    &quot;ToolWindowGit.ShowToolbar&quot;: &quot;false&quot;,\r\n    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,\r\n    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,\r\n    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,\r\n    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,\r\n    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,\r\n    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,\r\n    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;\r\n  }\r\n}</component>\r\n  <component name=\"SpellCheckerSettings\" RuntimeDictionaries=\"0\" Folders=\"0\" CustomDictionaries=\"0\" DefaultDictionary=\"application-level\" UseSingleDictionary=\"true\" transferred=\"true\" />\r\n  <component name=\"TaskManager\">\r\n    <task active=\"true\" id=\"Default\" summary=\"Default task\">\r\n      <changelist id=\"59dfec90-93b5-41dd-956c-8d393c8b7fc3\" name=\"Changes\" comment=\"\" />\r\n      <created>1664512642253</created>\r\n      <option name=\"number\" value=\"Default\" />\r\n      <option name=\"presentableId\" value=\"Default\" />\r\n      <updated>1664512642253</updated>\r\n      <workItem from=\"1664512645263\" duration=\"16060000\" />\r\n      <workItem from=\"1664837680099\" duration=\"321000\" />\r\n      <workItem from=\"1664926853208\" duration=\"223000\" />\r\n      <workItem from=\"1665440900011\" duration=\"12523000\" />\r\n      <workItem from=\"1665532961541\" duration=\"11673000\" />\r\n    </task>\r\n    <task id=\"LOCAL-00001\" summary=\"Change the composer schema\">\r\n      <created>1664696726089</created>\r\n      <option name=\"number\" value=\"00001\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00001\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1664696726089</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00002\" summary=\"Change the composer schema\">\r\n      <created>1664696779411</created>\r\n      <option name=\"number\" value=\"00002\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00002\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1664696779411</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00003\" summary=\"Change the composer schema\">\r\n      <created>1664701603444</created>\r\n      <option name=\"number\" value=\"00003\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00003\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1664701603444</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00004\" summary=\"Update the piece schema\">\r\n      <created>1664837992157</created>\r\n      <option name=\"number\" value=\"00004\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00004\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1664837992157</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00005\" summary=\"Update the piece schema\">\r\n      <created>1665442259156</created>\r\n      <option name=\"number\" value=\"00005\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00005\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1665442259156</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00006\" summary=\"Update the piece schema\">\r\n      <created>1665467441734</created>\r\n      <option name=\"number\" value=\"00006\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00006\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1665467441734</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00007\" summary=\"Update the piece schema\">\r\n      <created>1665467716696</created>\r\n      <option name=\"number\" value=\"00007\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00007\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1665467716696</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00008\" summary=\"Update the forum schema\">\r\n      <created>1665527922310</created>\r\n      <option name=\"number\" value=\"00008\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00008\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1665527922310</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00009\" summary=\"Update the posts.js\">\r\n      <created>1665528325848</created>\r\n      <option name=\"number\" value=\"00009\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00009\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1665528325848</updated>\r\n    </task>\r\n    <option name=\"localTasksCounter\" value=\"10\" />\r\n    <servers />\r\n  </component>\r\n  <component name=\"TypeScriptGeneratedFilesManager\">\r\n    <option name=\"version\" value=\"3\" />\r\n  </component>\r\n  <component name=\"Vcs.Log.Tabs.Properties\">\r\n    <option name=\"TAB_STATES\">\r\n      <map>\r\n        <entry key=\"MAIN\">\r\n          <value>\r\n            <State>\r\n              <option name=\"FILTERS\">\r\n                <map>\r\n                  <entry key=\"branch\">\r\n                    <value>\r\n                      <list>\r\n                        <option value=\"Server\" />\r\n                      </list>\r\n                    </value>\r\n                  </entry>\r\n                </map>\r\n              </option>\r\n            </State>\r\n          </value>\r\n        </entry>\r\n      </map>\r\n    </option>\r\n  </component>\r\n  <component name=\"VcsManagerConfiguration\">\r\n    <MESSAGE value=\"Change the composer schema\" />\r\n    <MESSAGE value=\"Update the piece schema\" />\r\n    <MESSAGE value=\"Update the forum schema\" />\r\n    <MESSAGE value=\"Update the posts.js\" />\r\n    <MESSAGE value=\"testing\" />\r\n    <option name=\"LAST_COMMIT_MESSAGE\" value=\"testing\" />\r\n  </component>\r\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/workspace.xml b/.idea/workspace.xml
+--- a/.idea/workspace.xml	(revision 296c427dc626073ea57e5bc944dae59fcf701215)
++++ b/.idea/workspace.xml	(date 1665553714709)
+@@ -4,10 +4,7 @@
+     <option name="autoReloadType" value="SELECTIVE" />
+   </component>
+   <component name="ChangeListManager">
+-    <list default="true" id="59dfec90-93b5-41dd-956c-8d393c8b7fc3" name="Changes" comment="testing">
+-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/server/routes/search.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/routes/search.js" afterDir="false" />
+-    </list>
++    <list default="true" id="59dfec90-93b5-41dd-956c-8d393c8b7fc3" name="Changes" comment="testing2" />
+     <option name="SHOW_DIALOG" value="false" />
+     <option name="HIGHLIGHT_CONFLICTS" value="true" />
+     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+@@ -16,7 +13,7 @@
+   <component name="Git.Settings">
+     <option name="RECENT_BRANCH_BY_REPOSITORY">
+       <map>
+-        <entry key="$PROJECT_DIR$" value="Server" />
++        <entry key="$PROJECT_DIR$" value="5c5f52ad0f01eb1edf4228b27a4d041db59723da" />
+       </map>
+     </option>
+     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+@@ -121,7 +118,14 @@
+       <option name="project" value="LOCAL" />
+       <updated>1665528325848</updated>
+     </task>
+-    <option name="localTasksCounter" value="10" />
++    <task id="LOCAL-00010" summary="testing2">
++      <created>1665553164037</created>
++      <option name="number" value="00010" />
++      <option name="presentableId" value="LOCAL-00010" />
++      <option name="project" value="LOCAL" />
++      <updated>1665553164037</updated>
++    </task>
++    <option name="localTasksCounter" value="11" />
+     <servers />
+   </component>
+   <component name="TypeScriptGeneratedFilesManager">
+@@ -156,6 +160,7 @@
+     <MESSAGE value="Update the forum schema" />
+     <MESSAGE value="Update the posts.js" />
+     <MESSAGE value="testing" />
+-    <option name="LAST_COMMIT_MESSAGE" value="testing" />
++    <MESSAGE value="testing2" />
++    <option name="LAST_COMMIT_MESSAGE" value="testing2" />
+   </component>
+ </project>
+\ No newline at end of file

@@ -45,14 +45,21 @@ router.get('/piece', async (req, res) => {
         result = await Piece.find(
             {
                 "$or": [
-                    { name: { $regex: reg1 } },
-                    { instruments: { $regex: reg1 } },
-                    { publisher: { $regex: reg1 } },
-                    // { composer: { name: { $regex: reg1 } } },
+                    {name: {$regex: reg1}},
+                    {instruments: {$regex: reg1}},
+                    {publisher: {$regex: reg1}},
+                    //{"composer.name": {$elemMatch: {$regex: reg1}}},
                 ]
             }
         );
-    } else if (!req.query.instrument) {
+        if( result = [] ){
+            result = await Piece.aggregate([
+                { $unwind : "$composer"},
+                { $match :{"composer.name" :{ $regex:reg1} } },
+
+            ])
+        }
+    }else if (!req.query.instrument) {
         result = await Piece.find(
             {
                 "$and": [
