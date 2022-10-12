@@ -61,7 +61,7 @@ router.get('/piece', async (req, res) => {
                 ]
             }
         );
-    } else {
+    } else if (!req.query.publisher) {
         result = await Piece.find(
             {
                 "$and": [
@@ -70,7 +70,31 @@ router.get('/piece', async (req, res) => {
                 ]
             }
         );
+    } else {
+        result = await Piece.find(
+            {
+                "$and": [
+                    { name: { $regex: reg1 } },
+                    { instruments: { $regex: reg2 } },
+                    { publisher: { $regex: reg3 } },
+                ]
+            }
+        );
     }
+
+    res.send(result);
+});
+
+router.get('/instrument/:instrument', async (req, res) => {
+
+    const reg = new RegExp(req.params.instrument, "i");
+
+    result = await Piece.find(
+        {
+            instruments: { $regex: reg }
+        }
+    );
+
 
     res.send(result);
 });
