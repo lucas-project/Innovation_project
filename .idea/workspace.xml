@@ -1,26 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="7c003d22-b666-4e4f-82e9-be5f2c89ed56" name="Changes" comment="composers data from backend fetch successfully, repertoire needed to be done in next stage">
-      <change afterPath="$PROJECT_DIR$/client/src/components/pages/Instrument/Flute.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/components/pages/Instrument/InstrumentChild.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/components/pages/Recommendation/Ailis.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/components/pages/Recommendation/Recommendation.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/components/pages/Search/Search.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/img/Nicola.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/img/ailis.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/img/clarinet.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/img/flute.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_07_10_2022_1_50_pm__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_07_10_2022_1_50_pm__Changes_.xml" afterDir="false" />
+    <list default="true" id="7c003d22-b666-4e4f-82e9-be5f2c89ed56" name="Changes" comment="frontend combined">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/client/public/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/pages/Composer/Composer.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/pages/Composer/Composer.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/src/components/pages/Composer/Profile.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/pages/Composer/Profile.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/pages/Instrument/Instrument.css" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/pages/Instrument/Instrument.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/pages/Instrument/Instrument.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/pages/Instrument/Instrument.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/pages/NavbarItems.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/pages/NavbarItems.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/pages/Recommendation/Recommendation.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/pages/Recommendation/Recommendation.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -30,11 +13,19 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="local-work-lucas" />
+        <entry key="$PROJECT_DIR$" value="feb14696d76bf92dc712d3483eb01e8640a20326" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
     <option name="RESET_MODE" value="HARD" />
+  </component>
+  <component name="GitSEFilterConfiguration">
+    <file-type-list>
+      <filtered-out-file-type name="LOCAL_BRANCH" />
+      <filtered-out-file-type name="REMOTE_BRANCH" />
+      <filtered-out-file-type name="TAG" />
+      <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
+    </file-type-list>
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -56,7 +47,7 @@
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
@@ -97,7 +88,9 @@
       <workItem from="1665441035869" duration="4154000" />
       <workItem from="1665459789667" duration="1417000" />
       <workItem from="1665464907225" duration="3476000" />
-      <workItem from="1665556453635" duration="1187000" />
+      <workItem from="1665556453635" duration="1671000" />
+      <workItem from="1665573351319" duration="266000" />
+      <workItem from="1665637153783" duration="991000" />
     </task>
     <task id="LOCAL-00001" summary="files restructured, all swipers fixed">
       <created>1663904598170</created>
@@ -190,7 +183,14 @@
       <option name="project" value="LOCAL" />
       <updated>1665120099175</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="frontend combined">
+      <created>1665558122046</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1665558122046</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -235,6 +235,7 @@
     <MESSAGE value="twitter and facebook api integration testing success" />
     <MESSAGE value="checkout point, to make composer page a album-like structure" />
     <MESSAGE value="connect with latest server side" />
-    <option name="LAST_COMMIT_MESSAGE" value="connect with latest server side" />
+    <MESSAGE value="frontend combined" />
+    <option name="LAST_COMMIT_MESSAGE" value="frontend combined" />
   </component>
 </project>

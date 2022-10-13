@@ -89,7 +89,7 @@
 //                 photos to explore. Enjoy!
 //             </p>
 //             <div className="items-container">
-//                 <p>Composer Name: {albumId}</p>
+//                 <p>Profile Name: {albumId}</p>
 //                 <p>Nationality:</p>
 //                 <p>Introduction:</p>
 //                 <br/>
@@ -149,18 +149,20 @@ import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import Card from "../../Card";
 import "./Composer.css";
+import {useParams} from "react-router";
 
-const Composer = () => {
+const Profile = () => {
     const [albums, setAlbums] = useState([]);
     const [isLoading, setIsLoading] = useState(false);
 
+    const { _id } = useParams();
     useEffect(() => {
         setIsLoading(true);
         const fetchData = async () => {
-            const result = await fetch(`http://localhost:3000/api/composers/:id`);
+            const result = await fetch(`http://localhost:3000/api/composers/633cc39a56e324f2dac4f69c`);
             const resultJson = await result.json();
-            const sliceResult = resultJson.slice(0, 10);
-            setAlbums(sliceResult);
+
+            setAlbums(resultJson);
             setIsLoading(false);
         };
         fetchData();
@@ -174,20 +176,20 @@ const Composer = () => {
                 </div>
             )}
             <div className="albums-container">
-                {albums.map(album => (
+                {/*{albums.map(album => (*/}
                         <Card className="albums-card">
                             <img
-                                // src={"https://via.placeholder.com/168x118.png"}
-                                src={album.image}
+                                src={"https://via.placeholder.com/168x118.png"}
+                                // src={album.image}
                                 alt={`data thumbnail`}
                             />
-                            <h5>Composer {album.name}</h5>
-                            <h6>Composer {album.nationality}</h6>
+                            <h5>Composer {albums.name}</h5>
+                            {/*<h6>Composer {album.nationality}</h6>*/}
                         </Card>
-                ))}
+                {/*))}*/}
             </div>
         </div>
     );
 };
 
-export default Composer;
+export default Profile;
