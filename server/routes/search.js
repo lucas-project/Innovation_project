@@ -52,13 +52,11 @@ router.get('/piece', async (req, res) => {
                 ]
             }
         );
-        if( result = [] ){
-            result = await Piece.aggregate([
+        result = result.concat(await Piece.aggregate([
                 { $unwind : "$composer"},
                 { $match :{"composer.name" :{ $regex:reg1} } },
+        ]))
 
-            ])
-        }
     }else if (!req.query.instrument) {
         result = await Piece.find(
             {
