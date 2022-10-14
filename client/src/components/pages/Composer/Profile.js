@@ -185,7 +185,7 @@ const Profile = () => {
                                 // src={album.image}
                                 alt={`data thumbnail`}
                             />
-                            <h5>Composers {album._id}</h5>
+                            <h5>{album._id}</h5>
                             {/*<h6>Composer {album.nationality}</h6>*/}
                         </Card>
                 ))}
