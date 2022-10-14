@@ -1,7 +1,8 @@
 import React, { useState } from "react";
 import Navbar from "./components/pages/Navbar/Navbar";
 import Composer from "./components/pages/Composer/Composer";
-import Repertoire from "./components/pages/Repertoire/Repertoire";
+import Repertoires from "./components/pages/Repertoire/Repertoire";
+import Repertoire from "./components/pages/Repertoire/Repertoire.detail";
 import Instrument from "./components/pages/Instrument/Instrument";
 import Recommendation from "./components/pages/Recommendation/Recommendation";
 import Forum from "./components/pages/Forum/Forum";
@@ -29,12 +30,13 @@ const App = () => {
       <Routes>
         <Route path="/" element={<Home />} />
           <Route path="/api/composers" element={<Composer />} />
-          <Route path="/repertoire" element={<Repertoire />} />
+          <Route path="/repertoire" element={<Repertoires />} />
           <Route path="/instrument" element={<Instrument />} />
           <Route path="/recommendation" element={<Recommendation />} />
           <Route path="/forum" element={<Forum />} />
           <Route path="/profile" element={<Profile />} />
           <Route path="/api/composers/:id" element={<ComposerMongodb />} />
+          <Route path="/api/pieces/:id" element={<Repertoire />} />
 
           <Route path="/recommendation/ailis" element={<Ailis />} />
           <Route path="/search/*" element={<Search />} />

@@ -29,7 +29,7 @@ const Composer = () => {
             <div className="albums-container">
                 {albums.map(album => (
                     <Link
-                        to={`/api/composers/${album._id}`}
+                        to={{pathname:`/api/composers/${album._id}`,state:`${album._id}`}}
                         key={album.name}
                         style={{ textDecoration: "none", color: "black" }}
                     >

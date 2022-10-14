@@ -2,8 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7c003d22-b666-4e4f-82e9-be5f2c89ed56" name="Changes" comment="frontend combined">
+      <change afterPath="$PROJECT_DIR$/client/src/components/pages/Repertoire/Repertoire.detail.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_07_10_2022_1_50_pm__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_07_10_2022_1_50_pm__Changes_.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/pages/Composer/Composer.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/pages/Composer/Composer.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/src/components/pages/Composer/Profile.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/pages/Composer/Profile.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/pages/Repertoire/Repertoire.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/pages/Repertoire/Repertoire.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -47,7 +52,7 @@
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
