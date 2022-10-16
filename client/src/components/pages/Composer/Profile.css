@@ -151,3 +151,9 @@
 card {
     padding: 50px;
 }
+
+#firstRow {
+    height: 50px;
+    background: #000d1a;
+    margin-top: 50px;
+}

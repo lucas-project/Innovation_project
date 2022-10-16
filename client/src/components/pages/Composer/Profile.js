@@ -148,9 +148,36 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import Card from "../../Card";
-import "./Composer.css";
+
 import {useLocation, useParams} from "react-router";
 import {Container, Col, Row} from 'react-bootstrap';
+import "./Composer.css";
+
+const firstRow = {
+    height:'100px',
+    background:'#a0cbde',
+    width:'100%'
+};
+const secondRow = {
+    height: '600px',
+    background: '#87b0a0',
+    width: '100%'
+}
+const secondLeft = {
+    height: '600px',
+    background: '#689581',
+    width: '50%'
+}
+const secondRight = {
+    height: '200px',
+    background:'#acbc8a',
+    width:'100%'
+}
+const down ={
+    height:'300px',
+    background:'#f2b476',
+    width:'100%'
+}
 
 const Profile = () => {
     const [albums, setAlbums] = useState([]);
@@ -178,41 +205,22 @@ const Profile = () => {
                     <p>...loading</p>
                 </div>
             )}
-            {/*<div className="albums-container">*/}
-                {/*<div>{Object.values(location.state.albumName)}</div>*/}
 
-                        {/*<Card className="albums-card">*/}
-                        {/*    <img*/}
-                        {/*        src={"https://via.placeholder.com/168x118.png"}*/}
-                        {/*        // src={album.image}*/}
-                        {/*        alt={`data thumbnail`}*/}
-                        {/*    />*/}
-
-                        {/*    <h5>{albums._id}</h5>*/}
-                        {/*    /!*<h6>Composer {album.nationality}</h6>*!/*/}
-                        {/*</Card>*/}
-
-            {/*</div>*/}
             <Container>
-                <Row>
+                <br/><br/><br/><br/>
+                <Row style={firstRow}>
                     <Col>Name: {Object.values(location.state.name)}</Col>
                 </Row>
-                <Row>
-                    <Col>Country: {Object.values(location.state.nationality)}</Col>
-                    <Col md="auto">Website: {Object.values(location.state.website)}</Col>
-                    <Col xs lg="2">
-                        {/*Born: {Object.values(location.state.date)}*/}
+                <Row style={secondRow}>
+                    <Col md={6} style={secondLeft}>image: {Object.values(location.state.image)}</Col>
+                    <Col md="auto" style={secondLeft}>
+                        <Row style={secondRight}>Country: {Object.values(location.state.nationality)}</Row>
+                        <Row style={secondRight}>DOB: {Object.values(location.state.DOB)}</Row>
+                        <Row style={secondRight}>Website: {Object.values(location.state.website)}</Row>
                     </Col>
                 </Row>
                 <Row>
-
-                    <Col md="auto">Biography: {Object.values(location.state.biography)}</Col>
-                    <Col xs lg="2">
-                        image: {Object.values(location.state.image)}
-                    </Col>
-                    <Col xs lg="2">
-                        DOB: {Object.values(location.state.DOB)}
-                    </Col>
+                    <Col md="auto" style={down}>Biography: {Object.values(location.state.biography)}</Col>
                 </Row>
             </Container>
 
