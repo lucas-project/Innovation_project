@@ -34,7 +34,7 @@ const Composer = () => {
                             _id:album._id,
                             name: album.name,
                             nationality:album.nationality,
-                            date:album.data,
+                            DOB:album.DOB,
                             website:album.website,
                             biography:album.biography,
                             image:album.image

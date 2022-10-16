@@ -150,6 +150,7 @@ import { Link } from "react-router-dom";
 import Card from "../../Card";
 import "./Composer.css";
 import {useLocation, useParams} from "react-router";
+import {Container, Col, Row} from 'react-bootstrap';
 
 const Profile = () => {
     const [albums, setAlbums] = useState([]);
@@ -177,20 +178,44 @@ const Profile = () => {
                     <p>...loading</p>
                 </div>
             )}
-            <div className="albums-container">
-                <div>{Object.values(location.state.albumName)}</div>
-                        <Card className="albums-card">
-                            <img
-                                src={"https://via.placeholder.com/168x118.png"}
-                                // src={album.image}
-                                alt={`data thumbnail`}
-                            />
+            {/*<div className="albums-container">*/}
+                {/*<div>{Object.values(location.state.albumName)}</div>*/}
 
-                            <h5>{albums._id}</h5>
-                            {/*<h6>Composer {album.nationality}</h6>*/}
-                        </Card>
+                        {/*<Card className="albums-card">*/}
+                        {/*    <img*/}
+                        {/*        src={"https://via.placeholder.com/168x118.png"}*/}
+                        {/*        // src={album.image}*/}
+                        {/*        alt={`data thumbnail`}*/}
+                        {/*    />*/}
 
-            </div>
+                        {/*    <h5>{albums._id}</h5>*/}
+                        {/*    /!*<h6>Composer {album.nationality}</h6>*!/*/}
+                        {/*</Card>*/}
+
+            {/*</div>*/}
+            <Container>
+                <Row>
+                    <Col>Name: {Object.values(location.state.name)}</Col>
+                </Row>
+                <Row>
+                    <Col>Country: {Object.values(location.state.nationality)}</Col>
+                    <Col md="auto">Website: {Object.values(location.state.website)}</Col>
+                    <Col xs lg="2">
+                        {/*Born: {Object.values(location.state.date)}*/}
+                    </Col>
+                </Row>
+                <Row>
+
+                    <Col md="auto">Biography: {Object.values(location.state.biography)}</Col>
+                    <Col xs lg="2">
+                        image: {Object.values(location.state.image)}
+                    </Col>
+                    <Col xs lg="2">
+                        DOB: {Object.values(location.state.DOB)}
+                    </Col>
+                </Row>
+            </Container>
+
         </div>
     );
 };

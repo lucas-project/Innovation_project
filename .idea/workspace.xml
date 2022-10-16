@@ -1,12 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="7c003d22-b666-4e4f-82e9-be5f2c89ed56" name="Changes" comment="composers and pieces details page reached, more details needed to displayed,css need to be developed">
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_07_10_2022_1_50_pm_[Changes]/shelved.patch" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_07_10_2022_1_50_pm__Changes_.xml" beforeDir="false" />
+    <list default="true" id="7c003d22-b666-4e4f-82e9-be5f2c89ed56" name="Changes" comment="successfully get params from last page, bootstrap grid to be applied">
+      <change afterPath="$PROJECT_DIR$/client/src/components/pages/Composer/Profile.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/src/components/pages/Composer/Composer.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/pages/Composer/Composer.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/src/components/pages/Composer/Profile.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/pages/Composer/Profile.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/models/composer.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/models/composer.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/models/piece.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/models/piece.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/models/post.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/models/post.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/routes/composers.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/routes/composers.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/routes/posts.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/routes/posts.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/routes/search.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/routes/search.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -94,7 +100,9 @@
       <workItem from="1665556453635" duration="1671000" />
       <workItem from="1665573351319" duration="266000" />
       <workItem from="1665637153783" duration="991000" />
-      <workItem from="1665888197621" duration="3924000" />
+      <workItem from="1665888197621" duration="6127000" />
+      <workItem from="1665898313247" duration="1745000" />
+      <workItem from="1665900419155" duration="770000" />
     </task>
     <task id="LOCAL-00001" summary="files restructured, all swipers fixed">
       <created>1663904598170</created>
@@ -201,7 +209,14 @@
       <option name="project" value="LOCAL" />
       <updated>1665708880159</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="successfully get params from last page, bootstrap grid to be applied">
+      <created>1665892389081</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1665892389081</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -248,6 +263,7 @@
     <MESSAGE value="connect with latest server side" />
     <MESSAGE value="frontend combined" />
     <MESSAGE value="composers and pieces details page reached, more details needed to displayed,css need to be developed" />
-    <option name="LAST_COMMIT_MESSAGE" value="composers and pieces details page reached, more details needed to displayed,css need to be developed" />
+    <MESSAGE value="successfully get params from last page, bootstrap grid to be applied" />
+    <option name="LAST_COMMIT_MESSAGE" value="successfully get params from last page, bootstrap grid to be applied" />
   </component>
 </project>

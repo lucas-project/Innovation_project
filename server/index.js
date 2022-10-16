@@ -6,11 +6,10 @@ const pieces = require('./routes/pieces');
 const search = require('./routes/search');
 const posts = require('./routes/posts');
 const comments = require('./routes/comments');
+const recommends = require('./routes/recommends');
 const express = require('express');
 const app = express();
-var cors = require('cors');
-
-
+const cors = require('cors');
 
 mongoose.connect('mongodb+srv://maye:2110301186@cluster0.csodksa.mongodb.net/?retryWrites=true&w=majority')
     // mongoose.connect('mongodb://localhost:27017/corelia')
@@ -26,6 +25,7 @@ app.use('/api/pieces', pieces);
 app.use('/api/search', search);
 app.use('/api/posts', posts);
 app.use('/api/comments', comments);
+app.use('/api/recommends', recommends);
 
 const port = process.env.PORT || 3000;
 app.listen(port, () => console.log(`Listening on port ${port}...`));
