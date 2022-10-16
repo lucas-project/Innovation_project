@@ -14,7 +14,7 @@ router.post('/', [auth, admin], async (req, res) => {
     const { error } = validate(req.body);
     if (error) return res.status(400).send(error.details[0].message);
 
-    const composer = new Composer(_.pick(req.body, ['name', 'date', 'nationality', 'website','biography','image']));
+    const composer = new Composer(_.pick(req.body, ['name', 'DOB', 'nationality', 'website','biography','image']));
     await composer.save();
 
     res.send(composer);
@@ -24,7 +24,7 @@ router.put('/:id', [auth, admin], async (req, res) => {
     const { error } = validate(req.body);
     if (error) return res.status(400).send(error.details[0].message);
 //
-    const composer = await Composer.findByIdAndUpdate(req.params.id, _.pick(req.body, ['name', 'date', 'nationality', 'website', 'biography','image']), { new: true });
+    const composer = await Composer.findByIdAndUpdate(req.params.id, _.pick(req.body, ['name', 'DOB', 'nationality', 'website', 'biography','image']), { new: true });
 
     if (!composer) return res.status(404).send('The composer with the given ID was not found.');
 
