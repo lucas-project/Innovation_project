@@ -157,17 +157,18 @@ const Profile = () => {
 
     const { _id } = useParams();
     const location = useLocation();
-    useEffect(() => {
-        setIsLoading(true);
-        const fetchData = async () => {
-            const result = await fetch(`http://localhost:3000/api/composers/`);
-            const resultJson = await result.json();
 
-            setAlbums(resultJson);
-            setIsLoading(false);
-        };
-        fetchData();
-    }, []);
+   useEffect(() => {
+       setIsLoading(true);
+       const fetchData = async () => {
+           const result = await fetch(`http://localhost:3000/api/composers/`);
+           const resultJson = await result.json();
+
+           setAlbums(resultJson);
+           setIsLoading(false);
+       };
+       fetchData();
+   }, []);
 
     return (
         <div>
@@ -177,18 +178,18 @@ const Profile = () => {
                 </div>
             )}
             <div className="albums-container">
-                {albums.map(album => (
-
+                <div>{Object.values(location.state.albumName)}</div>
                         <Card className="albums-card">
                             <img
                                 src={"https://via.placeholder.com/168x118.png"}
                                 // src={album.image}
                                 alt={`data thumbnail`}
                             />
-                            <h5>{album._id}</h5>
+
+                            <h5>{albums._id}</h5>
                             {/*<h6>Composer {album.nationality}</h6>*/}
                         </Card>
-                ))}
+
             </div>
         </div>
     );

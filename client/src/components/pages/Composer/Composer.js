@@ -29,7 +29,17 @@ const Composer = () => {
             <div className="albums-container">
                 {albums.map(album => (
                     <Link
-                        to={{pathname:`/api/composers/${album._id}`,state:`${album._id}`}}
+                        to={{pathname:`/api/composers/${album._id}`}}
+                        state={{
+                            _id:album._id,
+                            name: album.name,
+                            nationality:album.nationality,
+                            date:album.data,
+                            website:album.website,
+                            biography:album.biography,
+                            image:album.image
+
+                        }}
                         key={album.name}
                         style={{ textDecoration: "none", color: "black" }}
                     >
@@ -39,8 +49,8 @@ const Composer = () => {
                                 src={album.image}
                                 alt={`data thumbnail`}
                             />
-                            <h5>Composer {album.name}</h5>
-                            <h6>Composer {album.nationality}</h6>
+                            <h5>{album.name}</h5>
+                            <h6>{album.nationality}</h6>
                         </Card>
                     </Link>
                 ))}
