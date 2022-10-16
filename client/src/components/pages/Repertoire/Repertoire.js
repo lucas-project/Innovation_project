@@ -162,6 +162,19 @@ const Repertoire = () => {
                 {albums.map(piece => (
                     <Link
                         to={{pathname:`/api/pieces/${piece._id}`,state:`${piece._id}`}}
+                        state={{
+                            _id:piece._id,
+                            name: piece.name,
+                            composer:piece.composer.name,
+                            duration:piece.duration,
+                            publishyear:piece.year,
+                            instruments:piece.instruments,
+                            links:piece.recordingLink,
+                            publisher:piece.publisher,
+                            scorelink:piece.scoreLink,
+                            image:piece.image
+
+                        }}
                         key={piece.name}
                         style={{ textDecoration: "none", color: "black" }}
                     >
@@ -174,7 +187,7 @@ const Repertoire = () => {
                             <h5>{piece.name}</h5>
                             <p><strong>Instrument</strong>: {piece.instruments}</p>
                             <p>Name: {piece.recordingLink}</p>
-                            <h5>Composer: {piece.composer[0].name}</h5>
+
 
                         </Card>
                     </Link>
