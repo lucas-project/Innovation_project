@@ -2,7 +2,11 @@ import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import Card from "../../Card";
 import "./Composer.css";
-
+import composerP from "../../img/composerP.jpg";
+const imgStyle = {
+    width:"250px",
+    height:"auto"
+}
 const Composer = () => {
     const [albums, setAlbums] = useState([]);
     const [isLoading, setIsLoading] = useState(false);
@@ -12,8 +16,8 @@ const Composer = () => {
         const fetchData = async () => {
             const result = await fetch("http://localhost:3000/api/composers");
             const resultJson = await result.json();
-            const sliceResult = resultJson.slice(0, 10);
-            setAlbums(sliceResult);
+            // const sliceResult = resultJson.slice(0, 10);
+            setAlbums(resultJson);
             setIsLoading(false);
         };
         fetchData();
@@ -44,13 +48,17 @@ const Composer = () => {
                         style={{ textDecoration: "none", color: "black" }}
                     >
                         <Card className="albums-card">
+                            <div>
                             <img
                                 // src={"https://via.placeholder.com/168x118.png"}
-                                src={album.image}
+                                // src={album.image}
+                                src={composerP}
                                 alt={`data thumbnail`}
+                                style={imgStyle}
                             />
                             <h5>{album.name}</h5>
                             <h6>{album.nationality}</h6>
+                            </div>
                         </Card>
                     </Link>
                 ))}

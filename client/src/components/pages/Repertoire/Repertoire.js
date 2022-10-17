@@ -134,6 +134,7 @@ import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import Card from "../../Card";
 import "./Repertoire.css";
+import pieces from "../../img/piece.png";
 
 const Repertoire = () => {
     const [albums, setAlbums] = useState([]);
@@ -180,8 +181,9 @@ const Repertoire = () => {
                     >
                         <Card className="albums-card">
                             <img
-                                src={"https://via.placeholder.com/168x118.png"}
+                                src={pieces}
                                 // src={album.image}
+                                // image source: https://maxmaraliving.com.au/team/terry/image-placeholder/
                                 alt={`data thumbnail`}
                             />
                             <h5>{piece.name}</h5>

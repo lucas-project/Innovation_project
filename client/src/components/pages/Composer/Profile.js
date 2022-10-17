@@ -152,6 +152,8 @@ import Card from "../../Card";
 import {useLocation, useParams} from "react-router";
 import {Container, Col, Row} from 'react-bootstrap';
 import "./Composer.css";
+import placeholder from "../../img/placeholder.png";
+
 
 const firstRow = {
     height:'100px',
@@ -161,7 +163,16 @@ const firstRow = {
 const secondRow = {
     height: '600px',
     background: '#87b0a0',
-    width: '100%'
+    width: '100%',
+    display:'flex',
+    justifyContent: 'center'
+}
+const imageDiv = {
+    height: '600px',
+    background: '#87b0a0',
+    width: '100%',
+    display:'flex',
+    justifyContent: 'center'
 }
 const secondLeft = {
     height: '600px',
@@ -176,7 +187,15 @@ const secondRight = {
 const down ={
     height:'300px',
     background:'#f2b476',
-    width:'100%'
+    width:'96.5%',
+    marginHorizontal:'auto'
+}
+
+const font = {
+    fontSize: 40,
+    color: "#4a54f1",
+    textAlign: "center",
+    paddingTop: "100px",
 }
 
 const Profile = () => {
@@ -209,18 +228,27 @@ const Profile = () => {
             <Container>
                 <br/><br/><br/><br/>
                 <Row style={firstRow}>
-                    <Col>Name: {Object.values(location.state.name)}</Col>
+                    <Col> <h1>{Object.values(location.state.name)}</h1></Col>
                 </Row>
                 <Row style={secondRow}>
-                    <Col md={6} style={secondLeft}>image: {Object.values(location.state.image)}</Col>
+                    <Col md={6} style={secondLeft}>
+                        {/*image: {typeof JSON.stringify(location.state.image)}*/}
+
+                        {/*<img src={require(`${JSON.stringify(location.state.image)}`)}/>*/}
+                        <div style={imageDiv}>
+                            <img src={placeholder} alt="composer avatar" style={{ width: 260, height: 280, margin:"auto" }}/>
+                        </div>
+                        {/*image source:https://stock.adobe.com/au/search?k=placeholder&asset_id=233462402*/}
+
+                    </Col>
                     <Col md="auto" style={secondLeft}>
-                        <Row style={secondRight}>Country: {Object.values(location.state.nationality)}</Row>
-                        <Row style={secondRight}>DOB: {Object.values(location.state.DOB)}</Row>
-                        <Row style={secondRight}>Website: {Object.values(location.state.website)}</Row>
+                        <Row style={secondRight}><h3>Country:</h3><br/><p> {Object.values(location.state.nationality)}</p></Row>
+                        <Row style={secondRight}><h3>DOB:</h3><br/> <p>{Object.values(location.state.DOB)}</p></Row>
+                        <Row style={secondRight}><h3>Website:</h3><br/> <p>{Object.values(location.state.website)}</p></Row>
                     </Col>
                 </Row>
                 <Row>
-                    <Col md="auto" style={down}>Biography: {Object.values(location.state.biography)}</Col>
+                    <Col md="auto" style={down}><h3>Biography:</h3><br/> <p>{Object.values(location.state.biography)}</p></Col>
                 </Row>
             </Container>
 

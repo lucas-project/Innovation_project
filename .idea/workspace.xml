@@ -1,10 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="7c003d22-b666-4e4f-82e9-be5f2c89ed56" name="Changes" comment="composer page css structure done">
+    <list default="true" id="7c003d22-b666-4e4f-82e9-be5f2c89ed56" name="Changes" comment="repertoire css structure done, scoreLink can't be reached yet">
+      <change afterPath="$PROJECT_DIR$/client/src/components/img/composerP.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/components/img/piece.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/components/img/placeholder.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/components/pages/Composer/placeholder.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/img/placeholder.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/pages/NavbarItems.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/pages/NavbarItems.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/Card.css" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/Card.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/pages/Composer/Composer.css" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/pages/Composer/Composer.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/pages/Composer/Composer.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/pages/Composer/Composer.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/pages/Composer/Profile.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/pages/Composer/Profile.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/pages/Repertoire/Repertoire.css" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/pages/Repertoire/Repertoire.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/src/components/pages/Repertoire/Repertoire.detail.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/pages/Repertoire/Repertoire.detail.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/src/components/pages/Repertoire/Repertoire.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/pages/Repertoire/Repertoire.js" afterDir="false" />
     </list>
@@ -97,7 +105,7 @@
       <workItem from="1665888197621" duration="6127000" />
       <workItem from="1665898313247" duration="1745000" />
       <workItem from="1665900419155" duration="770000" />
-      <workItem from="1665920476179" duration="6039000" />
+      <workItem from="1665920476179" duration="17028000" />
     </task>
     <task id="LOCAL-00001" summary="files restructured, all swipers fixed">
       <created>1663904598170</created>
@@ -218,7 +226,14 @@
       <option name="project" value="LOCAL" />
       <updated>1665922783636</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="repertoire css structure done, scoreLink can't be reached yet">
+      <created>1665926674135</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1665926674135</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -267,6 +282,7 @@
     <MESSAGE value="composers and pieces details page reached, more details needed to displayed,css need to be developed" />
     <MESSAGE value="successfully get params from last page, bootstrap grid to be applied" />
     <MESSAGE value="composer page css structure done" />
-    <option name="LAST_COMMIT_MESSAGE" value="composer page css structure done" />
+    <MESSAGE value="repertoire css structure done, scoreLink can't be reached yet" />
+    <option name="LAST_COMMIT_MESSAGE" value="repertoire css structure done, scoreLink can't be reached yet" />
   </component>
 </project>
