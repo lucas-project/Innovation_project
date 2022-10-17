@@ -6,7 +6,6 @@ const router = express.Router();
 router.post('/', async (req, res) => {
     let result ="Success";
     let token = "";
-    const email = req.body.email;
     const { error } = validate(req.body);
     if (error) return res.status(400).send(error.details[0].message);
 
@@ -28,7 +27,7 @@ router.post('/', async (req, res) => {
     }
 
     token = user.generateAuthToken();
-    const sendback = {token,result,email};
+    const sendback = {token,result};
 
     res.send(sendback);
 })

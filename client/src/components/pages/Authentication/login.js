@@ -25,6 +25,7 @@ export default function Create() {
         email: "",
         password: "",
     });
+    const [tokens, setTokens]=useState();
     const navigate = useNavigate();
 
     // These methods will update the state properties.
@@ -40,31 +41,44 @@ export default function Create() {
 
         // When a post request is sent to the create url, we'll add a new record to the database.
         const newPerson = { ...form };
-
-        await fetch("http://localhost:3000/api/auth", {
+        let responseToken = "";
+        let responseEmail = "";
+        // alert(JSON.stringify(newPerson))
+        const responses = await fetch("http://localhost:3000/api/auth", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json",
             },
-            // body: JSON.stringify(newPerson),
-            body: JSON.stringify({
-                email: "this.state.idValue",
-                password: "this.state.pwValue"
-            }),
+            body: JSON.stringify(newPerson),
         })
-
-         .then((response) => response.json())
-            .then((result)=>{
-                if(result.status){
-                    alert(result.status);
-                    navigate("/");
-                } else {
-                    alert("Please check your login information.");
-                }
+            // .then((response) => response.json())
+            // .then((result)=>{
+            //     if(result.ok){
+            //         alert(result)
+            //     } else {
+            //         alert("Please check your login information-1.");
+            //     }
+            // })
+        //
+        // setForm({ email: "", password: ""});
+            .then(response => response.json())
+            // .then(data => setTokens(data.token))
+            .then(data => responseToken=data.token)
+            // .then(data => alert("data "+JSON.stringify(data)))
+            // .then(data => responseEmail=data.result)
+            // .then(data => alert(JSON.stringify(data.email)))
+            .catch(error => {
+                window.alert(error);
+                return;
             });
 
-        setForm({ email: "", password: ""});
+        setTokens(responseToken);
+        sessionStorage.setItem("tokens", responseToken);
 
+
+        // alert(responseEmail);
+        setForm({ email: "", password: ""});
+        // navigate("/");
     }
 
     // This following section will display the form that takes the input from the user.
