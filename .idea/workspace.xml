@@ -4,10 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="59dfec90-93b5-41dd-956c-8d393c8b7fc3" name="Changes" comment="add composers to search">
+    <list default="true" id="59dfec90-93b5-41dd-956c-8d393c8b7fc3" name="Changes" comment="change composers date to DOB">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/models/composer.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/models/composer.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/routes/composers.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/routes/composers.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/routes/auth.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/routes/auth.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -58,7 +57,10 @@
       <workItem from="1664926853208" duration="223000" />
       <workItem from="1665440900011" duration="12523000" />
       <workItem from="1665532961541" duration="11673000" />
-      <workItem from="1665716051390" duration="3887000" />
+      <workItem from="1665716051390" duration="4647000" />
+      <workItem from="1665965567701" duration="91000" />
+      <workItem from="1665990671377" duration="1228000" />
+      <workItem from="1666004723608" duration="3201000" />
     </task>
     <task id="LOCAL-00001" summary="Change the composer schema">
       <created>1664696726089</created>
@@ -144,7 +146,14 @@
       <option name="project" value="LOCAL" />
       <updated>1665716705393</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="change composers date to DOB">
+      <created>1665900547216</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1665900547216</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -181,6 +190,7 @@
     <MESSAGE value="testing" />
     <MESSAGE value="testing2" />
     <MESSAGE value="add composers to search" />
-    <option name="LAST_COMMIT_MESSAGE" value="add composers to search" />
+    <MESSAGE value="change composers date to DOB" />
+    <option name="LAST_COMMIT_MESSAGE" value="change composers date to DOB" />
   </component>
 </project>
