@@ -1,11 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="7c003d22-b666-4e4f-82e9-be5f2c89ed56" name="Changes" comment="authentication pages added, registration success, css adjustments, login to be continued">
-      <change afterPath="$PROJECT_DIR$/server/routes/index.js" afterDir="false" />
+    <list default="true" id="7c003d22-b666-4e4f-82e9-be5f2c89ed56" name="Changes" comment="login success, token store in session, email and result remain unknown">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/home-composer.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/home-composer.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/home-list-item-detail.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/home-list-item-detail.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/home-list-item.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/home-list-item.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/src/components/pages/Authentication/login.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/pages/Authentication/login.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/routes/auth.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/routes/auth.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/pages/Composer/Composer.css" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/pages/Composer/Composer.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/pages/Home/Home.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/pages/Home/Home.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/pages/Recommendation/Recommendation.css" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/pages/Recommendation/Recommendation.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -96,7 +100,7 @@
       <workItem from="1665888197621" duration="6127000" />
       <workItem from="1665898313247" duration="1745000" />
       <workItem from="1665900419155" duration="770000" />
-      <workItem from="1665920476179" duration="32969000" />
+      <workItem from="1665920476179" duration="38100000" />
     </task>
     <task id="LOCAL-00001" summary="files restructured, all swipers fixed">
       <created>1663904598170</created>
@@ -238,7 +242,14 @@
       <option name="project" value="LOCAL" />
       <updated>1666007893825</updated>
     </task>
-    <option name="localTasksCounter" value="21" />
+    <task id="LOCAL-00021" summary="login success, token store in session, email and result remain unknown">
+      <created>1666012941848</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1666012941848</updated>
+    </task>
+    <option name="localTasksCounter" value="22" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -290,6 +301,7 @@
     <MESSAGE value="repertoire css structure done, scoreLink can't be reached yet" />
     <MESSAGE value="composer page, repertoire page, profile page, and repertoire detail page css fixed, img still can't be accessed" />
     <MESSAGE value="authentication pages added, registration success, css adjustments, login to be continued" />
-    <option name="LAST_COMMIT_MESSAGE" value="authentication pages added, registration success, css adjustments, login to be continued" />
+    <MESSAGE value="login success, token store in session, email and result remain unknown" />
+    <option name="LAST_COMMIT_MESSAGE" value="login success, token store in session, email and result remain unknown" />
   </component>
 </project>

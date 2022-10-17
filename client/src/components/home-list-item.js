@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import { Container } from "../styles";
-
+import { Link } from "react-router-dom";
 import HomeListItemDetail from "./home-list-item-detail";
 
 const HomeListItem = ({ heading, link, courses }) => {
@@ -13,18 +13,32 @@ const HomeListItem = ({ heading, link, courses }) => {
         </h4>
         <div className='suggested-courses'>
           {courses.map((course) => {
+              const links = course._id;
             return (
+                <Link
+                    to={{pathname:"/api/composers/"+links}}
+                    state={{
+                        _id:course._id,
+                        name: course.name,
+                        nationality:course.nationality,
+                        DOB:course.DOB,
+                        website:course.website,
+                        biography:course.biography,
+                        image:course.image
+
+                    }}
+                    key={course.links}
+                    style={{ textDecoration: "none", color: "black" }}
+                >
               <HomeListItemDetail
-                courseImage={course.courseImage}
-                title={course.courseTitle}
-                author={course.courseAuthor}
-                rating={course.courseRating}
-                ratingNum={course.ratingNumbers}
-                price={course.coursePrice}
-                discount={course.currentPrice}
+                images={course.image}
+                names={course.names}
+                nationality={course.nationality}
+                website={course.website}
                 tag={course.tag}
                 tagColor={course.tagColor}
               />
+                </Link>
             );
           })}
         </div>

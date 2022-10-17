@@ -74,11 +74,11 @@ export default function Create() {
 
         setTokens(responseToken);
         sessionStorage.setItem("tokens", responseToken);
-
-
+        // alert(sessionStorage.getItem("tokens"));
         // alert(responseEmail);
+        alert("Successfully login as "+sessionStorage.getItem("tokens"))
         setForm({ email: "", password: ""});
-        // navigate("/");
+        navigate("/");
     }
 
     // This following section will display the form that takes the input from the user.

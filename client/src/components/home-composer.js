@@ -23,93 +23,99 @@ const mystyle = {
 const HomeComposer = () => {
   const courses = [
     {
-      courseImage: djangoEcomImg,
-      courseTitle: "Kate Dcott | Build Advanced Django Web Application",
-      courseAuthor: "Victoria, Australia",
-      courseRating: "4.8",
-      ratingNumbers: "57",
-      
+      "_id": "633cc39a56e324f2dac4f6a8",
+      "name": "Beglarian Eve",
+      "nationality": "American Armenian",
+      "website": "She does not have a website.",
+      "biography": "There are no information at this moment.",
+      "image": "../../img/placeholder.png",
+      "DOB": "1958"
     },
     {
-      courseImage: djangoFullImg,
-      courseTitle: "Helen Whitaker | Full Stack Websites with Python Web Development",
-      courseAuthor: "Nick Walter",
-      courseRating: "4.7",
-      ratingNumbers: "3,091",
-      
+      "_id": "633cc39a56e324f2dac4f6ab",
+      "name": "Blass Noa",
+      "nationality": "Israeli",
+      "website": "She does not have a website.",
+      "biography": "There are no information at this moment.",
+      "image": "../../img/placeholder.png",
+      "DOB": "1937-2008"
     },
     {
-      courseImage: pythonImg,
-      courseTitle: "Tessa Sanderson | Python Django Dev To Deployment",
-      courseAuthor: "Brad Traversy",
-      courseRating: "4.6",
-      ratingNumbers: "4,532",
-      
-      tag: "Most polular",
-      tagColor: "#ffe799",
+      "_id": "633cc39a56e324f2dac4f6ae",
+      "name": "Bonis Mel",
+      "nationality": "French",
+      "website": "She does not have a website.",
+      "biography": "There are no information at this moment.",
+      "image": "../../img/placeholder.png",
+      "DOB": "1858-1937"
     },
     {
-      courseImage: buildPyImg,
-      courseTitle: "Dina Peters | Build Python Django Real Project: Django Web Development",
-      courseAuthor: "Rathan Kumar",
-      courseRating: "4.5",
-      ratingNumbers: "168",
-      
+      "_id": "633cc39a56e324f2dac4f6b1",
+      "name": "Bray Charlotte",
+      "nationality": "British (English)",
+      "website": "http://charlottebray.co.uk/",
+      "biography": "There are no information at this moment.",
+      "image": "../../img/placeholder.png",
+      "DOB": "1982"
     },
     {
-      courseImage: reactDjImg,
-      courseTitle:
-        "Mary Muir | React & Django Full Stack: web app, backend API, mobile apps",
-      courseAuthor: "Krystian Czekalski",
-      courseRating: "4.3",
-      ratingNumbers: "1,172",
-    
+      "_id": "633cc39a56e324f2dac4f6b4",
+      "name": "Brouwer Margaret",
+      "nationality": "American",
+      "website": "She does not have a website.",
+      "biography": "There are no information at this moment.",
+      "image": "../../img/placeholder.png",
+      "DOB": "1940"
     },
   ];
 
   const courses2 = [
     {
-      courseImage: buildPyImg,
-      courseTitle: "Kate Dcott | Build Advanced Django Web Application",
-      courseAuthor: "Victoria, Australia",
-      courseRating: "4.8",
-      ratingNumbers: "57",
-
+      "_id": "633cc39a56e324f2dac4f6b6",
+      "name": "Burrell Diana",
+      "nationality": "British (English)",
+      "website": "She does not have a website.",
+      "biography": "There are no information at this moment.",
+      "image": "../../img/placeholder.png",
+      "DOB": "1948"
     },
     {
-      courseImage: reactDjImg,
-      courseTitle: "Helen Whitaker | Full Stack Websites with Python Web Development",
-      courseAuthor: "Nick Walter",
-      courseRating: "4.7",
-      ratingNumbers: "3,091",
-
+      "_id": "633cc39a56e324f2dac4f6b8",
+      "name": "Carwithen Doreen",
+      "nationality": "British (English)",
+      "website": "She does not have a website.",
+      "biography": "There are no information at this moment.",
+      "image": "../../img/placeholder.png",
+      "DOB": "1922-2003"
     },
     {
-      courseImage: pythonImg,
-      courseTitle: "Tessa Sanderson | Python Django Dev To Deployment",
-      courseAuthor: "Brad Traversy",
-      courseRating: "4.6",
-      ratingNumbers: "4,532",
-
+      "_id": "633cc39a56e324f2dac4f6c2",
+      "name": "Czernowin Chaya",
+      "nationality": "Israeli American",
+      "website": "She does not have a website.",
+      "biography": "There are no information at this moment.",
+      "image": "../../img/placeholder.png",
+      "DOB": "1957",
       tag: "Most polular",
       tagColor: "#ffe799",
     },
     {
-      courseImage: djangoEcomImg,
-      courseTitle: "Dina Peters | Build Python Django Real Project: Django Web Development",
-      courseAuthor: "Rathan Kumar",
-      courseRating: "4.5",
-      ratingNumbers: "168",
-
+      "_id": "633cc39a56e324f2dac4f6c5",
+      "name": "Desportes Yvonnes",
+      "nationality": "French",
+      "website": "She does not have a website.",
+      "biography": "There are no information at this moment.",
+      "image": "../../img/placeholder.png",
+      "DOB": "1907-1993"
     },
     {
-      courseImage: djangoFullImg,
-      courseTitle:
-          "Mary Muir | React & Django Full Stack: web app, backend API, mobile apps",
-      courseAuthor: "Krystian Czekalski",
-      courseRating: "4.3",
-      ratingNumbers: "1,172",
-
+      "_id": "633cc39a56e324f2dac4f6cb",
+      "name": "Epstein Marti",
+      "nationality": "American",
+      "website": "She does not have a website.",
+      "biography": "There are no information at this moment.",
+      "image": "../../img/placeholder.png",
+      "DOB": "1959"
     },
   ];
   return (
@@ -117,7 +123,6 @@ const HomeComposer = () => {
 
         <h4 style={mystyle}>Popular Composers</h4>
         <Swiper
-
             slidesPerView={1}
             spaceBetween={33}
             slidesPerGroup={2}

@@ -1,11 +1,13 @@
 import styled from "styled-components";
 
 const HomeListItemDetail = ({
-  courseImage,
-  title,
-  author,
-  price,
-  discount,
+  ids,
+    names,
+    nationality,
+    website,
+    biography,
+    images,
+    DOB,
   tag,
   tagColor,
 }) => {
@@ -13,16 +15,16 @@ const HomeListItemDetail = ({
     <StyledCourseCard tagColor={tagColor}>
       <div className='course-container'>
         <div className='img-container'>
-          <img src={courseImage} alt='course image' />
+          <img src={images} alt='course image' />
         </div>
         <div className='course-content'>
-          <h5>{title}</h5>
-          <p>{author}</p>
+          <h5>{names}</h5>
+          <p>{nationality}</p>
 
           <h5>
-            {discount}
+            {website}
             <span>
-              <strike>{price}</strike>
+              <strike>{DOB}</strike>
             </span>
           </h5>
           {tag ? <div className='tag'>{tag}</div> : ""}

@@ -3,10 +3,10 @@
     width: 900px;
     /*margin: auto;*/
     display: grid;
-    grid-template-columns: repeat(4, 50%);
+    grid-template-columns: repeat(4, 37%);
     column-gap: 1%;
     padding-top: 100px;
-    column-gap: 1%;
+    column-gap: 2%;
     row-gap: 25px;
 }
 
