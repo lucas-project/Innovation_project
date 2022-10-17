@@ -15,6 +15,8 @@ import Ailis from "./components/pages/Recommendation/Ailis";
 import Flute from "./components/pages/Instrument/Flute";
 import Search from "./components/pages/Search/Search";
 import InstrumentChild from "./components/pages/Instrument/InstrumentChild";
+import Login from "./components/pages/Authentication/login";
+import Register from "./components/pages/Authentication/registration";
 
 
 const App = () => {
@@ -42,7 +44,8 @@ const App = () => {
           <Route path="/search/*" element={<Search />} />
           <Route path="/recommendation/flute" element={<Flute />} />
           <Route path="/instrument/:instrument" element={<InstrumentChild />} />
-
+          <Route path="/api/auth" element={<Login />} />
+          <Route path="/api/users" element={<Register />} />
       </Routes>
       
         <br/><br/><br/>

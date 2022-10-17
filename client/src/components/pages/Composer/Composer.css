@@ -1,17 +1,17 @@
 
 .albums-container {
-    width: 1000px;
-    margin: auto;
+    width: 900px;
+    /*margin: auto;*/
     display: grid;
-    grid-template-columns: repeat(4, 42%);
-    column-gap: 4%;
+    grid-template-columns: repeat(4, 50%);
+    column-gap: 1%;
     padding-top: 100px;
-    column-gap: 5%;
+    column-gap: 1%;
     row-gap: 25px;
 }
 
 .albums-card {
-    min-height: 198px;
+    min-height: 150px;
 }
 
 .loading {

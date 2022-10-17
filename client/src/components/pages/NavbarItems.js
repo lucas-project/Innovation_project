@@ -23,6 +23,10 @@ const navbarItems = [
     title: "Search",
     link: "/search",
   },
+  {
+    title: "Login",
+    link: "/api/auth",
+  },
 
 ];
 

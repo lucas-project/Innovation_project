@@ -30,6 +30,7 @@ const Composer = () => {
                     <p>...loading</p>
                 </div>
             )}
+
             <div className="albums-container">
                 {albums.map(album => (
                     <Link
