@@ -17,14 +17,11 @@ import Ailis from "./components/pages/Recommendation/Ailis";
 import Flute from "./components/pages/Instrument/Flute";
 import Search from "./components/pages/Search/Search";
 import InstrumentChild from "./components/pages/Instrument/InstrumentChild";
-<<<<<<< Updated upstream
-=======
 import Admin from "./components/pages/Admin/Admin";
 import Login from "./components/pages/Authentication/login";
 import Register from "./components/pages/Authentication/registration";
 import ComposerMongodb from "./components/pages/Composer/Profile";
 import Profile from "./components/pages/Profile/Profile";
->>>>>>> Stashed changes
 
 
 const App = () => {
@@ -53,13 +50,10 @@ const App = () => {
         <Route path="/search/*" element={<Search />} />
         <Route path="/recommendation/flute" element={<Flute />} />
         <Route path="/instrument/:instrument" element={<InstrumentChild />} />
-<<<<<<< Updated upstream
-=======
         <Route path="/admin" element={<Admin />} />
         <Route path="/instrument/:instrument" element={<InstrumentChild />} />
         <Route path="/api/auth" element={<Login />} />
         <Route path="/api/users" element={<Register />} />
->>>>>>> Stashed changes
 
 
       </Routes>
