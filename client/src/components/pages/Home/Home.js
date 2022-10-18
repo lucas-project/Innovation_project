@@ -10,6 +10,7 @@ import HomeRepertoire from "../../home-repertoire";
 import HomeComposer from "../../home-composer";
 import HomeInstrument from "../../home-instrument";
 
+import SearchBar from "../../home-searchBar";
 const home = () => {
   return (
    
