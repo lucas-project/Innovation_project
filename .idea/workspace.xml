@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="7c003d22-b666-4e4f-82e9-be5f2c89ed56" name="Changes" comment="home recommended piece now clickable">
-      <change afterPath="$PROJECT_DIR$/client/src/components/home-list-instrument-detail.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/components/home-list-instrument.js" afterDir="false" />
+    <list default="true" id="7c003d22-b666-4e4f-82e9-be5f2c89ed56" name="Changes" comment="combined codes, login and register need fixed-1">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/home-instrument.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/home-instrument.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/home-list-instrument.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/home-list-instrument.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/pages/Authentication/login.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/pages/Authentication/login.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/pages/Authentication/registration.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/pages/Authentication/registration.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/routes/users.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/routes/users.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -97,7 +98,15 @@
       <workItem from="1665898313247" duration="1745000" />
       <workItem from="1665900419155" duration="770000" />
       <workItem from="1665920476179" duration="40719000" />
-      <workItem from="1666052435200" duration="1938000" />
+      <workItem from="1666052435200" duration="1971000" />
+      <workItem from="1666055424896" duration="452000" />
+      <workItem from="1666057090425" duration="803000" />
+      <workItem from="1666058089207" duration="121000" />
+      <workItem from="1666058223085" duration="450000" />
+      <workItem from="1666058787009" duration="90000" />
+      <workItem from="1666058890572" duration="764000" />
+      <workItem from="1666061049286" duration="112000" />
+      <workItem from="1666069124749" duration="4142000" />
     </task>
     <task id="LOCAL-00001" summary="files restructured, all swipers fixed">
       <created>1663904598170</created>
@@ -260,7 +269,21 @@
       <option name="project" value="LOCAL" />
       <updated>1666051703671</updated>
     </task>
-    <option name="localTasksCounter" value="24" />
+    <task id="LOCAL-00024" summary="before combining codes, checkpoint">
+      <created>1666054874543</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1666054874543</updated>
+    </task>
+    <task id="LOCAL-00025" summary="combined codes, login and register need fixed-1">
+      <created>1666061140649</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1666061140649</updated>
+    </task>
+    <option name="localTasksCounter" value="26" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -291,9 +314,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="files restructured, all swipers fixed" />
-    <MESSAGE value="navigation bar added" />
-    <MESSAGE value="footer logo fixed" />
     <MESSAGE value="small changes on styles" />
     <MESSAGE value="Restructure project as client and server" />
     <MESSAGE value="errorMiddleware.js added, async http request added" />
@@ -315,6 +335,10 @@
     <MESSAGE value="login success, token store in session, email and result remain unknown" />
     <MESSAGE value="home-composer now clickable, pic needed" />
     <MESSAGE value="home recommended piece now clickable" />
-    <option name="LAST_COMMIT_MESSAGE" value="home recommended piece now clickable" />
+    <MESSAGE value="before combining codes, checkpoint" />
+    <MESSAGE value="combined codes" />
+    <MESSAGE value="combined codes, login and register need fixed" />
+    <MESSAGE value="combined codes, login and register need fixed-1" />
+    <option name="LAST_COMMIT_MESSAGE" value="combined codes, login and register need fixed-1" />
   </component>
 </project>

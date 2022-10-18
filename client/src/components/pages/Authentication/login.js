@@ -72,13 +72,19 @@ export default function Create() {
                 return;
             });
 
+
         setTokens(responseToken);
+        alert(typeof responseToken)
         sessionStorage.setItem("tokens", responseToken);
         // alert(sessionStorage.getItem("tokens"));
         // alert(responseEmail);
         alert("Successfully login as "+sessionStorage.getItem("tokens"))
         setForm({ email: "", password: ""});
-        navigate("/");
+        if (responseToken!=""){
+            navigate("/");
+        }else{
+            alert("login failed");
+        }
     }
 
     // This following section will display the form that takes the input from the user.
