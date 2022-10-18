@@ -4,43 +4,36 @@ const { Composer } = require('../models/composer');
 const express = require('express');
 const router = express.Router();
 
-router.get('/:key', async (req, res) => {
+router.get('/composer', async (req, res) => {
 
-    const reg = new RegExp(req.params.key, "i");
-    let result = await Composer.find(
-        {
-            "$or": [
-                { name: { $regex: reg } },
-                { nationality: { $regex: reg } }
-            ]
-        }
-    );
+    const reg1 = new RegExp(req.query.key, "i");
+    const reg2 = new RegExp(req.query.nationality, "i");
+    let result = "";
 
-    result = result.concat(await Piece.find(
-        {
-            "$or": [
-                { name: { $regex: reg } },
-                { instruments: { $regex: reg } }
-            ]
-        }
-    ));
+    if (!req.query.nationality) {
+        result = await Composer.find(
+            {
+                "$or": [
+                    { name: { $regex: reg1 } },
+                    { nationality: { $regex: reg1 } }
+                ]
+            }
+        );
+    } else {
+        result = await Composer.find(
+            {
+                "$and": [
+                    { name: { $regex: reg1 } },
+                    { nationality: { $regex: reg2 } }
+                ]
+            }
+        );
+    }
 
     res.send(result);
 });
 
-router.get('/composer/:key', async (req, res) => {
 
-<<<<<<< Updated upstream
-    const reg = new RegExp(req.params.key, "i");
-    let result = await Composer.find(
-        {
-            "$or": [
-                { name: { $regex: reg } },
-                { nationality: { $regex: reg } }
-            ]
-        }
-    );
-=======
 router.get('/piece', async (req, res) => {
 
     const reg1 = new RegExp(req.query.key, "i");
@@ -93,26 +86,23 @@ router.get('/piece', async (req, res) => {
             }
         );
     }
->>>>>>> Stashed changes
 
     res.send(result);
 });
 
-router.get('/piece/:key', async (req, res) => {
+router.get('/instrument/:instrument', async (req, res) => {
 
-    const reg = new RegExp(req.params.key, "i");
+    const reg = new RegExp(req.params.instrument, "i");
 
-    let result = await Piece.find(
+    result = await Piece.find(
         {
-            "$or": [
-                { name: { $regex: reg } },
-                { year: { $regex: reg } },
-                { instruments: { $regex: reg } }
-            ]
+            instruments: { $regex: reg }
         }
     );
 
+
     res.send(result);
 });
+
 
 module.exports = router; 
