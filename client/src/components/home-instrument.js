@@ -1,4 +1,4 @@
-import HomeListComposer from "./home-list-composer";
+import HomeListComposer from "./home-list-instrument";
 
 import ethicalImg from "../img/ethical_hack.jpg";
 import cdataImg from "../img/cdata.jpg";
@@ -25,83 +25,42 @@ const HomeInstrument = () => {
       instrument: "flute",
     },
     {
-      courseImage: cdataImg,
-      courseTitle: "Mastering Data Structures & Algorithms using C and C++",
-      courseAuthor: "Abdul Bari",
-      courseRating: "4.7",
-      ratingNumbers: "17,135",
+      instrument: "clarinet",
       
     },
     {
-      courseImage: financialImg,
-      courseTitle:
-        "The Data Science Course 2021: Complete Data Science Bootcamp",
-      courseAuthor: "365 Careers, 365 Careers Team",
-      courseRating: "4.6",
-      ratingNumbers: "90,944",
+      instrument:"Trumpet",
       
     },
     {
-      courseImage: kuberImg,
-      courseTitle:
-        "Certified Kubernetes Administrator (CKA) with Practice Tests",
-      courseAuthor: "Mumshad Mannambeth, KodeKloud Training",
-      courseRating: "4.7",
-      ratingNumbers: "24,590",
+      instrument: "Violin"
      
     },
     {
-      courseImage: graphicImg,
-      courseTitle: "Graphic Design Masterclass - Learn GREAT Design",
-      courseAuthor: "Lindsay Marsh",
-      courseRating: "4.7",
-      ratingNumbers: "25,588",
+      instrument: "Cello"
      
     },
   ];
 
   const courses2 = [
     {
-      courseImage: financialImg,
-      courseTitle: "Learn Ethical Hacking From Scratch",
-      courseAuthor: "Zaid Sabih, z Security",
-      courseRating: "4.6",
-      ratingNumbers: "94,117",
+      instrument:"Piano"
 
     },
     {
-      courseImage: graphicImg,
-      courseTitle: "Mastering Data Structures & Algorithms using C and C++",
-      courseAuthor: "Abdul Bari",
-      courseRating: "4.7",
-      ratingNumbers: "17,135",
+      instrument: "Viola"
 
     },
     {
-      courseImage: ethicalImg,
-      courseTitle:
-          "The Data Science Course 2021: Complete Data Science Bootcamp",
-      courseAuthor: "365 Careers, 365 Careers Team",
-      courseRating: "4.6",
-      ratingNumbers: "90,944",
+      instrument: "Oboe"
 
     },
     {
-      courseImage: kuberImg,
-      courseTitle:
-          "Certified Kubernetes Administrator (CKA) with Practice Tests",
-      courseAuthor: "Mumshad Mannambeth, KodeKloud Training",
-      courseRating: "4.7",
-      ratingNumbers: "24,590",
+      instrument: "Bassoon"
 
     },
     {
-      courseImage: cdataImg,
-      courseTitle: "Graphic Design Masterclass - Learn GREAT Design",
-      courseAuthor: "Lindsay Marsh",
-      courseRating: "4.7",
-      ratingNumbers: "25,588",
-
+      instrument: "Horn"
     },
   ];
   return (

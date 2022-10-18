@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import { Container } from "../styles";
 import { Link } from "react-router-dom";
-import HomeListComposerDetail from "./home-list-composer-detail";
+import HomeListComposerDetail from "./home-list-instrument-detail";
 
 const HomeListComposer = ({ heading, link, courses }) => {
     return (
@@ -13,29 +13,18 @@ const HomeListComposer = ({ heading, link, courses }) => {
                 </h4>
                 <div className='suggested-courses'>
                     {courses.map((course) => {
-                        const links = course._id;
+                        const links = course.instrument;
                         return (
                             <Link
-                                to={{pathname:"/api/composers/"+links}}
+                                to={{pathname:"/instrument/"+links}}
                                 state={{
-                                    _id:course._id,
-                                    name: course.name,
-                                    nationality:course.nationality,
-                                    DOB:course.DOB,
-                                    website:course.website,
-                                    biography:course.biography,
-                                    image:course.image
+                                    URL:course.instrument
                                 }}
-                                key={course._id}
+                                key={course.instrument}
                                 style={{ textDecoration: "none", color: "black" }}
                             >
                                 <HomeListComposerDetail
-                                    images={course.image}
-                                    names={course.name}
-                                    nationality={course.nationality}
-                                    // website={course.website}
-                                    tag={course.tag}
-                                    tagColor={course.tagColor}
+                                    instrument={course.instrument}
                                 />
                             </Link>
                         );
