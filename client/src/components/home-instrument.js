@@ -23,44 +23,46 @@ const HomeInstrument = () => {
   const courses = [
     {
       instrument: "flute",
+      images:"../../src/img/kubernetes.jpg"
     },
     {
       instrument: "clarinet",
-      
+      images:"../../src/img/kubernetes.jpg"
     },
     {
       instrument:"Trumpet",
-      
+      images:"../../src/img/kubernetes.jpg"
     },
     {
-      instrument: "Violin"
-     
+      instrument: "Violin",
+      images:"../../src/img/cdata.jpg"
     },
     {
-      instrument: "Cello"
-     
+      instrument: "Cello",
+      images:"../../src/img/cdata.jpg"
     },
   ];
 
   const courses2 = [
     {
-      instrument:"Piano"
-
+      instrument:"Piano",
+      images:"../../src/img/cdata.jpg"
     },
     {
-      instrument: "Viola"
-
+      instrument: "Viola",
+      images:"../../src/img/kubernetes.jpg"
     },
     {
-      instrument: "Oboe"
-
+      instrument: "Oboe",
+      images:"../../src/img/kubernetes.jpg"
     },
     {
-      instrument: "Bassoon"
-
+      instrument: "Bassoon",
+      images:"../../src/img/kubernetes.jpg"
     },
     {
-      instrument: "Horn"
+      instrument: "Horn",
+      images:"../../src/img/kubernetes.jpg"
     },
   ];
   return (

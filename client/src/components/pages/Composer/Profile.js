@@ -185,7 +185,8 @@ const secondRight = {
     width:'100%'
 }
 const down ={
-    height:'300px',
+    minHeight:'300px',
+    height:'auto',
     background:'#f2b476',
     width:'96.5%',
     marginHorizontal:'auto'

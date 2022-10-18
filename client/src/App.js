@@ -22,7 +22,7 @@ import Login from "./components/pages/Authentication/login";
 import Register from "./components/pages/Authentication/registration";
 import ComposerMongodb from "./components/pages/Composer/Profile";
 import Profile from "./components/pages/Profile/Profile";
-
+import About from "./components/pages/AboutUs/about";
 
 const App = () => {
     const [isopen, setisopen] = useState(false);
@@ -54,6 +54,7 @@ const App = () => {
         <Route path="/instrument/:instrument" element={<InstrumentChild />} />
         <Route path="/api/auth" element={<Login />} />
         <Route path="/api/users" element={<Register />} />
+        <Route path="/about" element={<About/>} />
 
 
       </Routes>

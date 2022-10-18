@@ -25,6 +25,7 @@ const HomeListComposer = ({ heading, link, courses }) => {
                             >
                                 <HomeListComposerDetail
                                     instrument={course.instrument}
+                                    images={course.images}
                                 />
                             </Link>
                         );

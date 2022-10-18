@@ -1,11 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="7c003d22-b666-4e4f-82e9-be5f2c89ed56" name="Changes" comment="login and registration fixed">
+    <list default="true" id="7c003d22-b666-4e4f-82e9-be5f2c89ed56" name="Changes" comment="about us page created, footer links added for most of the item, join us link works">
+      <change afterPath="$PROJECT_DIR$/client/src/components/img/home-piece.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/components/pages/AboutUs/about.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/img/home-instrument.jpg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/Footer.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/Footer.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/home-composer.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/home-composer.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/home-footer-joinUs.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/home-footer-joinUs.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/src/components/home-instrument.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/home-instrument.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/src/components/home-list-instrument-detail.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/home-list-instrument-detail.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/src/components/home-list-instrument.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/home-list-instrument.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/home-list-piece-detail.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/home-list-piece-detail.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/home-repertoire.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/home-repertoire.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/pages/Composer/Profile.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/pages/Composer/Profile.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/pages/NavbarItems.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/pages/NavbarItems.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/img/adidas-logo.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/img/booking-logo.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/img/eventbrite-logo.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/img/lyft-logo.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/img/purple-intersect.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/img/surveymonkey-logo.svg" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -105,7 +122,7 @@
       <workItem from="1666058787009" duration="90000" />
       <workItem from="1666058890572" duration="764000" />
       <workItem from="1666061049286" duration="112000" />
-      <workItem from="1666069124749" duration="8459000" />
+      <workItem from="1666069124749" duration="16884000" />
     </task>
     <task id="LOCAL-00001" summary="files restructured, all swipers fixed">
       <created>1663904598170</created>
@@ -289,7 +306,14 @@
       <option name="project" value="LOCAL" />
       <updated>1666073436582</updated>
     </task>
-    <option name="localTasksCounter" value="27" />
+    <task id="LOCAL-00027" summary="homepage all swiper functional now">
+      <created>1666087429793</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1666087429793</updated>
+    </task>
+    <option name="localTasksCounter" value="28" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -320,8 +344,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Restructure project as client and server" />
-    <MESSAGE value="errorMiddleware.js added, async http request added" />
     <MESSAGE value="mongodb connected" />
     <MESSAGE value="rename files and folders, successfully applied dummy api in testing React router" />
     <MESSAGE value="picture added to composer page" />
@@ -345,6 +367,8 @@
     <MESSAGE value="combined codes, login and register need fixed" />
     <MESSAGE value="combined codes, login and register need fixed-1" />
     <MESSAGE value="login and registration fixed" />
-    <option name="LAST_COMMIT_MESSAGE" value="login and registration fixed" />
+    <MESSAGE value="homepage all swiper functional now" />
+    <MESSAGE value="about us page created, footer links added for most of the item, join us link works" />
+    <option name="LAST_COMMIT_MESSAGE" value="about us page created, footer links added for most of the item, join us link works" />
   </component>
 </project>

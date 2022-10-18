@@ -5,7 +5,6 @@ const navbarItems = [
   },
   {
     title: "Repertoire",
-    link: "/repertoire",
     link: "/pieces",
   },
   {

@@ -1,16 +1,19 @@
 import styled from "styled-components";
-import composerP from "../../src/img/kubernetes.jpg";
+import composerP from "../../src/img/home-instrument.jpg";
+//image source:https://www.istockphoto.com/es/foto/instrumentos-musical-gm894058154-247232042?phrase=music%20instrument
 const HomeListComposerDetail = ({
-                                   instrument
+                                   instrument,images
                                 }) => {
     return (
         <StyledCourseCard>
             <div className='course-container'>
                 <div className='img-container'>
                     <img src={composerP} alt='course image' />
+
                 </div>
                 <div className='course-content'>
                     <h5>{instrument}</h5>
+                    {/*<h5>{images}</h5>*/}
                 </div>
             </div>
         </StyledCourseCard>

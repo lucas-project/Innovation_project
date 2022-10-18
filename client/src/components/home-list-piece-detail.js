@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import composerP from "../components/img/piece.png";
+import composerP from "../components/img/home-piece.jpg";
 const HomeListComposerDetail = ({
                                     ids,
                                     names,
