@@ -1,15 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="7c003d22-b666-4e4f-82e9-be5f2c89ed56" name="Changes" comment="home-composer now clickable, pic needed">
-      <change afterPath="$PROJECT_DIR$/client/src/components/home-list-piece-detail.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/components/home-list-piece.js" afterDir="false" />
+    <list default="true" id="7c003d22-b666-4e4f-82e9-be5f2c89ed56" name="Changes" comment="home recommended piece now clickable">
+      <change afterPath="$PROJECT_DIR$/client/src/components/home-list-instrument-detail.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/components/home-list-instrument.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/home-composer.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/home-composer.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/src/components/home-instrument.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/home-instrument.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/home-list-item-detail.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/home-list-composer-detail.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/home-list-item.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/home-list-composer.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/home-repertoire.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/home-repertoire.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -100,7 +96,8 @@
       <workItem from="1665888197621" duration="6127000" />
       <workItem from="1665898313247" duration="1745000" />
       <workItem from="1665900419155" duration="770000" />
-      <workItem from="1665920476179" duration="39974000" />
+      <workItem from="1665920476179" duration="40719000" />
+      <workItem from="1666052435200" duration="1938000" />
     </task>
     <task id="LOCAL-00001" summary="files restructured, all swipers fixed">
       <created>1663904598170</created>
@@ -256,7 +253,14 @@
       <option name="project" value="LOCAL" />
       <updated>1666049792310</updated>
     </task>
-    <option name="localTasksCounter" value="23" />
+    <task id="LOCAL-00023" summary="home recommended piece now clickable">
+      <created>1666051703671</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1666051703671</updated>
+    </task>
+    <option name="localTasksCounter" value="24" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -310,6 +314,7 @@
     <MESSAGE value="authentication pages added, registration success, css adjustments, login to be continued" />
     <MESSAGE value="login success, token store in session, email and result remain unknown" />
     <MESSAGE value="home-composer now clickable, pic needed" />
-    <option name="LAST_COMMIT_MESSAGE" value="home-composer now clickable, pic needed" />
+    <MESSAGE value="home recommended piece now clickable" />
+    <option name="LAST_COMMIT_MESSAGE" value="home recommended piece now clickable" />
   </component>
 </project>
