@@ -1,15 +1,15 @@
 const navbarItems = [
   {
-    title: "Home",
-    link: "/",
-  },
-  {
     title: "Composer",
-    link: "/api/composer",
+    link: "/api/composers",
   },
   {
     title: "Repertoire",
+<<<<<<< Updated upstream
     link: "/repertoire",
+=======
+    link: "/pieces",
+>>>>>>> Stashed changes
   },
   {
     title: "Instrument",
@@ -26,6 +26,10 @@ const navbarItems = [
   {
     title: "Search",
     link: "/search",
+  },
+  {
+    title: "Login",
+    link: "/api/auth",
   },
 
 ];
