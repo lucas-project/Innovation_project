@@ -12,75 +12,75 @@ const Admin = () => {
   
     return (
 
-        <Navbar  key="false" bg="light" expand="false"  className="mb-3">
-          <Container fluid>
-            <Navbar.Brand href="#">The Admin Center</Navbar.Brand>
-            <Navbar.Toggle aria-controls={`offcanvasNavbar-expand-false`} />
-            <Navbar.Offcanvas
-              id={`offcanvasNavbar-expand-false`}
-              aria-labelledby={`offcanvasNavbarLabel-expand-false`}
-              placement="end"
-            >
-              <Offcanvas.Header closeButton>
-                <Offcanvas.Title id={`offcanvasNavbarLabel-expand-false`}>
-                  Admin
-                </Offcanvas.Title>
-              </Offcanvas.Header>
-              <Offcanvas.Body>
-                <Nav className="justify-content-end flex-grow-1 pe-3">
-                <NavDropdown
-                    title="Composer Management"
-                    id={`offcanvasNavbarDropdown-expand-false`}
-                  >
-                    <NavDropdown.Item href="/admin/composer">
-                      Show composer
-                    </NavDropdown.Item>
-                    <NavDropdown.Item href="#action4">
-                      Add composer
-                    </NavDropdown.Item>
-                    <NavDropdown.Divider />
-                    <NavDropdown.Item href="#action5">
-                      Remove composer
-                    </NavDropdown.Item>
-                  </NavDropdown>
-                  <NavDropdown
-                    title="Repertoire Management"
-                    id={`offcanvasNavbarDropdown-expand-false`}
-                  >
-                    <NavDropdown.Item href="#action3">
-                      Show piece list
-                    </NavDropdown.Item>
-                    <NavDropdown.Item href="#action4">
-                      Add piece
-                    </NavDropdown.Item>
-                    <NavDropdown.Divider />
-                    <NavDropdown.Item href="#action5">
-                      Remove piece
-                    </NavDropdown.Item>
-                  </NavDropdown>
-                  <NavDropdown
-                    title="Recommendation Management"
-                    id={`offcanvasNavbarDropdown-expand-false`}
-                  >
-                    <NavDropdown.Item href="#action3">
-                      Show recommendation
-                    </NavDropdown.Item>
-                    <NavDropdown.Item href="#action4">
-                      Add recommendation
-                    </NavDropdown.Item>
-                    <NavDropdown.Divider />
-                    <NavDropdown.Item href="#action5">
-                      Remove recommendation
-                    </NavDropdown.Item>
-                  </NavDropdown>
-                  <Nav.Link href="#action1">Go to website home</Nav.Link>
-                </Nav>
-                
-              </Offcanvas.Body>
-            </Navbar.Offcanvas>
-          </Container>
-        </Navbar>
-      )}
+      <Navbar  key="false" bg="light" expand="false"  className="mb-3">
+      <Container fluid>
+        <Navbar.Brand href="#">The Admin Center</Navbar.Brand>
+        <Navbar.Toggle aria-controls={`offcanvasNavbar-expand-false`} />
+        <Navbar.Offcanvas
+          id={`offcanvasNavbar-expand-false`}
+          aria-labelledby={`offcanvasNavbarLabel-expand-false`}
+          placement="end"
+        >
+          <Offcanvas.Header closeButton>
+            <Offcanvas.Title id={`offcanvasNavbarLabel-expand-false`}>
+              Admin
+            </Offcanvas.Title>
+          </Offcanvas.Header>
+          <Offcanvas.Body>
+            <Nav className="justify-content-end flex-grow-1 pe-3">
+            <NavDropdown
+                title="Composer Management"
+                id={`offcanvasNavbarDropdown-expand-false`}
+              >
+                <NavDropdown.Item href="/admin/composer">
+                  Show composer
+                </NavDropdown.Item>
+                <NavDropdown.Item href="/admin/addcomposer">
+                  Add composer
+                </NavDropdown.Item>
+                <NavDropdown.Divider />
+                <NavDropdown.Item href="/admin/removecomposer">
+                  Remove composer
+                </NavDropdown.Item>
+              </NavDropdown>
+              <NavDropdown
+                title="Repertoire Management"
+                id={`offcanvasNavbarDropdown-expand-false`}
+              >
+                <NavDropdown.Item href="/admin/piece">
+                  Show piece list
+                </NavDropdown.Item>
+                <NavDropdown.Item href="/admin/addpiece">
+                  Add piece
+                </NavDropdown.Item>
+                <NavDropdown.Divider />
+                <NavDropdown.Item href="/admin/removepiece">
+                  Remove piece
+                </NavDropdown.Item>
+              </NavDropdown>
+              <NavDropdown
+                title="Recommendation Management"
+                id={`offcanvasNavbarDropdown-expand-false`}
+              >
+                <NavDropdown.Item href="/admin/recommendation">
+                  Show recommendation
+                </NavDropdown.Item>
+                <NavDropdown.Item href="/admin/addrecommendation">
+                  Add recommendation
+                </NavDropdown.Item>
+                <NavDropdown.Divider />
+                <NavDropdown.Item href="/admin/removerecommendation">
+                  Remove recommendation
+                </NavDropdown.Item>
+              </NavDropdown>
+              <Nav.Link href="/">Go to website home</Nav.Link>
+            </Nav>
+            
+          </Offcanvas.Body>
+        </Navbar.Offcanvas>
+      </Container>
+    </Navbar>
+  )}
     // <Nav justify variant="tabs" defaultActiveKey="/admin"  class="adminnav nav nav-tabs nav-justifed">
     //     <Nav.Item>
     //         <Nav.Link href="/admin">Overview</Nav.Link>

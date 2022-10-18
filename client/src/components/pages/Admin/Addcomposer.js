@@ -43,21 +43,40 @@ const Addcomposer = () => {
         }
         console.log(searchValue,type,ComposerInfoRef);
     }
-    // const config = {
-    //     headers: { Authorization: `Bearer ${token}` }
-    // };
-    // const token = JSON.parse(sessionStorage.getItem('data'));
-    // const token = user.data.id; 
+    const tokens = sessionStorage.getItem('tokens');
+    const config = {
+      headers: {
+        'Content-Type': 'application/json',
+        'x-auth-token': tokens
+        }
+    };
+    
+
+    //const tokens = user.data.id; 
     const onSubmitListener = () =>{
-        const JSON = JSON.stringify(ComposerInfoRef);
+        //const JSON = JSON.stringify(ComposerInfoRef.current);
+        var jsonObj = {};
+        jsonObj["name"] = ComposerInfoRef.current[0];
+        jsonObj["nationality"] = ComposerInfoRef.current[1];
+        jsonObj["website"] = ComposerInfoRef.current[2];
+        jsonObj["biography"] = ComposerInfoRef.current[3];
+        jsonObj["image"] = ComposerInfoRef.current[4];
+        jsonObj["DOB"] = ComposerInfoRef.current[5];
+        
         axios
-        .post('http://localhost:3000/api/composers/admin',JSON)
+        .post('http://localhost:3000/api/composers/admin',jsonObj,config)
         .then(res=>{
-            console.log(res);
+          console.log(sessionStorage.getItem('tokens'));
+          console.log(res);
+          if (res.status == "200"){
+            alert("Sucessfully added composer!");
+          }
         })
         .catch(err =>{
             console.log("Error from posting data: "+err)
         })
+
+
     }
 
     return (
@@ -85,11 +104,11 @@ const Addcomposer = () => {
                     <NavDropdown.Item href="/admin/composer">
                       Show composer
                     </NavDropdown.Item>
-                    <NavDropdown.Item href="admin/addcomposer">
+                    <NavDropdown.Item href="/admin/addcomposer">
                       Add composer
                     </NavDropdown.Item>
                     <NavDropdown.Divider />
-                    <NavDropdown.Item href="#action5">
+                    <NavDropdown.Item href="/admin/removecomposer">
                       Remove composer
                     </NavDropdown.Item>
                   </NavDropdown>
@@ -97,14 +116,14 @@ const Addcomposer = () => {
                     title="Repertoire Management"
                     id={`offcanvasNavbarDropdown-expand-false`}
                   >
-                    <NavDropdown.Item href="#action3">
+                    <NavDropdown.Item href="/admin/piece">
                       Show piece list
                     </NavDropdown.Item>
-                    <NavDropdown.Item href="#action4">
+                    <NavDropdown.Item href="/admin/addpiece">
                       Add piece
                     </NavDropdown.Item>
                     <NavDropdown.Divider />
-                    <NavDropdown.Item href="#action5">
+                    <NavDropdown.Item href="/admin/removepiece">
                       Remove piece
                     </NavDropdown.Item>
                   </NavDropdown>
@@ -112,18 +131,18 @@ const Addcomposer = () => {
                     title="Recommendation Management"
                     id={`offcanvasNavbarDropdown-expand-false`}
                   >
-                    <NavDropdown.Item href="#action3">
+                    <NavDropdown.Item href="/admin/recommendation">
                       Show recommendation
                     </NavDropdown.Item>
-                    <NavDropdown.Item href="#action4">
+                    <NavDropdown.Item href="/admin/addrecommendation">
                       Add recommendation
                     </NavDropdown.Item>
                     <NavDropdown.Divider />
-                    <NavDropdown.Item href="#action5">
+                    <NavDropdown.Item href="/admin/removerecommendation">
                       Remove recommendation
                     </NavDropdown.Item>
                   </NavDropdown>
-                  <Nav.Link href="#action1">Go to website home</Nav.Link>
+                  <Nav.Link href="/">Go to website home</Nav.Link>
                 </Nav>
                 
               </Offcanvas.Body>
@@ -157,7 +176,7 @@ const Addcomposer = () => {
       {/* <Form.Group className="mb-3" controlId="formBasicCheckbox">
         <Form.Check type="checkbox" label="Check me out" />
       </Form.Group> */}
-      <Button variant="primary" type="submit" onClick={onSubmitListener}>
+      <Button variant="primary" onClick={onSubmitListener}>
         Add
       </Button>
     </Form>

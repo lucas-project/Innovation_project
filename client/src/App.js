@@ -22,8 +22,9 @@ import Login from "./components/pages/Authentication/login";
 import Register from "./components/pages/Authentication/registration";
 import ComposerMongodb from "./components/pages/Composer/Profile";
 import Profile from "./components/pages/Profile/Profile";
-import AdminComposer from "./components/pages/Admin/Composer";
+import AdminComposer from "./components/pages/Admin/AdminComposer";
 import AddComposer from "./components/pages/Admin/Addcomposer";
+import RemoveComposer from "./components/pages/Admin/RemoveComposer";
 
 
 const App = () => {
@@ -59,6 +60,7 @@ const App = () => {
         <Route path="/admin/composer" element={<AdminComposer />} />
         
         <Route path="/admin/addcomposer" element={<AddComposer />} />
+        <Route path="/admin/removecomposer" element={<RemoveComposer />} />
 
 
       </Routes>

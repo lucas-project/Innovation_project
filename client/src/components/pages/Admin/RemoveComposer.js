@@ -11,15 +11,38 @@ import { Link } from "react-router-dom";
 import Card from "../../Card";
 import "../Composer/Composer.css";
 import composerP from "../../img/composerP.jpg";
+import axios from "axios";
 
-const Admincomposer = () => {
-    
+import {useNavigate} from "react-router-dom";
+
+const Removecomposer = () => {
+    const navigate = useNavigate();
     const imgStyle = {
         width:"250px",
         height:"auto"
     }
     const [albums, setAlbums] = useState([]);
     const [isLoading, setIsLoading] = useState(false);
+    //const [id,setID] = useState([]);
+    const tokens = sessionStorage.getItem('tokens');
+    const config = {
+        headers: {
+          'Content-Type': 'application/json',
+          'x-auth-token': tokens
+          }
+      };
+    const onClickRemoveComposer = (album) =>{
+        
+        const id = album._id;
+        console.log(id);
+        axios
+        .delete('http://localhost:3000/api/composers/'+id,config)
+        .then(res =>{
+            console.log(res);
+            navigate('/admin/removecomposer');
+        })
+    }
+
     useEffect(() => {
         setIsLoading(true);
         const fetchData = async () => {
@@ -60,7 +83,7 @@ const Admincomposer = () => {
                       Add composer
                     </NavDropdown.Item>
                     <NavDropdown.Divider />
-                    <NavDropdown.Item href="#action5">
+                    <NavDropdown.Item href="/admin/removecomposer">
                       Remove composer
                     </NavDropdown.Item>
                   </NavDropdown>
@@ -68,14 +91,14 @@ const Admincomposer = () => {
                     title="Repertoire Management"
                     id={`offcanvasNavbarDropdown-expand-false`}
                   >
-                    <NavDropdown.Item href="#action3">
+                    <NavDropdown.Item href="/admin/piece">
                       Show piece list
                     </NavDropdown.Item>
-                    <NavDropdown.Item href="#action4">
+                    <NavDropdown.Item href="/admin/addpiece">
                       Add piece
                     </NavDropdown.Item>
                     <NavDropdown.Divider />
-                    <NavDropdown.Item href="#action5">
+                    <NavDropdown.Item href="/admin/removepiece">
                       Remove piece
                     </NavDropdown.Item>
                   </NavDropdown>
@@ -83,18 +106,18 @@ const Admincomposer = () => {
                     title="Recommendation Management"
                     id={`offcanvasNavbarDropdown-expand-false`}
                   >
-                    <NavDropdown.Item href="#action3">
+                    <NavDropdown.Item href="/admin/recommendation">
                       Show recommendation
                     </NavDropdown.Item>
-                    <NavDropdown.Item href="#action4">
+                    <NavDropdown.Item href="/admin/addrecommendation">
                       Add recommendation
                     </NavDropdown.Item>
                     <NavDropdown.Divider />
-                    <NavDropdown.Item href="#action5">
+                    <NavDropdown.Item href="/admin/removerecommendation">
                       Remove recommendation
                     </NavDropdown.Item>
                   </NavDropdown>
-                  <Nav.Link href="#action1">Go to website home</Nav.Link>
+                  <Nav.Link href="/">Go to website home</Nav.Link>
                 </Nav>
                 
               </Offcanvas.Body>
@@ -111,21 +134,6 @@ const Admincomposer = () => {
 
             <div className="albums-container">
                 {albums.map(album => (
-                    <Link
-                        to={{pathname:`/api/composers/${album._id}`}}
-                        state={{
-                            _id:album._id,
-                            name: album.name,
-                            nationality:album.nationality,
-                            DOB:album.DOB,
-                            website:album.website,
-                            biography:album.biography,
-                            image:album.image
-
-                        }}
-                        key={album.name}
-                        style={{ textDecoration: "none", color: "black" }}
-                    >
                         <Card className="albums-card">
                             <div>
                             <img
@@ -138,8 +146,11 @@ const Admincomposer = () => {
                             <h5>{album.name}</h5>
                             <h6>{album.nationality}</h6>
                             </div>
+                            <button onClick={(e) => onClickRemoveComposer(album)}>
+                                Remove this composer
+                            </button>
                         </Card>
-                    </Link>
+                    // </Link>
                 ))}
             </div>
         </div>
@@ -228,4 +239,4 @@ const Admincomposer = () => {
         //add repertoire （edit piece)
 
     )};
-export default Admincomposer;
+export default Removecomposer;

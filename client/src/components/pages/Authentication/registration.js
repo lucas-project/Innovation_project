@@ -22,7 +22,7 @@ export default function Create() {
         password: "",
     });
     const navigate = useNavigate();
-
+    let backendRes = "";
     // These methods will update the state properties.
     function updateForm(value) {
         return setForm((prev) => {
@@ -44,13 +44,22 @@ export default function Create() {
             },
             body: JSON.stringify(newPerson),
         })
+            .then(response => response.json())
+            .then((data) => {
+                if (data.email!="") backendRes = data.email;
+                else alert("email exist, try another one or login.");
+            })
             .catch(error => {
                 window.alert(error);
                 return;
             });
 
         setForm({ email: "", password: ""});
-        navigate("/");
+        if (backendRes!=""){
+            alert("Successfully registered, you can login now.")
+            navigate("/api/auth");
+        }
+
     }
 
     // This following section will display the form that takes the input from the user.
