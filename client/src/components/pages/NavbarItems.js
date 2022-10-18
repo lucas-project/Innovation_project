@@ -28,6 +28,11 @@ const navbarItems = [
     title: "Login",
     link: "/api/auth",
   },
+  {
+    title: "Admin",
+    link: "/admin",
+  },
+
 
 ];
 

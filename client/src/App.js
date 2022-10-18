@@ -22,6 +22,8 @@ import Login from "./components/pages/Authentication/login";
 import Register from "./components/pages/Authentication/registration";
 import ComposerMongodb from "./components/pages/Composer/Profile";
 import Profile from "./components/pages/Profile/Profile";
+import AdminComposer from "./components/pages/Admin/Composer";
+import AddComposer from "./components/pages/Admin/Addcomposer";
 
 
 const App = () => {
@@ -54,6 +56,9 @@ const App = () => {
         <Route path="/instrument/:instrument" element={<InstrumentChild />} />
         <Route path="/api/auth" element={<Login />} />
         <Route path="/api/users" element={<Register />} />
+        <Route path="/admin/composer" element={<AdminComposer />} />
+        
+        <Route path="/admin/addcomposer" element={<AddComposer />} />
 
 
       </Routes>

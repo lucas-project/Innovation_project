@@ -2,16 +2,37 @@ import React from "react";
 import "./Admin.css";
 import Button from 'react-bootstrap/Button';
 import Container from 'react-bootstrap/Container';
-import Form from 'react-bootstrap/Form';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import NavDropdown from 'react-bootstrap/NavDropdown';
 import Offcanvas from 'react-bootstrap/Offcanvas';
+import  { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
+import Card from "../../Card";
+import "../Composer/Composer.css";
+import composerP from "../../img/composerP.jpg";
 
-const Admin = () => {
-  
+const Admincomposer = () => {
+    
+    const imgStyle = {
+        width:"250px",
+        height:"auto"
+    }
+    const [albums, setAlbums] = useState([]);
+    const [isLoading, setIsLoading] = useState(false);
+    useEffect(() => {
+        setIsLoading(true);
+        const fetchData = async () => {
+            const result = await fetch("http://localhost:3000/api/composers");
+            const resultJson = await result.json();
+            // const sliceResult = resultJson.slice(0, 10);
+            setAlbums(resultJson);
+            setIsLoading(false);
+        };
+        fetchData();
+    }, []);
     return (
-
+        <>
         <Navbar  key="false" bg="light" expand="false"  className="mb-3">
           <Container fluid>
             <Navbar.Brand href="#">The Admin Center</Navbar.Brand>
@@ -35,7 +56,7 @@ const Admin = () => {
                     <NavDropdown.Item href="/admin/composer">
                       Show composer
                     </NavDropdown.Item>
-                    <NavDropdown.Item href="#action4">
+                    <NavDropdown.Item href="/admin/addcomposer">
                       Add composer
                     </NavDropdown.Item>
                     <NavDropdown.Divider />
@@ -80,7 +101,50 @@ const Admin = () => {
             </Navbar.Offcanvas>
           </Container>
         </Navbar>
-      )}
+      
+      <div>
+            {isLoading && (
+                <div className="loading">
+                    <p>...loading</p>
+                </div>
+            )}
+
+            <div className="albums-container">
+                {albums.map(album => (
+                    <Link
+                        to={{pathname:`/api/composers/${album._id}`}}
+                        state={{
+                            _id:album._id,
+                            name: album.name,
+                            nationality:album.nationality,
+                            DOB:album.DOB,
+                            website:album.website,
+                            biography:album.biography,
+                            image:album.image
+
+                        }}
+                        key={album.name}
+                        style={{ textDecoration: "none", color: "black" }}
+                    >
+                        <Card className="albums-card">
+                            <div>
+                            <img
+                                // src={"https://via.placeholder.com/168x118.png"}
+                                // src={album.image}
+                                src={composerP}
+                                alt={`data thumbnail`}
+                                style={imgStyle}
+                            />
+                            <h5>{album.name}</h5>
+                            <h6>{album.nationality}</h6>
+                            </div>
+                        </Card>
+                    </Link>
+                ))}
+            </div>
+        </div>
+        </>
+    
     // <Nav justify variant="tabs" defaultActiveKey="/admin"  class="adminnav nav nav-tabs nav-justifed">
     //     <Nav.Item>
     //         <Nav.Link href="/admin">Overview</Nav.Link>
@@ -163,5 +227,5 @@ const Admin = () => {
 
         //add repertoire （edit piece)
 
-
-export default Admin;
+    )};
+export default Admincomposer;
