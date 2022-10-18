@@ -22,12 +22,7 @@ const mystyle = {
 const HomeInstrument = () => {
   const courses = [
     {
-      courseImage: ethicalImg,
-      courseTitle: "Learn Ethical Hacking From Scratch",
-      courseAuthor: "Zaid Sabih, z Security",
-      courseRating: "4.6",
-      ratingNumbers: "94,117",
-      
+      instrument: "flute",
     },
     {
       courseImage: cdataImg,

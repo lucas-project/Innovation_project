@@ -1,4 +1,5 @@
-import React, { useState } from "react";
+import React, {useEffect } from "react";
+import useState from 'react-usestateref';
 import {useLocation} from "react-router-dom";
 import axios from "axios";
 import Container from 'react-bootstrap/Container';
@@ -9,26 +10,31 @@ import Row from 'react-bootstrap/Row';
 const InstrumentChild = () => {
     const URL = useLocation();
     console.log(URL.state,"data from child element");
-    const [info,setInfo] = useState([]);
+    const [info,setInfo,infoRef] = useState([]);
+    const [isLoading,setLoading,loadingRef] = useState(true);
 
-
-    axios
-    .get('https://99b782be-a96c-4d7b-9225-d8515f657ddf.mock.pstmn.io/search/instrument/'+URL.state.URL)
-    .then(res =>{
-        setInfo(res.data);
-        console.log(res);
-
-        console.log(res.data);
-        console.log(res.data.name);  
-        console.log(URL.state.URL);    
-    })
-    .catch(err =>{
-        console.log("Error from getting data: "+err)
-    })
+    useEffect(()=>{
+        axios
+        .get('http://localhost:3000/api/search/instrument/'+URL.state.URL)
+        .then(res =>{
+            setInfo(res.data);
+            //console.log(infoRef.current);
+            console.log(infoRef.current);
+            console.log(URL.state.URL);  
+            setLoading(false);
+            console.log(loadingRef.current);
+        })
+        .catch(err =>{
+            console.log("Error from getting data: "+err)
+        });
+    },[]);
+        if(loadingRef.current){
+            return <div> Loading...</div>
+        }
         return (
         <Container style={{ position: "absolute", marginTop: "120px", fontSize: "20px" }}>
           <Row class="d-flex row">
-          {info.map((item) =>{
+          {infoRef.current.map((item) =>{
                     console.log("mapped items");
                     return(
                     <div class="col col-4 d-flex justify-content-center">
@@ -40,12 +46,12 @@ const InstrumentChild = () => {
                                 Composer: {item.composer.name}.<br></br>
                                 Duration: {item.duration} mins.<br></br>
                                 Year: {item.year}<br></br>
-                                Instruments: {item.instrments}.<br></br>
+                                Instruments: {item.instruments}.<br></br>
                                 Publisher: {item.publisher}.<br></br>
                                 Score Link: {item.scoreLink}.<br></br>
                                 </Card.Text>
                                 {/* <Link to='/recommendation/ailis'> */}
-                                <a href={info.recordingLink}>
+                                <a href={item.recordingLink}>
                                 <Button variant="primary" class="mt-auto btn">Explore now!</Button>
                                 </a>
                                 {/* </Link> */}

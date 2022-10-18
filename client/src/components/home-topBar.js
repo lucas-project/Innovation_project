@@ -9,9 +9,9 @@ const TopBar = () => {
       <span>
         <a href='#'>Login</a>
       </span>
-      {/* <span className='search'>
+      <span className='search'>
         <HomeTopBarSearchBar />
-      </span> */}
+      </span>
 
       <span className='top-links'>
         <a href='#'>Stories</a>
@@ -37,7 +37,6 @@ const TopBar = () => {
         <a href='#'>SS</a>
       </span>
     </StyledTopBar>
-
   );
 };
 

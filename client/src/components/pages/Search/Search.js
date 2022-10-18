@@ -1,4 +1,5 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect } from 'react';
+import useState from 'react-usestateref';
 import styled from "styled-components";
 // import Dropdown from 'react-bootstrap/Dropdown';
 // import DropdownButton from 'react-bootstrap/DropdownButton';
@@ -18,11 +19,11 @@ import Container from 'react-bootstrap/Container';
 
 const Search = () => {
     const navigate = useNavigate();
-    const [searchArray, setSearchArray] = useState(["","","composer"]);
-    const [URL,setURL] = useState([""]);
-    const [info,setInfo] = useState([]);
-    const [searchby,setSearchby] =useState([]);
-    const [inputarea,setInputarea] = useState([]);
+    const [searchArray, setSearchArray,arrayRef] = useState(["composer","","",""]);
+    const [URL,setURL,URLRef] = useState([""]);
+    const [info,setInfo,infoRef] = useState([]);
+    // const [searchby,setSearchby,searchbyRef] =useState([]);
+    const [inputarea,setInputarea,inputRef] = useState([]);
     // const [filterInput1, setFilterInput1] = useState('');
     // const [filterInput2, setFilterInput2] = useState('');
     // const [searchBy, setSearchBy] = useState('Any');
@@ -33,36 +34,48 @@ const Search = () => {
         let newSearchArray;
         if (type === "searchInput"){
             newSearchArray = [...searchArray];
-            newSearchArray[0] = searchValue;
+            newSearchArray[1] = searchValue;
             setSearchArray(newSearchArray);
             // setFilteredOptions(searchValue);
         }
         if (type === "filterInput1"){
             newSearchArray = [...searchArray];
-            newSearchArray[1] = searchValue;
+            newSearchArray[2] = searchValue;
+            setSearchArray(newSearchArray);
+        }
+        if (type === "filterInput2"){
+            newSearchArray = [...searchArray];
+            newSearchArray[3] = searchValue;
+            setSearchArray(newSearchArray);
+        }
+        if (type === "filterInput3"){
+            newSearchArray = [...searchArray];
+            newSearchArray[4] = searchValue;
             setSearchArray(newSearchArray);
         }
         if (type === "searchBy"){
             setInputarea("");
             newSearchArray = [...searchArray];
-            newSearchArray[1] = "";
-            newSearchArray[2] = searchValue;
+            newSearchArray[2] = "";
+            newSearchArray[3] = "";
+            newSearchArray[4] = "";
+            newSearchArray[0] = searchValue;
             setSearchArray(newSearchArray);
             console.log("recognize search by");
         }
-        console.log(searchValue,type,searchArray[2],searchArray);
+        console.log(searchValue,type,searchArray[0],searchArray);
         // APIData.filter((item) => {
         //     return Object.values(item).join('').toLowerCase().includes(searchInput.toLowerCase())
         // })
             
     };
     const onClickSearchHandler = () => {
-        generateSearchURL(searchArray);
-        setSearchby(searchArray[2]);
-        console.log("clicked search",searchArray);
+        generateSearchURL(arrayRef.current);
+        // setSearchby(searchArray[0],()=>{console.log("searchby is",searchby)});
+        console.log("clicked search",URLRef.current);
         // useEffect(() =>{
             axios
-            .get('https://99b782be-a96c-4d7b-9225-d8515f657ddf.mock.pstmn.io'+URL
+            .get('http://localhost:3000/api/search/'+URLRef.current
             //     .get('http://localhost:3000/api'+URL,{
             // params:{
             //     input:searchArray[0],
@@ -73,23 +86,36 @@ const Search = () => {
         )
             .then(res =>{
                 setInfo(res.data);
-                console.log(info,"this is info");
-                    // console.log(res);
-                    // console.log(res.data);
-                    // console.log(res.data.name);
-                    // console.log(res.status);
-                    // console.log(res.statusText);
+                console.log(infoRef.current,"this is info");
+                    console.log(res);
+                    console.log(res.data);
+                    console.log(res.data.name);
+                    console.log(res.status);
+                    console.log(res.statusText);
             })
             .catch(err =>{
                 console.log("Error from getting data: "+err)
             })
+            navigate(URLRef.current);
         // });
     };
     const generateSearchURL = (newValue) => {
-        const URL = `/search/${newValue[2]}/${newValue[0]}/${newValue[1]}`;//searchby input filter
-        setURL(URL);
-        console.log(newValue,searchArray,URL);
-        navigate(URL);
+        if(newValue[0] === "composer"){
+        setURL(`${newValue[0]}?key=${newValue[1]}&nationality=${newValue[2]}`);
+        // setURL(prevState =>{
+        //     const newState = computeUpdatedState(prevState);
+        //     return newState;//composer?key=input&nationality=filter1
+
+        // });
+        }
+        else{
+        setURL(`${newValue[0]}?key=${newValue[1]}&instrument=${newValue[3]}&publisher=${newValue[4]}`)//piece?key=input&instrument=filter2&publisher=filter3
+        }
+    
+        // const URL = `/${newValue[0]}?key=${newValue[0]}/${newValue[1]}`;//searchby input filter
+        // setURL(URL);
+        console.log(newValue,searchArray,URLRef.current,"generate URL");
+        
         //componentDidMount(URL);
     };
     
@@ -187,16 +213,30 @@ Dropdown
                                 <Collapse in={open}>
                                     <div id="advancedSearch">
                                         <div class="card card-body">
-                                            <div class="row">
-                                                    {searchArray[2] === "piece" ?(
-                                                    <div class="col-md-12">
-                                                    <input type="text" placeholder="Please input the instrument you want to search..." class="form-control" onChange={(e) => searchItems(e.target.value, "filterInput1")} />
-                                                    <input value={inputarea} type="text" disabled class="form-control" placeholder="Nationality can be only searched with name." onChange={(e) => searchItems(e.target.value, "filterInput1")} />
+                                            
+                                                    {arrayRef.current[0] === "piece" ?(
+                                                    <div class="row">
+                                                    <div class="col-md-4">
+                                                    <input type="text" placeholder="Please input the instrument you want to search..." class="form-control" onChange={(e) => searchItems(e.target.value, "filterInput2")} />
+                                                    </div>
+                                                    <div class="col-md-4">
+                                                    <input type="text" placeholder="Please input the publisher you want to search..." class="form-control" onChange={(e) => searchItems(e.target.value, "filterInput3")} />
+                                                    </div>
+                                                    <div class="col-md-4">
+                                                    <input value={inputarea} type="text" disabled class="form-control" placeholder="Nationality can be only filtered with name." onChange={(e) => searchItems(e.target.value, "filterInput1")} />
+                                                    </div>
                                                     </div>
                                                     ):(
-                                                    <div class="col-md-12">
-                                                    <input type="text" value={inputarea} disabled placeholder="Instruments can be only searched with piece." class="form-control" onChange={(e) => searchItems(e.target.value, "filterInput1")} />
+                                                    <div class="row">
+                                                    <div class="col-md-4">
+                                                    <input type="text" value={inputarea} disabled placeholder="Instruments can be only filtered with piece." class="form-control" onChange={(e) => searchItems(e.target.value, "filterInput2")} />
+                                                    </div>
+                                                    <div class="col-md-4">
+                                                    <input type="text" value={inputarea} disabled placeholder="Publisher can be only filtered with piece." class="form-control" onChange={(e) => searchItems(e.target.value, "filterInput3")} />
+                                                    </div>
+                                                    <div class="col-md-4">
                                                     <input type="text" class="form-control" placeholder="Please input the nationality you want to search..." onChange={(e) => searchItems(e.target.value, "filterInput1")} />
+                                                    </div>
                                                     </div>
                                                     )
                                                     }
@@ -205,7 +245,7 @@ Dropdown
                                                 {/* <div class="col-md-6">
                                                     <input type="text" class="form-control" placeholder="Instrument" onChange={(e) => searchItems(e.target.value, "filterInput2")} />
                                                 </div> */}
-                                            </div>
+                                            
                                         </div>
                                     </div>
                                 </Collapse>
@@ -217,8 +257,8 @@ Dropdown
         </StyledSearch>
         <Container style={{ position: "absolute", marginTop: "120px", fontSize: "20px" }}>
           <Row class="d-flex row">
-            {searchby === "composer" ? (
-                info.map((item) =>{
+            {arrayRef.current[0] === "composer" ? (
+                infoRef.current.map((item) =>{
                     console.log("mapped items");
                     return(
                         <div class="col col-4 d-flex justify-content-center">
@@ -255,7 +295,7 @@ Dropdown
                                 Composer: {item.composer.name}.<br></br>
                                 Duration: {item.duration} mins.<br></br>
                                 Year: {item.year}<br></br>
-                                Instruments: {item.instrments}.<br></br>
+                                Instruments: {item.instruments}.<br></br>
                                 Publisher: {item.publisher}.<br></br>
                                 Score Link: {item.scoreLink}.<br></br>
                                 </Card.Text>
