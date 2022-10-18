@@ -1,9 +1,9 @@
 import styled from "styled-components";
 import { Container } from "../styles";
 import { Link } from "react-router-dom";
-import HomeListItemDetail from "./home-list-item-detail";
+import HomeListComposerDetail from "./home-list-composer-detail";
 
-const HomeListItem = ({ heading, link, courses }) => {
+const HomeListComposer = ({ heading, link, courses }) => {
   return (
     <Container>
       <StyledCourses>
@@ -25,16 +25,15 @@ const HomeListItem = ({ heading, link, courses }) => {
                         website:course.website,
                         biography:course.biography,
                         image:course.image
-
                     }}
-                    key={course.links}
+                    key={course._id}
                     style={{ textDecoration: "none", color: "black" }}
                 >
-              <HomeListItemDetail
+              <HomeListComposerDetail
                 images={course.image}
-                names={course.names}
+                names={course.name}
                 nationality={course.nationality}
-                website={course.website}
+                // website={course.website}
                 tag={course.tag}
                 tagColor={course.tagColor}
               />
@@ -87,4 +86,4 @@ const StyledCourses = styled.div`
   }
 `;
 
-export default HomeListItem;
+export default HomeListComposer;

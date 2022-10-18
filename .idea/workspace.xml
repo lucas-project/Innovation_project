@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="7c003d22-b666-4e4f-82e9-be5f2c89ed56" name="Changes" comment="login success, token store in session, email and result remain unknown">
+    <list default="true" id="7c003d22-b666-4e4f-82e9-be5f2c89ed56" name="Changes" comment="home-composer now clickable, pic needed">
+      <change afterPath="$PROJECT_DIR$/client/src/components/home-list-piece-detail.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/components/home-list-piece.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/src/components/home-composer.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/home-composer.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/home-list-item-detail.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/home-list-item-detail.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/home-list-item.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/home-list-item.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/pages/Authentication/login.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/pages/Authentication/login.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/pages/Composer/Composer.css" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/pages/Composer/Composer.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/pages/Home/Home.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/pages/Home/Home.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/pages/Recommendation/Recommendation.css" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/pages/Recommendation/Recommendation.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/home-instrument.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/home-instrument.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/home-list-item-detail.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/home-list-composer-detail.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/home-list-item.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/home-list-composer.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/home-repertoire.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/home-repertoire.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -100,7 +100,7 @@
       <workItem from="1665888197621" duration="6127000" />
       <workItem from="1665898313247" duration="1745000" />
       <workItem from="1665900419155" duration="770000" />
-      <workItem from="1665920476179" duration="38100000" />
+      <workItem from="1665920476179" duration="39974000" />
     </task>
     <task id="LOCAL-00001" summary="files restructured, all swipers fixed">
       <created>1663904598170</created>
@@ -249,7 +249,14 @@
       <option name="project" value="LOCAL" />
       <updated>1666012941848</updated>
     </task>
-    <option name="localTasksCounter" value="22" />
+    <task id="LOCAL-00022" summary="home-composer now clickable, pic needed">
+      <created>1666049792310</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1666049792310</updated>
+    </task>
+    <option name="localTasksCounter" value="23" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -302,6 +309,7 @@
     <MESSAGE value="composer page, repertoire page, profile page, and repertoire detail page css fixed, img still can't be accessed" />
     <MESSAGE value="authentication pages added, registration success, css adjustments, login to be continued" />
     <MESSAGE value="login success, token store in session, email and result remain unknown" />
-    <option name="LAST_COMMIT_MESSAGE" value="login success, token store in session, email and result remain unknown" />
+    <MESSAGE value="home-composer now clickable, pic needed" />
+    <option name="LAST_COMMIT_MESSAGE" value="home-composer now clickable, pic needed" />
   </component>
 </project>

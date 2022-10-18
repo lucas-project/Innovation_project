@@ -1,6 +1,6 @@
 import styled from "styled-components";
-
-const HomeListItemDetail = ({
+import composerP from "../img/placeholder.png";
+const HomeListComposerDetail = ({
   ids,
     names,
     nationality,
@@ -15,7 +15,7 @@ const HomeListItemDetail = ({
     <StyledCourseCard tagColor={tagColor}>
       <div className='course-container'>
         <div className='img-container'>
-          <img src={images} alt='course image' />
+          <img src={composerP} alt='course image' />
         </div>
         <div className='course-content'>
           <h5>{names}</h5>
@@ -110,4 +110,4 @@ const StyledCourseCard = styled.a`
   }
 `;
 
-export default HomeListItemDetail;
+export default HomeListComposerDetail;

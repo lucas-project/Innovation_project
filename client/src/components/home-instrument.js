@@ -1,4 +1,4 @@
-import HomeListItem from "./home-list-item";
+import HomeListComposer from "./home-list-composer";
 
 import ethicalImg from "../img/ethical_hack.jpg";
 import cdataImg from "../img/cdata.jpg";
@@ -127,8 +127,8 @@ const HomeInstrument = () => {
         modules={[Pagination, Navigation]}
         className="mySwiper"
     >
-      <SwiperSlide><HomeListItem courses={courses}/></SwiperSlide>
-      <SwiperSlide><HomeListItem courses={courses2}/></SwiperSlide>
+      <SwiperSlide><HomeListComposer courses={courses}/></SwiperSlide>
+      <SwiperSlide><HomeListComposer courses={courses2}/></SwiperSlide>
     </Swiper>
   </>
   );
