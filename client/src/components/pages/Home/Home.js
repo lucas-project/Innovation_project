@@ -10,10 +10,7 @@ import HomeRepertoire from "../../home-repertoire";
 import HomeComposer from "../../home-composer";
 import HomeInstrument from "../../home-instrument";
 
-<<<<<<< Updated upstream
 import SearchBar from "../../home-searchBar";
-=======
->>>>>>> Stashed changes
 const home = () => {
   return (
    

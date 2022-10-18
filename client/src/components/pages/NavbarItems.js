@@ -5,11 +5,8 @@ const navbarItems = [
   },
   {
     title: "Repertoire",
-<<<<<<< Updated upstream
     link: "/repertoire",
-=======
     link: "/pieces",
->>>>>>> Stashed changes
   },
   {
     title: "Instrument",
