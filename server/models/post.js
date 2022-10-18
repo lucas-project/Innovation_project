@@ -53,12 +53,19 @@ const Post = mongoose.model('Post', new mongoose.Schema({
         required: true,
         default: Date.now
     },
+    iframe:{
+        type: String,
+        required:true,
+        minlength: 5,
+        maxlength: 255
+    },
 }));
 
 function validatePost(post) {
     const schema = Joi.object({
         title: Joi.string().min(1).max(200).required(),
-        body: Joi.string().min(1).max(2000).required()
+        body: Joi.string().min(1).max(2000).required(),
+        iframe: Joi.string().min(5).max(250).required(),
     });
 
     return schema.validate(post);
