@@ -1,13 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="7c003d22-b666-4e4f-82e9-be5f2c89ed56" name="Changes" comment="about us page created, footer links added for most of the item, join us link works">
-      <change afterPath="$PROJECT_DIR$/client/src/components/pages/Composer/Profile-piece.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_11_10_2022_5_14_pm__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_11_10_2022_5_14_pm__Changes_.xml" afterDir="false" />
+    <list default="true" id="7c003d22-b666-4e4f-82e9-be5f2c89ed56" name="Changes" comment="composer page now added a button to check the composer's pieces, piece's css needed to be improved">
+      <change afterPath="$PROJECT_DIR$/client/src/components/pages/Repertoire/saveFacebook.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/components/pages/Repertoire/share.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/pages/Composer/Profile.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/pages/Composer/Profile.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/pages/Instrument/InstrumentChild.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/pages/Instrument/InstrumentChild.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/client/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/client/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/pages/Forum/Forum.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/pages/Forum/Forum.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/pages/Repertoire/Repertoire.detail.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/pages/Repertoire/Repertoire.detail.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -298,7 +299,14 @@
       <option name="project" value="LOCAL" />
       <updated>1666087429793</updated>
     </task>
-    <option name="localTasksCounter" value="28" />
+    <task id="LOCAL-00028" summary="composer page now added a button to check the composer's pieces, piece's css needed to be improved">
+      <created>1666177017651</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1666177017651</updated>
+    </task>
+    <option name="localTasksCounter" value="29" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -329,7 +337,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="mongodb connected" />
     <MESSAGE value="rename files and folders, successfully applied dummy api in testing React router" />
     <MESSAGE value="picture added to composer page" />
     <MESSAGE value="repertoire page and instrument page template added" />
@@ -354,6 +361,7 @@
     <MESSAGE value="login and registration fixed" />
     <MESSAGE value="homepage all swiper functional now" />
     <MESSAGE value="about us page created, footer links added for most of the item, join us link works" />
-    <option name="LAST_COMMIT_MESSAGE" value="about us page created, footer links added for most of the item, join us link works" />
+    <MESSAGE value="composer page now added a button to check the composer's pieces, piece's css needed to be improved" />
+    <option name="LAST_COMMIT_MESSAGE" value="composer page now added a button to check the composer's pieces, piece's css needed to be improved" />
   </component>
 </project>

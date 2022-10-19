@@ -25,11 +25,18 @@ const iframeContainer = {
 
 const iframestyle = {
     position: "absolute",
-    top:"0",
-    left: "0",
-    width: "400px",
+    display:"flex",
+    justifyContent:"center",
+    margin:"auto",
+    minWidth: "800px",
+    width:"auto",
     height: "auto",
     minHeight:"600px"
+}
+
+const fbtimeline = {
+    border:"none",
+    overflow:"hidden"
 }
 
 const Forum = () => {
@@ -61,6 +68,135 @@ const Forum = () => {
                         allowFullScreen="true"
                         allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe></div>
                     </Col>
+                    <Col>
+                        <iframe
+                            src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2Fcoreliaproject%2F&tabs=timeline&width=340&height=331&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=true&appId=407443791582428"
+                            width="340" height="331" style={fbtimeline} scrolling="no" frameBorder="0"
+                            allowFullScreen="true"
+                            allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
+                    </Col>
+                </Row>
+                <Row>
+                    <Col>
+                        <blockquote className="tiktok-embed"
+                                    cite="https://www.tiktok.com/@almadeutscher/video/7089154686665673990"
+                                    data-video-id="7089154686665673990" >
+                            <section><a target="_blank" title="@almadeutscher"
+                                        href="https://www.tiktok.com/@almadeutscher?refer=embed">@almadeutscher</a> Did
+                                you know very few pieces played in classical music concerts are composed by women? I’m
+                                shining a light on some amazing female composers. Here’s a piece by Teresa Carreño ✨ <a
+                                    title="femalecomposer" target="_blank"
+                                    href="https://www.tiktok.com/tag/femalecomposer?refer=embed">#femalecomposer</a> <a
+                                    target="_blank" title="♬ original sound - AlmaDeutscher"
+                                    href="https://www.tiktok.com/music/original-sound-7089154751165664005?refer=embed">♬
+                                    original sound - AlmaDeutscher</a></section>
+                        </blockquote>
+                        <Helmet>
+                            <script async src="https://www.tiktok.com/embed.js"></script>
+                        </Helmet>
+
+                    </Col>
+                    <Col>
+
+                            <blockquote className="tiktok-embed"
+                                        cite="https://www.tiktok.com/@emilythebear/video/6954172227130641670"
+                                        data-video-id="6954172227130641670" >
+                                <section><a target="_blank" title="@emilythebear"
+                                            href="https://www.tiktok.com/@emilythebear?refer=embed">@emilythebear</a> female
+                                    composers are the future!!!!!! Inspired by the talented @niaimanifranklin ✨✨🤍 <a
+                                        title="femaleisfuture" target="_blank"
+                                        href="https://www.tiktok.com/tag/femaleisfuture?refer=embed">#femaleisfuture</a>
+                                    <a title="composer" target="_blank"
+                                       href="https://www.tiktok.com/tag/composer?refer=embed">#composer</a> <a
+                                        target="_blank" title="♬ original sound - Emily Bear"
+                                        href="https://www.tiktok.com/music/original-sound-6954172055600237317?refer=embed">♬
+                                        original sound - Emily Bear</a></section>
+                            </blockquote>
+                            <Helmet>
+                            <script async src="https://www.tiktok.com/embed.js"></script>
+                            </Helmet>
+
+                    </Col>
+                    <Col>
+
+                            <blockquote className="tiktok-embed"
+                                        cite="https://www.tiktok.com/@laufey/video/6958449298568695046"
+                                        data-video-id="6958449298568695046" >
+                                <section><a target="_blank" title="@laufey"
+                                            href="https://www.tiktok.com/@laufey?refer=embed">@laufey</a> composing for
+                                    a nonexistent romantic film set in the French countryside ... 🎹💗⭐️ <a
+                                        title="womencomposers" target="_blank"
+                                        href="https://www.tiktok.com/tag/womencomposers?refer=embed">#womencomposers</a>
+                                    <a title="music" target="_blank"
+                                       href="https://www.tiktok.com/tag/music?refer=embed">#music</a> <a
+                                        title="songwriter" target="_blank"
+                                        href="https://www.tiktok.com/tag/songwriter?refer=embed">#songwriter</a> <a
+                                        title="filmscore" target="_blank"
+                                        href="https://www.tiktok.com/tag/filmscore?refer=embed">#filmscore</a> <a
+                                        title="piano" target="_blank"
+                                        href="https://www.tiktok.com/tag/piano?refer=embed">#piano</a> <a
+                                        target="_blank" title="♬ original sound - laufey"
+                                        href="https://www.tiktok.com/music/original-sound-6958449214166682373?refer=embed">♬
+                                        original sound - laufey</a></section>
+                            </blockquote>
+                            <Helmet>
+                            <script async src="https://www.tiktok.com/embed.js"></script>
+                            </Helmet>
+
+                    </Col>
+                    <Col>
+
+                            <blockquote className="tiktok-embed"
+                                        cite="https://www.tiktok.com/@tonyannn/video/7149183811690040619"
+                                        data-video-id="7149183811690040619" >
+                                <section><a target="_blank" title="@tonyannn"
+                                            href="https://www.tiktok.com/@tonyannn?refer=embed">@tonyannn</a> hope you
+                                    all like it as much as I do.. ❤️ <a title="piano" target="_blank"
+                                                                        href="https://www.tiktok.com/tag/piano?refer=embed">#piano</a>
+                                    <a title="music" target="_blank"
+                                       href="https://www.tiktok.com/tag/music?refer=embed">#music</a> <a
+                                        title="original" target="_blank"
+                                        href="https://www.tiktok.com/tag/original?refer=embed">#original</a> <a
+                                        title="inspiration" target="_blank"
+                                        href="https://www.tiktok.com/tag/inspiration?refer=embed">#inspiration</a> <a
+                                        title="song" target="_blank"
+                                        href="https://www.tiktok.com/tag/song?refer=embed">#song</a> <a
+                                        title="neoclassical" target="_blank"
+                                        href="https://www.tiktok.com/tag/neoclassical?refer=embed">#neoclassical</a> <a
+                                        title="composer" target="_blank"
+                                        href="https://www.tiktok.com/tag/composer?refer=embed">#composer</a> <a
+                                        title="friday" target="_blank"
+                                        href="https://www.tiktok.com/tag/friday?refer=embed">#friday</a> <a
+                                        title="weekend" target="_blank"
+                                        href="https://www.tiktok.com/tag/weekend?refer=embed">#weekend</a> <a
+                                        title="song" target="_blank"
+                                        href="https://www.tiktok.com/tag/song?refer=embed">#song</a> <a title="cover"
+                                                                                                        target="_blank"
+                                                                                                        href="https://www.tiktok.com/tag/cover?refer=embed">#cover</a>
+                                    <a title="romantic" target="_blank"
+                                       href="https://www.tiktok.com/tag/romantic?refer=embed">#romantic</a> <a
+                                        target="_blank" title="♬ original sound - tony ann"
+                                        href="https://www.tiktok.com/music/original-sound-7149183875795962670?refer=embed">♬
+                                        original sound - tony ann</a></section>
+                            </blockquote>
+                            <Helmet>
+                                <script async src="https://www.tiktok.com/embed.js"></script>
+                            </Helmet>
+
+                    </Col>
+                </Row>
+                <Row>
+                    <Col>
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/Y56ODjb8ZMo"
+                                title="YouTube video player" frameBorder="0"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                allowFullScreen></iframe>
+                    </Col>
+                    <Col>
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/SAtZawkqBG8"
+                                title="YouTube video player" frameBorder="0"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                allowFullScreen></iframe></Col>
                 </Row>
                 <Row>
                     <Col>
@@ -97,8 +233,8 @@ const Forum = () => {
                                 href="https://twitter.com/JeffBezos/status/1519789439224012802?ref_src=twsrc%5Etfw">April
                                 28, 2022</a></blockquote>
                         <Helmet>
-                        <script async src="https://platform.twitter.com/widgets.js" charSet="utf-8"></script></Helmet></Col>
-
+                        <script async src="https://platform.twitter.com/widgets.js" charSet="utf-8"></script></Helmet>
+                    </Col>
                 </Row>
                 <Row>
                     <Col>
