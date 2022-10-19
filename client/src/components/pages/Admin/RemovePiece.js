@@ -13,9 +13,11 @@ import "../Composer/Composer.css";
 import composerP from "../../img/composerP.jpg";
 import axios from "axios";
 
+import pieces from "../../img/piece.png";
+
 import {useNavigate} from "react-router-dom";
 
-const Removecomposer = () => {
+const RemovePiece = () => {
     const navigate = useNavigate();
     const imgStyle = {
         width:"250px",
@@ -31,25 +33,26 @@ const Removecomposer = () => {
           'x-auth-token': tokens
           }
       };
-    const onClickRemoveComposer = (album) =>{
-        
-        const id = album._id;
+    const onClickRemovePiece = (piece) =>{
+        const id = piece._id;
         console.log(id);
         axios
-        .delete('http://localhost:3000/api/composers/'+id,config)
+        .delete('http://localhost:3000/api/pieces/'+id,config)
         .then(res =>{
             console.log(res);
-            navigate('/admin/removecomposer');
-            alert("Sucessfully removed composer!");
+            navigate('/admin/removepiece');
+            alert("Sucessfully removed piece!");
         })
     }
+
+
 
     useEffect(() => {
         setIsLoading(true);
         const fetchData = async () => {
-            const result = await fetch("http://localhost:3000/api/composers");
+            const result = await fetch("http://localhost:3000/api/pieces/");
             const resultJson = await result.json();
-            // const sliceResult = resultJson.slice(0, 10);
+
             setAlbums(resultJson);
             setIsLoading(false);
         };
@@ -126,118 +129,53 @@ const Removecomposer = () => {
           </Container>
         </Navbar>
       
-      <div>
+        <div>
             {isLoading && (
                 <div className="loading">
                     <p>...loading</p>
                 </div>
             )}
-
             <div className="albums-container">
-                {albums.map(album => (
+                {albums.map(piece => (
+                    <Link
+                        to={{pathname:`/api/pieces/${piece._id}`,state:`${piece._id}`}}
+                        state={{
+                            _id:piece._id,
+                            name: piece.name,
+                            composer:piece.composer.name,
+                            duration:piece.duration,
+                            publishyear:piece.year,
+                            instruments:piece.instruments,
+                            links:piece.recordingLink,
+                            publisher:piece.publisher,
+                            scorelink:piece.scoreLink,
+                            image:piece.image
+
+                        }}
+                        key={piece.name}
+                        style={{ textDecoration: "none", color: "black" }}
+                    >
                         <Card className="albums-card">
-                            <div>
                             <img
-                                // src={"https://via.placeholder.com/168x118.png"}
+                                src={pieces}
                                 // src={album.image}
-                                src={composerP}
+                                // image source: https://maxmaraliving.com.au/team/terry/image-placeholder/
                                 alt={`data thumbnail`}
-                                style={imgStyle}
                             />
-                            <h5>{album.name}</h5>
-                            <h6>{album.nationality}</h6>
-                            </div>
-                            <button onClick={(e) => onClickRemoveComposer(album)}>
-                                Remove this composer
+                            <h5>{piece.name}</h5>
+                            <p><strong>Instrument</strong>: {piece.instruments}</p>
+                            <p>Name: {piece.recordingLink}</p>
+                            <button onClick={(e) => onClickRemovePiece(piece)}>
+                                Remove this piece
                             </button>
+
                         </Card>
-                    // </Link>
+                    </Link>
                 ))}
             </div>
         </div>
         </>
     
-    // <Nav justify variant="tabs" defaultActiveKey="/admin"  class="adminnav nav nav-tabs nav-justifed">
-    //     <Nav.Item>
-    //         <Nav.Link href="/admin">Overview</Nav.Link>
-    //     </Nav.Item>
-    //     <Nav.Item>
-    //         <Nav.Link eventKey="composer">View Composer Data</Nav.Link>
-    //     </Nav.Item>
-    //     <Nav.Item>
-    //         <Nav.Link eventKey="recommdation">View Recommendation Info</Nav.Link>
-    //     </Nav.Item>
-    //     <Nav.Item>
-    //         <Nav.Link eventKey="repertoire">View Repertoire Info</Nav.Link>
-    //     </Nav.Item>
-    // </Nav>
-
-  //   <div class="flex-shrink-0 p-3 bg-white" width="280px">
-  //   <a href="/" class="d-flex align-items-center pb-3 mb-3 link-dark text-decoration-none border-bottom">
-      
-  //     <span class="fs-5 fw-semibold">Collapsible</span>
-  //   </a>
-  //   <ul class="list-unstyled ps-0">
-  //     <li class="mb-1">
-  //       <button class="btn btn-toggle align-items-center rounded collapsed" data-bs-toggle="collapse" data-bs-target="#home-collapse" aria-expanded="true">
-  //         Home
-  //       </button>
-  //       <div class="collapse show" id="home-collapse">
-  //         <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
-  //           <li><a href="#" class="link-dark rounded">Overview</a></li>
-  //           <li><a href="#" class="link-dark rounded">Updates</a></li>
-  //           <li><a href="#" class="link-dark rounded">Reports</a></li>
-  //         </ul>
-  //       </div>
-  //     </li>
-  //     <li class="mb-1">
-  //       <button class="btn btn-toggle align-items-center rounded collapsed" data-bs-toggle="collapse" data-bs-target="#dashboard-collapse" aria-expanded="false">
-  //         Dashboard
-  //       </button>
-  //       <div class="collapse" id="dashboard-collapse">
-  //         <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
-  //           <li><a href="#" class="link-dark rounded">Overview</a></li>
-  //           <li><a href="#" class="link-dark rounded">Weekly</a></li>
-  //           <li><a href="#" class="link-dark rounded">Monthly</a></li>
-  //           <li><a href="#" class="link-dark rounded">Annually</a></li>
-  //         </ul>
-  //       </div>
-  //     </li>
-  //     <li class="mb-1">
-  //       <button class="btn btn-toggle align-items-center rounded collapsed" data-bs-toggle="collapse" data-bs-target="#orders-collapse" aria-expanded="false">
-  //         Orders
-  //       </button>
-  //       <div class="collapse" id="orders-collapse">
-  //         <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
-  //           <li><a href="#" class="link-dark rounded">New</a></li>
-  //           <li><a href="#" class="link-dark rounded">Processed</a></li>
-  //           <li><a href="#" class="link-dark rounded">Shipped</a></li>
-  //           <li><a href="#" class="link-dark rounded">Returned</a></li>
-  //         </ul>
-  //       </div>
-  //     </li>
-  //     <li class="border-top my-3"></li>
-  //     <li class="mb-1">
-  //       <button class="btn btn-toggle align-items-center rounded collapsed" data-bs-toggle="collapse" data-bs-target="#account-collapse" aria-expanded="false">
-  //         Account
-  //       </button>
-  //       <div class="collapse" id="account-collapse">
-  //         <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
-  //           <li><a href="#" class="link-dark rounded">New...</a></li>
-  //           <li><a href="#" class="link-dark rounded">Profile</a></li>
-  //           <li><a href="#" class="link-dark rounded">Settings</a></li>
-  //           <li><a href="#" class="link-dark rounded">Sign out</a></li>
-  //         </ul>
-  //       </div>
-  //     </li>
-  //   </ul>
-  // </div>
-
-        //add composer （edit composer)
-
-        //add recommendation (delete recommendation)
-
-        //add repertoire （edit piece)
 
     )};
-export default Removecomposer;
+export default RemovePiece;

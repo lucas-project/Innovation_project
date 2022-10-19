@@ -81,7 +81,7 @@ export default function Create() {
         alert("Successfully login as "+sessionStorage.getItem("tokens"))
         setForm({ email: "", password: ""});
         if (responseToken!=""){
-            navigate("/");
+            navigate("/admin");
         }else{
             alert("login failed");
         }

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import useState from 'react-usestateref';
 import "./Admin.css";
 import Button from 'react-bootstrap/Button';
@@ -14,35 +14,64 @@ import { useNavigate } from "react-router";
 
 
 const Addcomposer = () => {
-    const [composerInfo, setComposerInfo, ComposerInfoRef] = useState(["","","She does not have a website","Biography unknown.","../../img/placeholder.png",""]);
+    const [composer, setComposer] = useState([]);
+
+    useEffect(() => {
+        const fetchData = async () => {
+            const result = await fetch("http://localhost:3000/api/composers/");
+            const resultJson = await result.json();
+
+            setComposer(resultJson);
+        };
+        fetchData();
+    }, []);
+
+    const [composerInfo, setComposerInfo, ComposerInfoRef] = useState(["","","","","","Recording Link unknown.","Publisher unkown.","ScoreLink unknown","../../img/placeholder.png"]);
     const inputItems = (searchValue,type) => {
         let newComposerInfo;
-        if (type === "name"){
+        if (type === "id"){
             newComposerInfo = [...composerInfo];
             newComposerInfo[0] = searchValue;
             setComposerInfo(newComposerInfo);
+            console.log(searchValue);
         }
-        if (type === "nationality"){
+        if (type === "name"){
             newComposerInfo = [...composerInfo];
             newComposerInfo[1] = searchValue;
             setComposerInfo(newComposerInfo);
         }
-        if (type === "website"){
+        if (type === "duration"){
             newComposerInfo = [...composerInfo];
             newComposerInfo[2] = searchValue;
             setComposerInfo(newComposerInfo);
         }
-        if (type === "biography"){
+        if (type === "year"){
             newComposerInfo = [...composerInfo];
             newComposerInfo[3] = searchValue;
             setComposerInfo(newComposerInfo);
         }
-        if (type === "dob"){
+        if (type === "instruments"){
+            newComposerInfo = [...composerInfo];
+            newComposerInfo[4] = searchValue;
+            setComposerInfo(newComposerInfo);
+        }
+        if (type === "recordinglink"){
             newComposerInfo = [...composerInfo];
             newComposerInfo[5] = searchValue;
             setComposerInfo(newComposerInfo);
         }
-        console.log(searchValue,type,ComposerInfoRef);
+        if (type === "publisher"){
+            newComposerInfo = [...composerInfo];
+            newComposerInfo[6] = searchValue;
+            setComposerInfo(newComposerInfo);
+        }
+        if (type === "scorelink"){
+            newComposerInfo = [...composerInfo];
+            newComposerInfo[7] = searchValue;
+            setComposerInfo(newComposerInfo);
+        }
+        
+        console.log(searchValue,type,ComposerInfoRef.current);
     }
     const tokens = sessionStorage.getItem('tokens');
     const config = {
@@ -58,28 +87,30 @@ const Addcomposer = () => {
     const onSubmitListener = () =>{
         //const JSON = JSON.stringify(ComposerInfoRef.current);
         var jsonObj = {};
-        jsonObj["name"] = ComposerInfoRef.current[0];
-        jsonObj["nationality"] = ComposerInfoRef.current[1];
-        jsonObj["website"] = ComposerInfoRef.current[2];
-        jsonObj["biography"] = ComposerInfoRef.current[3];
-        jsonObj["image"] = ComposerInfoRef.current[4];
-        jsonObj["DOB"] = ComposerInfoRef.current[5];
+        jsonObj["composerID"] = ComposerInfoRef.current[0];
+        jsonObj["name"] = ComposerInfoRef.current[1];
+        jsonObj["duration"] = ComposerInfoRef.current[2];
+        jsonObj["year"] = ComposerInfoRef.current[3];
+        jsonObj["instruments"] = ComposerInfoRef.current[4];
+        jsonObj["recordingLink"] = ComposerInfoRef.current[5];
+        jsonObj["publisher"] = ComposerInfoRef.current[6];
+        jsonObj["scoreLink"] = ComposerInfoRef.current[7];
+        jsonObj["image"] = ComposerInfoRef.current[8];
         
         axios
-        .post('http://localhost:3000/api/composers/admin',jsonObj,config)
+        .post('http://localhost:3000/api/pieces/admin',jsonObj,config)
         .then(res=>{
           console.log(sessionStorage.getItem('tokens'));
           console.log(res);
           if (res.status == "200"){
-            navigate('/admin/composer');
-            alert("Sucessfully added composer!");
             
+            navigate("/admin/piece");
+            alert("Sucessfully added piece!");
           }
         })
         .catch(err =>{
             console.log("Error from posting data: "+err)
         })
-        
 
 
     }
@@ -154,30 +185,45 @@ const Addcomposer = () => {
             </Navbar.Offcanvas>
           </Container>
         </Navbar>
+
         <Form>
+            <Form.Select onChange={(e)=>inputItems(e.target.value,"id")}>
+            <option>Select the composer</option>
+            {composer.map(item => (
+                
+                <option value={item._id} >{item.name}</option>
+            
+            ))}
+            </Form.Select>
             <Form.Group className="mb-3" controlId="formBasicEmail">
-                <Form.Label>Name</Form.Label>
-                <Form.Control type="name" placeholder="Enter Name" onChange={(e)=>inputItems(e.target.value,"name")}/>
-                <Form.Text className="text-muted">
-                We'll never share your email with anyone else.
-                </Form.Text>
+                <Form.Label>Enter Piece Name</Form.Label>
+                <Form.Control type="name" placeholder="Enter Piece Name" onChange={(e)=>inputItems(e.target.value,"name")}/>
             </Form.Group>
             <Form.Group className="mb-3" controlId="formBasicPassword">
-                <Form.Label>Nationality</Form.Label>
-                <Form.Control type="nationality" placeholder="Enter Nationality"  onChange={(e)=>inputItems(e.target.value,"nationality")}/>
+                <Form.Label>Duration</Form.Label>
+                <Form.Control type="duration" placeholder="Enter Duration"  onChange={(e)=>inputItems(e.target.value,"duration")}/>
             </Form.Group>
             <Form.Group className="mb-3" controlId="formBasicPassword">
-                <Form.Label>Website</Form.Label>
-                <Form.Control type="website" placeholder="Enter Website"  onChange={(e)=>inputItems(e.target.value,"website")}/>
+                <Form.Label>Year</Form.Label>
+                <Form.Control type="year" placeholder="Enter Year"  onChange={(e)=>inputItems(e.target.value,"year")}/>
             </Form.Group>
             <Form.Group className="mb-3" controlId="formBasicPassword">
-                <Form.Label>Biography</Form.Label>
-                <Form.Control type="biography" placeholder="Enter Biography"  onChange={(e)=>inputItems(e.target.value,"biography")}/>
+                <Form.Label>Instruments</Form.Label>
+                <Form.Control type="instruments" placeholder="Enter Instruments"  onChange={(e)=>inputItems(e.target.value,"instruments")}/>
             </Form.Group>
             <Form.Group className="mb-3" controlId="formBasicPassword">
-                <Form.Label>Year of birth</Form.Label>
-                <Form.Control type="dob" placeholder="Enter Year of birth"  onChange={(e)=>inputItems(e.target.value,"dob")}/>
+                <Form.Label>Recording Link</Form.Label>
+                <Form.Control type="recordinglink" placeholder="Enter Recording Link"  onChange={(e)=>inputItems(e.target.value,"recordinglink")}/>
             </Form.Group>
+            <Form.Group className="mb-3" controlId="formBasicPassword">
+                <Form.Label>Publisher</Form.Label>
+                <Form.Control type="publisher" placeholder="Enter Publishers"  onChange={(e)=>inputItems(e.target.value,"publisher")}/>
+            </Form.Group>
+            <Form.Group className="mb-3" controlId="formBasicPassword">
+                <Form.Label>Score Link</Form.Label>
+                <Form.Control type="scorelink" placeholder="Enter Score Link"  onChange={(e)=>inputItems(e.target.value,"scorelink")}/>
+            </Form.Group>
+            
       {/* <Form.Group className="mb-3" controlId="formBasicCheckbox">
         <Form.Check type="checkbox" label="Check me out" />
       </Form.Group> */}

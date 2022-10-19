@@ -7,14 +7,15 @@ import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import NavDropdown from 'react-bootstrap/NavDropdown';
 import Offcanvas from 'react-bootstrap/Offcanvas';
+import background from '../../img/admin.png';
 
 const Admin = () => {
   
     return (
-
-      <Navbar  key="false" bg="light" expand="false"  className="mb-3">
+<>
+      <Navbar  key="false" bg="light" expand="false"  className="mb-3" position="fixed">
       <Container fluid>
-        <Navbar.Brand href="#">The Admin Center</Navbar.Brand>
+        <Navbar.Brand href="/admin">The Admin Center</Navbar.Brand>
         <Navbar.Toggle aria-controls={`offcanvasNavbar-expand-false`} />
         <Navbar.Offcanvas
           id={`offcanvasNavbar-expand-false`}
@@ -80,6 +81,11 @@ const Admin = () => {
         </Navbar.Offcanvas>
       </Container>
     </Navbar>
+    <div style={{ 
+      backgroundImage: `url(${background})`,width:"100%",height:"750px"}}>
+
+    </div>
+    </>
   )}
     // <Nav justify variant="tabs" defaultActiveKey="/admin"  class="adminnav nav nav-tabs nav-justifed">
     //     <Nav.Item>
