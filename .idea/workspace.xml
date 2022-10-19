@@ -2,27 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7c003d22-b666-4e4f-82e9-be5f2c89ed56" name="Changes" comment="about us page created, footer links added for most of the item, join us link works">
-      <change afterPath="$PROJECT_DIR$/client/src/components/img/home-piece.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/components/pages/AboutUs/about.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/img/home-instrument.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/components/pages/Composer/Profile-piece.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_11_10_2022_5_14_pm__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_11_10_2022_5_14_pm__Changes_.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/Footer.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/Footer.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/home-composer.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/home-composer.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/home-footer-joinUs.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/home-footer-joinUs.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/home-instrument.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/home-instrument.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/home-list-instrument-detail.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/home-list-instrument-detail.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/home-list-instrument.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/home-list-instrument.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/home-list-piece-detail.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/home-list-piece-detail.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/home-repertoire.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/home-repertoire.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/src/components/pages/Composer/Profile.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/pages/Composer/Profile.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/pages/NavbarItems.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/pages/NavbarItems.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/img/adidas-logo.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/img/booking-logo.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/img/eventbrite-logo.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/img/lyft-logo.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/img/purple-intersect.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/img/surveymonkey-logo.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/pages/Instrument/InstrumentChild.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/pages/Instrument/InstrumentChild.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

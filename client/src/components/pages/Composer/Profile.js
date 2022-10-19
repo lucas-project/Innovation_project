@@ -146,13 +146,14 @@
 // export default AlbumItemsPage;
 
 import React, { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
+import {Link, useNavigate} from "react-router-dom";
 import Card from "../../Card";
 
 import {useLocation, useParams} from "react-router";
 import {Container, Col, Row} from 'react-bootstrap';
 import "./Composer.css";
 import placeholder from "../../img/placeholder.png";
+import Button from "react-bootstrap/Button";
 
 
 const firstRow = {
@@ -205,7 +206,19 @@ const Profile = () => {
 
     const { _id } = useParams();
     const location = useLocation();
+    let navigate = useNavigate();
+    const [URL,setURL] = useState([]);
+    const composerName = document.getElementById("URL");
 
+    const searchComposer= (e) => {
+        // setInfo(e.target.value);
+        const URL = `${e.target.value}`;
+        const URLF = URL.split(' ')[0];
+        // alert(URLF);
+        setURL(URL);
+        //console.log(URL);
+        navigate(`/piece/${URLF}`, {state: URLF});
+    }
    useEffect(() => {
        setIsLoading(true);
        const fetchData = async () => {
@@ -229,7 +242,7 @@ const Profile = () => {
             <Container>
                 <br/><br/><br/><br/>
                 <Row style={firstRow}>
-                    <Col> <h1>{Object.values(location.state.name)}</h1></Col>
+                    <Col> <h1 id="URL">{Object.values(location.state.name)}</h1></Col>
                 </Row>
                 <Row style={secondRow}>
                     <Col md={6} style={secondLeft}>
@@ -252,6 +265,7 @@ const Profile = () => {
                     <Col md="auto" style={down}><h3>Biography:</h3><br/> <p>{Object.values(location.state.biography)}</p></Col>
                 </Row>
             </Container>
+            <Button variant="primary" class="mt-auto btn" value={location.state.name} onClick={searchComposer}>View her piece</Button>
 
         </div>
     );
