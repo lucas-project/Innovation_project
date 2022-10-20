@@ -13,7 +13,6 @@ import { Routes, Route, Link} from "react-router-dom";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import "bootstrap/dist/js/bootstrap.bundle.min";
 
-import Ailis from "./components/pages/Recommendation/Ailis";
 import Flute from "./components/pages/Instrument/Flute";
 import Search from "./components/pages/Search/Search";
 import InstrumentChild from "./components/pages/Instrument/InstrumentChild";
@@ -31,6 +30,7 @@ import RemovePiece from "./components/pages/Admin/RemovePiece";
 import { DefaultContext } from "react-icons/lib";
 import WithoutNav from "./WithoutNav";
 import WithNav from "./WithNav";
+import RecommChild from "./components/pages/Recommendation/RecommChild";
 
 
 const App = () => {
@@ -61,11 +61,8 @@ const App = () => {
           <Route path="/api/composers/:id" element={<ComposerMongodb />} />
           <Route path="/api/pieces/:id" element={<Repertoire />} />
           
-          <Route path="/recommendation/ailis" element={<Ailis />} />
+          <Route path="/recommendation/:title" element={<RecommChild />} />
           <Route path="/search/*" element={<Search />} />
-          <Route path="/recommendation/flute" element={<Flute />} />
-          <Route path="/instrument/:instrument" element={<InstrumentChild />} />
-
           <Route path="/instrument/:instrument" element={<InstrumentChild />} />
           <Route path="/api/auth" element={<Login />} />
           <Route path="/api/users" element={<Register />} />

@@ -10,6 +10,7 @@ import "./Recommendation.css";
 // import {Link } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
 import useState from 'react-usestateref';
+import axios from "axios";
 
 //the button to be added (for search related piece of the author)
 
@@ -18,6 +19,36 @@ const Recommendation = () => {
     const AilisRoute = () =>{ 
     let path = '/recommendation/ailis'; 
     navigate(path);
+    }
+    const mystyle = {
+        //color: "white",
+        backgroundColor: "ghostwhite",
+        padding: "10px",
+        fontFamily: "Arial",
+        fontSize :"1.8vw"
+      };
+      
+    const mystyleText = {
+    //color: "white",
+    backgroundColor: "aliceblue",
+    fontFamily: "Arial",
+    textAlign: 'left',
+    fontSize :"1.2vw"
+    };
+
+    const [id,setId,idRef] = useState([]);
+
+    const onClickJumpDetailPage =(item)=>{
+        const title = item.title;
+        console.log(title);
+        // axios
+        // .get('http://localhost:3000/api/search/recommend/'+title)
+        // .then(res =>{
+        //     console.log(res);
+        //     setId(res.data._id);
+        //     console.log(idRef.current);
+        navigate(`/recommendation/${title}`,{state:{title}});
+        // })
     }
     const [recommendation,setRecommendation,recommendationRef] = useState([]);
     useEffect(() => {
@@ -31,22 +62,24 @@ const Recommendation = () => {
     }, []);
     
     return (
-    <Container style={{ position: "absolute", marginTop: "120px", fontSize: "20px" }}>
+    <Container style={{ marginLeft: "auto",marginRight: "auto", paddingTop: "120px", fontSize: "20px" }}>
       <Row class="d-flex row">
       {recommendationRef.current.map(item => (
     <>
-        <div class="col col-4 d-flex justify-content-center">
+        <div class="col col-4 d-flex " style={{ position: "center"}}>
             {/* <div style={{ position: "absolute", margin: "170px", fontSize: "20px" }}> */}
                 <Card>
                 <Card.Img variant="top" src={item.image} />
-                <Card.Body class="card-body">
-                    <Card.Title>{item.title}</Card.Title>
-                    <Card.Text>
-                        {item.body}<br></br>
-                        Publish date: {item.date}
+                <Card.Body  class="card-body">
+                    <Card.Title style={mystyle}>{item.title}</Card.Title>
+                    <hr></hr>
+                    <Card.Text style={mystyleText}>
+                        {item.body.substring(0, 200)}... ...<br></br>
+                        <hr></hr>
+                        <p>Publish date: {item.date}</p>
                     </Card.Text>
                     {/* <Link to='/recommendation/ailis'> */}
-                    {/* <Button variant="primary" class="mt-auto btn" onClick={onClickHandler}>View more details.</Button> */}
+                    <Button variant="primary" class="mt-auto btn" onClick={(e) => onClickJumpDetailPage(item)}>View more details.</Button>
                     {/* </Link> */}
                 </Card.Body>
                 </Card>

@@ -13,10 +13,10 @@ import InstrumentChild from "../../pages/Instrument/InstrumentChild";
 const Instrument = () => {
 
         let navigate = useNavigate(); 
-        const FluteRoute = () =>{ 
-        let path = '/instrument/flute'; 
-        navigate(path);
-        }
+        // const FluteRoute = () =>{ 
+        // let path = '/instrument/flute'; 
+        // navigate(path);
+        // }
         const [URL,setURL] = useState([]);
         // const [info,setInfo] = useState([]);
 
