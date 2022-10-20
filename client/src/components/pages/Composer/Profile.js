@@ -154,6 +154,8 @@ import {Container, Col, Row} from 'react-bootstrap';
 import "./Composer.css";
 import placeholder from "../../img/placeholder.png";
 import Button from "react-bootstrap/Button";
+import {Helmet} from "react-helmet";
+import sharePic from "../../img/piece.png";
 
 
 const firstRow = {
@@ -240,6 +242,9 @@ const Profile = () => {
             )}
 
             <Container>
+                <Helmet>
+                    <script type="text/javascript" src="https://platform-api.sharethis.com/js/sharethis.js#property=635087349dc3400019b69556&product=inline-share-buttons&source=platform" async="async"></script>
+                </Helmet>
                 <br/><br/><br/><br/>
                 <Row style={firstRow}>
                     <Col> <h1 id="URL">{Object.values(location.state.name)}</h1></Col>
@@ -262,11 +267,12 @@ const Profile = () => {
                     </Col>
                 </Row>
                 <Row>
-                    <Col md="auto" style={down}><h3>Biography:</h3><br/> <p>{Object.values(location.state.biography)}</p></Col>
+                    <Col md="auto" style={down}><h3>Biography:</h3><br/> <p>{Object.values(location.state.biography)}</p><Button variant="primary" class="mt-auto btn" value={location.state.name} onClick={searchComposer}>View her piece</Button></Col>
+                    <Col></Col>
                 </Row>
             </Container>
-            <Button variant="primary" class="mt-auto btn" value={location.state.name} onClick={searchComposer}>View her piece</Button>
 
+            <div className="sharethis-inline-share-buttons" data-url="https://www.facebook.com/coreliaproject/" data-title="Corelia project" data-image={sharePic} data-description="Corelia project aims to build a centralised database for female composers" data-message="Hey look what I found, this website is awesome, check it out!" data-email-subject="I wanna share this with you"></div>
         </div>
     );
 };

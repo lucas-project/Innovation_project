@@ -11,6 +11,7 @@ import { RWebShare } from "react-web-share";
 import share from "./share";
 import save from "./saveFacebook";
 import {Helmet} from "react-helmet";
+import sharePic from "../../img/piece.png";
 
 const firstRow = {
     height:'600px',
@@ -92,6 +93,7 @@ const Profile = () => {
                             src="https://connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v15.0&appId=407443791582428&autoLogAppEvents=1"
                             nonce="8Fv7OSP4">
                     </script>
+                    <script type="text/javascript" src="https://platform-api.sharethis.com/js/sharethis.js#property=635087349dc3400019b69556&product=inline-share-buttons&source=platform" async="async"></script>
                 </Helmet>
                 <br/><br/><br/><br/>
                 <Row style={firstRow}>
@@ -117,10 +119,10 @@ const Profile = () => {
                     <Col md="auto" style={downLeft}><h4>Recording link: </h4><br/><p>{Object.values(location.state.links)}</p></Col>
                     <Col md="auto" style={downLeft}><h4>Duration:</h4><br/><p> {Object.values(location.state.duration)} min</p></Col>
                     <Col>
-                        <div className="fb-share-button"
-                             data-href="https://www.facebook.com/coreliaproject/"
-                             data-layout="button_count">
-                        </div>
+                        {/*<div className="fb-share-button"*/}
+                        {/*     data-href="https://www.facebook.com/coreliaproject/"*/}
+                        {/*     data-layout="button_count">*/}
+                        {/*</div>*/}
                         <div className="fb-comments"
                              data-href="https://stackoverflow.com/questions/61614313/adding-meta-tags-on-react-js" data-width=""
                              data-numposts="5">
@@ -132,18 +134,20 @@ const Profile = () => {
                     </Col>
                 </Row>
             </Container>
-            <helmet>
-                <meta property="og:url"           content="http://localhost:3001/api/pieces/" />
-                <meta property="og:type"          content="Corelia" />
-                <meta property="og:title"         content="Corelia Project" />
-                <meta property="og:description"   content="Composer' pieces" />
-                <meta property="og:image"         content="https://www.your-domain.com/path/image.jpg" />
-            </helmet>
-            <div id="fb-root"></div>
-            <helmet>
-                <script type="text/javascript" src={share}></script>
-                <script type="text/javascript" src={save}></script>
-            </helmet>
+            {/*<helmet>*/}
+            {/*    <meta property="og:url"           content="http://localhost:3001/api/pieces/" />*/}
+            {/*    <meta property="og:type"          content="Corelia" />*/}
+            {/*    <meta property="og:title"         content="Corelia Project" />*/}
+            {/*    <meta property="og:description"   content="Composer' pieces" />*/}
+            {/*    <meta property="og:image"         content="https://www.your-domain.com/path/image.jpg" />*/}
+            {/*</helmet>*/}
+            {/*<div id="fb-root"></div>*/}
+            {/*<helmet>*/}
+            {/*    <script type="text/javascript" src={share}></script>*/}
+            {/*    <script type="text/javascript" src={save}></script>*/}
+            {/*</helmet>*/}
+
+            <div className="sharethis-inline-share-buttons" data-url="https://www.facebook.com/coreliaproject/" data-title="Corelia project" data-image={sharePic} data-description="Corelia project aims to build a centralised database for female composers" data-message="Hey look what I found, this website is awesome, check it out!" data-email-subject="I wanna share this with you"></div>
 
             {/*<Row>*/}
             {/*    <Col>*/}
