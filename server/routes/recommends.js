@@ -3,6 +3,7 @@ const admin = require('../middleware/admin');
 //const _ = require('lodash');
 const { Recommend, validate } = require('../models/recommend');
 const express = require('express');
+
 const router = express.Router();
 
 router.get('/', async (req, res) => {
@@ -20,6 +21,14 @@ router.post('/', [auth, admin], async (req, res) => {
         image: req.body.image
     });
     await recommend.save();
+
+    res.send(recommend);
+});
+
+router.delete('/:id', [auth, admin], async (req, res) => {
+    const recommend = await Recommend.findByIdAndRemove(req.params.id);
+
+    if (!recommend) return res.status(404).send('The recommendation with the given ID was not found.');
 
     res.send(recommend);
 });
