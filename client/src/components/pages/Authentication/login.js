@@ -26,6 +26,8 @@ export default function Create() {
         password: "",
     });
     const [tokens, setTokens]=useState();
+    const [emails, setEmails] = useState();
+    const [res, setRes] = useState();
     const navigate = useNavigate();
 
     // These methods will update the state properties.
@@ -43,6 +45,7 @@ export default function Create() {
         const newPerson = { ...form };
         let responseToken = "";
         let responseEmail = "";
+        let responseJSON = {};
         // alert(JSON.stringify(newPerson))
         const responses = await fetch("http://localhost:3000/api/auth", {
             method: "POST",
@@ -51,36 +54,29 @@ export default function Create() {
             },
             body: JSON.stringify(newPerson),
         })
-            // .then((response) => response.json())
-            // .then((result)=>{
-            //     if(result.ok){
-            //         alert(result)
-            //     } else {
-            //         alert("Please check your login information-1.");
-            //     }
-            // })
-        //
-        // setForm({ email: "", password: ""});
+
             .then(response => response.json())
             // .then(data => setTokens(data.token))
-            .then(data => responseToken=data.token)
-            // .then(data => alert("data "+JSON.stringify(data)))
-            // .then(data => responseEmail=data.result)
+            // .then(data => responseEmail=data.email)
+            // .then(data => responseToken=data.token)
+            .then(data => responseJSON= data)
+            // .then(data => responseEmail=data.email)
             // .then(data => alert(JSON.stringify(data.email)))
             .catch(error => {
                 window.alert(error);
                 return;
             });
 
-
-        setTokens(responseToken);
-        alert(typeof responseToken)
-        sessionStorage.setItem("tokens", responseToken);
-        // alert(sessionStorage.getItem("tokens"));
+        setTokens(responseJSON.token);
+        // alert(typeof responseToken)
+        sessionStorage.setItem("tokens", responseJSON.token);
+        sessionStorage.setItem("email", responseJSON.email);
+        // sessionStorage.setItem("email",res.email);
+        // alert(sessionStorage.getItem("email"));
         // alert(responseEmail);
-        alert("Successfully login as "+sessionStorage.getItem("tokens"))
+        alert("Successfully login as "+sessionStorage.getItem("email"))
         setForm({ email: "", password: ""});
-        if (responseToken!=""){
+        if (responseJSON.token!=""){
             navigate("/");
         }else{
             alert("login failed");

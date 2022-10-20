@@ -3,7 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="7c003d22-b666-4e4f-82e9-be5f2c89ed56" name="Changes" comment="facebook share button added, facebook comment button added, localhost not availiable for these function though, also seeking more share buttons">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/pages/Composer/Profile.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/pages/Composer/Profile.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/home-topBar.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/home-topBar.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/pages/Authentication/login.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/pages/Authentication/login.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/src/components/pages/Repertoire/Repertoire.detail.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/pages/Repertoire/Repertoire.detail.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />

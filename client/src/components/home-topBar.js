@@ -1,32 +1,42 @@
 import Logo from "./Logo";
 import HomeTopBarSearchBar from "./home-topBar-searchBar";
 import styled from "styled-components";
+import {useEffect, useRef} from "react";
+import {Link} from "react-router-dom";
 
 const TopBar = () => {
+    const ref = useRef(null);
+    useEffect(() => {
+        if (sessionStorage.getItem("tokens")==="true"){
+            alert("your token is "+sessionStorage.getItem("tokens"))
+        }
+
+    }, []);
+
   return (
     <StyledTopBar>
       {/*<Logo className='bar-logo' width='2rem' />*/}
-      <span>
-        <a href='#'>Login</a>
-      </span>
-      <span className='search'>
-        <HomeTopBarSearchBar />
-      </span>
+      {/*<span>*/}
+      {/*  <a href='#'>Login</a>*/}
+      {/*</span>*/}
+      {/*<span className='search'>*/}
+      {/*  <HomeTopBarSearchBar />*/}
+      {/*</span>*/}
 
-      <span className='top-links'>
-        <a href='#'>Stories</a>
-      </span>
-      <span className='top-links'>
-        <a href='#'>Become a composer</a>
-      </span>
-      <span className='top-links'>
-        <a href='#'>My listening list</a>
-      </span>
-      <span className='bar-icon'>
-        <a href='#'>
-          <i class='far fa-heart'></i>
-        </a>
-      </span>
+        <Link
+            to={{pathname:'/about'}}
+        ><p>Stories</p></Link>
+      {/*<span className='top-links'>*/}
+      {/*  <a href='#'>Become a composer</a>*/}
+      {/*</span>*/}
+      {/*<span className='top-links'>*/}
+      {/*  <a href='#'>My listening list</a>*/}
+      {/*</span>*/}
+      {/*<span className='bar-icon'>*/}
+      {/*  <a href='#'>*/}
+      {/*    <i class='far fa-heart'></i>*/}
+      {/*  </a>*/}
+      {/*</span>*/}
      
       <span className='bar-icon'>
         <a href='#'>
@@ -34,8 +44,9 @@ const TopBar = () => {
         </a>
       </span>
       <span className='bar-icon profile'>
-        <a href='#'>SS</a>
+        <a href='#'id="usernamePlacrholder" ref={ref}>SS</a>
       </span>
+        {/*<div id="usernamePlaceholder"></div>*/}
     </StyledTopBar>
   );
 };

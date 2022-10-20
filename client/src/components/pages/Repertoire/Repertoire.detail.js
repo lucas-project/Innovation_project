@@ -123,6 +123,10 @@ const Profile = () => {
                         {/*     data-href="https://www.facebook.com/coreliaproject/"*/}
                         {/*     data-layout="button_count">*/}
                         {/*</div>*/}
+                        <br/>
+                        <div className="sharethis-inline-share-buttons" style={buttonS} data-url="https://www.facebook.com/coreliaproject/" data-title="Corelia project" data-image={sharePic} data-description="Corelia project aims to build a centralised database for female composers" data-message="Hey look what I found, this website is awesome, check it out!" data-email-subject="I wanna share this with you"></div>
+
+                        <br/>
                         <div className="fb-comments"
                              data-href="https://stackoverflow.com/questions/61614313/adding-meta-tags-on-react-js" data-width=""
                              data-numposts="5">
@@ -147,7 +151,6 @@ const Profile = () => {
             {/*    <script type="text/javascript" src={save}></script>*/}
             {/*</helmet>*/}
 
-            <div className="sharethis-inline-share-buttons" data-url="https://www.facebook.com/coreliaproject/" data-title="Corelia project" data-image={sharePic} data-description="Corelia project aims to build a centralised database for female composers" data-message="Hey look what I found, this website is awesome, check it out!" data-email-subject="I wanna share this with you"></div>
 
             {/*<Row>*/}
             {/*    <Col>*/}
