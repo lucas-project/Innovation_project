@@ -13,7 +13,7 @@ const Admin = () => {
   
     return (
 <>
-      <Navbar  key="false" bg="light" expand="false"  className="mb-3" position="fixed">
+    <Navbar  key="false" bg="light" expand="false"  className="mb-3" position="fixed">
       <Container fluid>
         <Navbar.Brand href="/admin">The Admin Center</Navbar.Brand>
         <Navbar.Toggle aria-controls={`offcanvasNavbar-expand-false`} />
@@ -36,10 +36,11 @@ const Admin = () => {
                 <NavDropdown.Item href="/admin/composer">
                   Show composer
                 </NavDropdown.Item>
+                <NavDropdown.Divider />
                 <NavDropdown.Item href="/admin/addcomposer">
                   Add composer
                 </NavDropdown.Item>
-                <NavDropdown.Divider />
+                
                 <NavDropdown.Item href="/admin/removecomposer">
                   Remove composer
                 </NavDropdown.Item>
@@ -51,10 +52,11 @@ const Admin = () => {
                 <NavDropdown.Item href="/admin/piece">
                   Show piece list
                 </NavDropdown.Item>
+                <NavDropdown.Divider />
                 <NavDropdown.Item href="/admin/addpiece">
                   Add piece
                 </NavDropdown.Item>
-                <NavDropdown.Divider />
+                
                 <NavDropdown.Item href="/admin/removepiece">
                   Remove piece
                 </NavDropdown.Item>
@@ -66,15 +68,16 @@ const Admin = () => {
                 <NavDropdown.Item href="/admin/recommendation">
                   Show recommendation
                 </NavDropdown.Item>
+                <NavDropdown.Divider />
                 <NavDropdown.Item href="/admin/addrecommendation">
                   Add recommendation
                 </NavDropdown.Item>
-                <NavDropdown.Divider />
+                
                 <NavDropdown.Item href="/admin/removerecommendation">
                   Remove recommendation
                 </NavDropdown.Item>
               </NavDropdown>
-              <Nav.Link href="/">Go to website home</Nav.Link>
+              <Nav.Link href="/"><strong>Return to Homepage</strong></Nav.Link>
             </Nav>
             
           </Offcanvas.Body>

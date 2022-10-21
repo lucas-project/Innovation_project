@@ -80,74 +80,77 @@ const RemoveRecomm = () => {
     
     return (
         <>
-                <Navbar  key="false" bg="light" expand="false"  className="mb-3">
-          <Container fluid>
-            <Navbar.Brand href="#">The Admin Center</Navbar.Brand>
-            <Navbar.Toggle aria-controls={`offcanvasNavbar-expand-false`} />
-            <Navbar.Offcanvas
-              id={`offcanvasNavbar-expand-false`}
-              aria-labelledby={`offcanvasNavbarLabel-expand-false`}
-              placement="end"
-            >
-              <Offcanvas.Header closeButton>
-                <Offcanvas.Title id={`offcanvasNavbarLabel-expand-false`}>
-                  Admin
-                </Offcanvas.Title>
-              </Offcanvas.Header>
-              <Offcanvas.Body>
-                <Nav className="justify-content-end flex-grow-1 pe-3">
-                <NavDropdown
-                    title="Composer Management"
-                    id={`offcanvasNavbarDropdown-expand-false`}
-                  >
-                    <NavDropdown.Item href="/admin/composer">
-                      Show composer
-                    </NavDropdown.Item>
-                    <NavDropdown.Item href="/admin/addcomposer">
-                      Add composer
-                    </NavDropdown.Item>
-                    <NavDropdown.Divider />
-                    <NavDropdown.Item href="/admin/removecomposer">
-                      Remove composer
-                    </NavDropdown.Item>
-                  </NavDropdown>
-                  <NavDropdown
-                    title="Repertoire Management"
-                    id={`offcanvasNavbarDropdown-expand-false`}
-                  >
-                    <NavDropdown.Item href="/admin/piece">
-                      Show piece list
-                    </NavDropdown.Item>
-                    <NavDropdown.Item href="/admin/addpiece">
-                      Add piece
-                    </NavDropdown.Item>
-                    <NavDropdown.Divider />
-                    <NavDropdown.Item href="/admin/removepiece">
-                      Remove piece
-                    </NavDropdown.Item>
-                  </NavDropdown>
-                  <NavDropdown
-                    title="Recommendation Management"
-                    id={`offcanvasNavbarDropdown-expand-false`}
-                  >
-                    <NavDropdown.Item href="/admin/recommendation">
-                      Show recommendation
-                    </NavDropdown.Item>
-                    <NavDropdown.Item href="/admin/addrecommendation">
-                      Add recommendation
-                    </NavDropdown.Item>
-                    <NavDropdown.Divider />
-                    <NavDropdown.Item href="/admin/removerecommendation">
-                      Remove recommendation
-                    </NavDropdown.Item>
-                  </NavDropdown>
-                  <Nav.Link href="/">Go to website home</Nav.Link>
-                </Nav>
+    <Navbar  key="false" bg="light" expand="false"  className="mb-3" position="fixed">
+      <Container fluid>
+        <Navbar.Brand href="/admin">The Admin Center</Navbar.Brand>
+        <Navbar.Toggle aria-controls={`offcanvasNavbar-expand-false`} />
+        <Navbar.Offcanvas
+          id={`offcanvasNavbar-expand-false`}
+          aria-labelledby={`offcanvasNavbarLabel-expand-false`}
+          placement="end"
+        >
+          <Offcanvas.Header closeButton>
+            <Offcanvas.Title id={`offcanvasNavbarLabel-expand-false`}>
+              Admin
+            </Offcanvas.Title>
+          </Offcanvas.Header>
+          <Offcanvas.Body>
+            <Nav className="justify-content-end flex-grow-1 pe-3">
+            <NavDropdown
+                title="Composer Management"
+                id={`offcanvasNavbarDropdown-expand-false`}
+              >
+                <NavDropdown.Item href="/admin/composer">
+                  Show composer
+                </NavDropdown.Item>
+                <NavDropdown.Divider />
+                <NavDropdown.Item href="/admin/addcomposer">
+                  Add composer
+                </NavDropdown.Item>
                 
-              </Offcanvas.Body>
-            </Navbar.Offcanvas>
-          </Container>
-        </Navbar>
+                <NavDropdown.Item href="/admin/removecomposer">
+                  Remove composer
+                </NavDropdown.Item>
+              </NavDropdown>
+              <NavDropdown
+                title="Repertoire Management"
+                id={`offcanvasNavbarDropdown-expand-false`}
+              >
+                <NavDropdown.Item href="/admin/piece">
+                  Show piece list
+                </NavDropdown.Item>
+                <NavDropdown.Divider />
+                <NavDropdown.Item href="/admin/addpiece">
+                  Add piece
+                </NavDropdown.Item>
+                
+                <NavDropdown.Item href="/admin/removepiece">
+                  Remove piece
+                </NavDropdown.Item>
+              </NavDropdown>
+              <NavDropdown
+                title="Recommendation Management"
+                id={`offcanvasNavbarDropdown-expand-false`}
+              >
+                <NavDropdown.Item href="/admin/recommendation">
+                  Show recommendation
+                </NavDropdown.Item>
+                <NavDropdown.Divider />
+                <NavDropdown.Item href="/admin/addrecommendation">
+                  Add recommendation
+                </NavDropdown.Item>
+                
+                <NavDropdown.Item href="/admin/removerecommendation">
+                  Remove recommendation
+                </NavDropdown.Item>
+              </NavDropdown>
+              <Nav.Link href="/"><strong>Return to Homepage</strong></Nav.Link>
+            </Nav>
+            
+          </Offcanvas.Body>
+        </Navbar.Offcanvas>
+      </Container>
+    </Navbar>
         <Container style={{ marginLeft: "auto",marginRight: "auto", paddingTop: "120px", fontSize: "20px" }}>
       <Row class="d-flex row">
       {recommendationRef.current.map(item => (

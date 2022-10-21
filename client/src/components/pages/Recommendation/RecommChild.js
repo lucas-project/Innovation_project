@@ -48,6 +48,7 @@ import Container from 'react-bootstrap/Container';
 import Card from 'react-bootstrap/Card';
 import Button from 'react-bootstrap/Button';
 import Row from 'react-bootstrap/Row';
+import Footer from "../../Footer";
 
 const RecommChild = () => {
     const URL = useLocation();
@@ -55,6 +56,7 @@ const RecommChild = () => {
     const [info,setInfo,infoRef] = useState([]);
     const [isLoading,setLoading,loadingRef] = useState(true);
 
+    
     useEffect(()=>{
         axios
         .get('http://localhost:3000/api/search/recommend/'+URL.state.title)
@@ -80,18 +82,23 @@ const RecommChild = () => {
         {infoRef.current.map((item) =>{
              console.log("mapped items");
              return(
-            <div style={{ width: "800vm"}}>
+            <div style={{ width: "800vm",paddingLeft:"10%",paddingRight:"10%"}}>
             <p>Recommendation for you</p>
             <hr></hr>
-            <h1>{item.title}</h1>
+            <h1 style={{backgroundColor:"ghostwhite"}}>{item.title}</h1>
             <hr></hr>
-            <p>Post time: {item.date}</p>
-            <h2>{item.body}</h2>
+            <p style={{color:"darkgray"}}>Post time: {item.date}</p>
+            <h4 >{item.body}</h4>
+            <hr></hr>
             </div>
             )
          }) }
         </Container>
-        
+        <br/><br></br><br></br><br></br><br></br><br></br>
+        <footer>
+
+        <Footer />
+      </footer>
       
 
     </>

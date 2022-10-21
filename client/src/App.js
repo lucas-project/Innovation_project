@@ -35,6 +35,10 @@ import AdminRecomm from "./components/pages/Admin/AdminRecomm";
 import AddRecomm from "./components/pages/Admin/AddRecomm";
 import RemoveRecomm from "./components/pages/Admin/RemoveRecomm";
 
+import Logout from "./components/pages/Authentication/logout";
+import Profiles from "./components/pages/Composer/Profile-piece";
+import About from "./components/pages/AboutUs/about";
+
 const App = () => {
     
   return (
@@ -71,6 +75,10 @@ const App = () => {
           <Route path="/instrument/:instrument" element={<InstrumentChild />} />
           <Route path="/api/auth" element={<Login />} />
           <Route path="/api/users" element={<Register />} />
+
+          <Route path="/api/logout" element={<Logout />} />
+          <Route path="/about" element={<About/>} />
+          <Route path="/piece/:piece" element={<Profiles />} />
 
         </Route>
       </Routes>

@@ -5,7 +5,6 @@ const navbarItems = [
   },
   {
     title: "Repertoire",
-    link: "/repertoire",
     link: "/pieces",
   },
   {
@@ -28,7 +27,6 @@ const navbarItems = [
     title: "Login",
     link: "/api/auth",
   },
- 
 
 ];
 

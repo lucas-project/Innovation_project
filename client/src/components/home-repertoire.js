@@ -108,18 +108,18 @@ const HomeRepertoire = () => {
 
   const courses2 = [
     {
-      "_id": "633cc32856e324f2dac4f4e8",
-      "name": "Arioso",
+      "_id": "633cc32856e324f2dac4f53b",
+      "name": "Times for Flying",
       "composer": {
-        "name": "Decruck Fernande",
-        "_id": "633cc39a56e324f2dac4f6c4"
+        "name": "Harrison Sadie",
+        "_id": "633cc39a56e324f2dac4f6dd"
       },
-      "duration": "There is no information at this moment.",
-      "year": "1932",
-      "instruments": "Bass Clarinet and Piano",
-      "recordingLink": "There is no information at this moment.",
-      "publisher": "There is no information at this moment.",
-      "scoreLink": "There is no information at this moment.",
+      "duration": "9",
+      "year": "2000",
+      "instruments": "2 Clarinets",
+      "recordingLink": "Recording Link unknown.",
+      "publisher": "UYMP",
+      "scoreLink": "ScoreLink unknown.",
       "image": "../../img/placeholder.png",
      
       tag: "Highest rating",
@@ -173,23 +173,108 @@ const HomeRepertoire = () => {
       "image": "../../img/placeholder.png"
     },
     {
-      "_id": "633cc32856e324f2dac4f5e7",
-      "name": "Chamber Concerto no. 2",
+      "_id": "633cc32856e324f2dac4f4ea",
+      "name": "Six Duets",
       "composer": {
-        "name": "Musgrave Thea",
-        "_id": "633cc39a56e324f2dac4f709"
+        "name": "Decruck Fernande",
+        "_id": "633cc39a56e324f2dac4f6c4"
       },
-      "duration": "There is no information at this moment.",
-      "year": "There is no information at this moment.",
-      "instruments": "There is no information at this moment.",
-      "recordingLink": "There is no information at this moment.",
-      "publisher": "There is no information at this moment.",
-      "scoreLink": "There is no information at this moment.",
+      "duration": "Duration unknown.",
+      "year": "1934",
+      "instruments": "2 Clarinets",
+      "recordingLink": "Recording Link unknown.",
+      "publisher": "Publisher unknown.",
+      "scoreLink": "ScoreLink unknown.",
       "image": "../../img/placeholder.png"
      
     },
 
     
+  ];
+  const courses3 = [
+    {
+      "_id": "633cc32856e324f2dac4f4e8",
+      "name": "Arioso",
+      "composer": {
+        "name": "Decruck Fernande",
+        "_id": "633cc39a56e324f2dac4f6c4"
+      },
+      "duration": "There is no information at this moment.",
+      "year": "1932",
+      "instruments": "Bass Clarinet and Piano",
+      "recordingLink": "There is no information at this moment.",
+      "publisher": "There is no information at this moment.",
+      "scoreLink": "There is no information at this moment.",
+      "image": "../../img/placeholder.png",
+
+      tag: "Highest rating",
+      tagColor: "#ffe799",
+    },
+    {
+      "_id": "633cc32856e324f2dac4f531",
+      "name": "Snow and Snow",
+      "composer": {
+        "name": "Grime Helen",
+        "_id": "633cc39a56e324f2dac4f6d8"
+      },
+      "duration": "9",
+      "year": "2012",
+      "instruments": "Clarinet, Viola, Piano",
+      "recordingLink": "Recording Link unknown.",
+      "publisher": "Publisher unknown.",
+      "scoreLink": "http://www.musicsalesclassical.com/composer/work/3953/47405",
+      "image": "../../img/placeholder.png"
+
+    },
+    {
+      "_id": "633cc32856e324f2dac4f649",
+      "name": "Sonata Champêtre ",
+      "composer": {
+        "name": "Tailleferre Germaine",
+        "_id": "633cc39a56e324f2dac4f723"
+      },
+      "duration": "Duration unknown.",
+      "year": "1972",
+      "instruments": "Clarinet, Bassoon, Piano",
+      "recordingLink": "Recording Link unknown.",
+      "publisher": "Publisher unknown.",
+      "scoreLink": "ScoreLink unknown.",
+      "image": "../../img/placeholder.png"
+
+    },
+    {
+      "_id": "633cc32856e324f2dac4f4d2",
+      "name": "Song of Pure Nothingness",
+      "composer": {
+        "name": "Davies Tansy",
+        "_id": "633cc39a56e324f2dac4f6c3"
+      },
+      "duration": "13",
+      "year": "2015",
+      "instruments": "Mezzo-Soprano or Countertenor and Piano",
+      "recordingLink": "Recording Link unknown.",
+      "publisher": "Faber",
+      "scoreLink": "ScoreLink unknown.",
+      "image": "../../img/placeholder.png"
+    },
+    {
+      "_id": "633cc32856e324f2dac4f606",
+      "name": "Three Scenes",
+      "composer": {
+        "name": "Ran Shulamit",
+        "_id": "633cc39a56e324f2dac4f710"
+      },
+      "duration": "Duration unknown.",
+      "year": "2000",
+      "instruments": "Solo Clarinet",
+      "recordingLink": "Recording Link unknown.",
+      "publisher": "Publisher unknown.",
+      "scoreLink": "ScoreLink unknown.",
+      "image": "../../img/placeholder.png"
+
+    },
+
+
   ];
 
 const mystyle = {
@@ -205,7 +290,7 @@ const mystyle = {
        
         slidesPerView={1}
         spaceBetween={33}
-        slidesPerGroup={2}
+        slidesPerGroup={1}
         loop={true}
         loopFillGroupWithBlank={true}
         pagination={{
@@ -218,7 +303,7 @@ const mystyle = {
         
         <SwiperSlide><HomeListComposer courses={courses}/></SwiperSlide>
         <SwiperSlide><HomeListComposer courses={courses2}/></SwiperSlide>
-        
+        <SwiperSlide><HomeListComposer courses={courses3}/></SwiperSlide>
         
       </Swiper>
     </>

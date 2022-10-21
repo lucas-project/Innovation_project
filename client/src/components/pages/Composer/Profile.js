@@ -146,54 +146,59 @@
 // export default AlbumItemsPage;
 
 import React, { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
+import {Link, useNavigate} from "react-router-dom";
 import Card from "../../Card";
 
 import {useLocation, useParams} from "react-router";
 import {Container, Col, Row} from 'react-bootstrap';
 import "./Composer.css";
 import placeholder from "../../img/placeholder.png";
+import Button from "react-bootstrap/Button";
+import {Helmet} from "react-helmet";
+import sharePic from "../../img/piece.png";
+import Footer from "../../Footer";
 
 
 const firstRow = {
     height:'100px',
-    background:'#a0cbde',
+    background:'#ddd8ab',
     width:'100%'
 };
 const secondRow = {
     height: '600px',
-    background: '#87b0a0',
+    background: '#f7e4aa',
     width: '100%',
     display:'flex',
     justifyContent: 'center'
 }
 const imageDiv = {
     height: '600px',
-    background: '#87b0a0',
+    background: '#f9d49c',
     width: '100%',
     display:'flex',
     justifyContent: 'center'
 }
 const secondLeft = {
     height: '600px',
-    background: '#689581',
+    background: '#f6c193',
     width: '50%'
 }
 const secondRight = {
     height: '200px',
-    background:'#acbc8a',
+    background:'#f0aa89',
     width:'100%'
 }
 const down ={
-    height:'300px',
-    background:'#f2b476',
-    width:'96.5%',
+    minHeight:'300px',
+    height:'auto',
+    background:'#e4a082',
+    width:'98%',
     marginHorizontal:'auto'
 }
 
 const font = {
     fontSize: 40,
-    color: "#4a54f1",
+    color: "#d3967b",
     textAlign: "center",
     paddingTop: "100px",
 }
@@ -204,7 +209,19 @@ const Profile = () => {
 
     const { _id } = useParams();
     const location = useLocation();
+    let navigate = useNavigate();
+    const [URL,setURL] = useState([]);
+    const composerName = document.getElementById("URL");
 
+    const searchComposer= (e) => {
+        // setInfo(e.target.value);
+        const URL = `${e.target.value}`;
+        const URLF = URL.split(' ')[0];
+        // alert(URLF);
+        setURL(URL);
+        //console.log(URL);
+        navigate(`/piece/${URLF}`, {state: URLF});
+    }
    useEffect(() => {
        setIsLoading(true);
        const fetchData = async () => {
@@ -226,9 +243,12 @@ const Profile = () => {
             )}
 
             <Container>
+                <Helmet>
+                    <script type="text/javascript" src="https://platform-api.sharethis.com/js/sharethis.js#property=635087349dc3400019b69556&product=inline-share-buttons&source=platform" async="async"></script>
+                </Helmet>
                 <br/><br/><br/><br/>
                 <Row style={firstRow}>
-                    <Col> <h1>{Object.values(location.state.name)}</h1></Col>
+                    <Col> <h1 id="URL">{Object.values(location.state.name)}</h1></Col>
                 </Row>
                 <Row style={secondRow}>
                     <Col md={6} style={secondLeft}>
@@ -248,10 +268,17 @@ const Profile = () => {
                     </Col>
                 </Row>
                 <Row>
-                    <Col md="auto" style={down}><h3>Biography:</h3><br/> <p>{Object.values(location.state.biography)}</p></Col>
+                    <Col md="auto" style={down}><h3>Biography:</h3><br/> <p>{Object.values(location.state.biography)}</p><Button variant="primary" class="mt-auto btn" value={location.state.name} onClick={searchComposer}>View her piece</Button></Col>
+                    <Col></Col>
                 </Row>
             </Container>
 
+            <br/>
+            <div className="sharethis-inline-share-buttons" data-url="https://www.facebook.com/coreliaproject/" data-title="Corelia project" data-image={sharePic} data-description="Corelia project aims to build a centralised database for female composers" data-message="Hey look what I found, this website is awesome, check it out!" data-email-subject="I wanna share this with you"></div>
+            <br/><br/>
+            <footer>
+                <Footer />
+            </footer>
         </div>
     );
 };
