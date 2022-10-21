@@ -3,9 +3,6 @@ import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
-
-import Ailis from '../../../img/ailis.jpg';
-import Nicola from '../../../img/Nicola.jpg';
 import "./Recommendation.css";
 // import {Link } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
@@ -16,10 +13,6 @@ import axios from "axios";
 
 const Recommendation = () => {
     let navigate = useNavigate(); 
-    const AilisRoute = () =>{ 
-    let path = '/recommendation/ailis'; 
-    navigate(path);
-    }
     const mystyle = {
         //color: "white",
         backgroundColor: "ghostwhite",

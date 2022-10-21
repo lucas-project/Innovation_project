@@ -10,7 +10,7 @@ router.get('/', async (req, res) => {
     res.send(recommends);
 });
 
-router.post('/', [auth, admin], async (req, res) => {
+router.post('/admin', [auth, admin], async (req, res) => {
     const { error } = validate(req.body);
     if (error) return res.status(400).send(error.details[0].message);
     //const recommend = new Recommend(_.pick(req.body, ['title', 'body','image']));
@@ -23,7 +23,13 @@ router.post('/', [auth, admin], async (req, res) => {
 
     res.send(recommend);
 });
+router.delete('/:id', [auth, admin], async (req, res) => {
+    const recommend = await Recommend.findByIdAndRemove(req.params.id);
 
+    if (!recommend) return res.status(404).send('The recommendation with the given ID was not found.');
+
+    res.send(recommend);
+});
 // router.put('/:id', [auth, admin], async (req, res) => {
 //     const { error } = validate(req.body);
 //     if (error) return res.status(400).send(error.details[0].message);

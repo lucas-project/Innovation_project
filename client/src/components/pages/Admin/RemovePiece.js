@@ -40,7 +40,7 @@ const RemovePiece = () => {
         .delete('http://localhost:3000/api/pieces/'+id,config)
         .then(res =>{
             console.log(res);
-            navigate('/admin/removepiece');
+            navigate('/admin/piece');
             alert("Sucessfully removed piece!");
         })
     }

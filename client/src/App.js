@@ -31,7 +31,9 @@ import { DefaultContext } from "react-icons/lib";
 import WithoutNav from "./WithoutNav";
 import WithNav from "./WithNav";
 import RecommChild from "./components/pages/Recommendation/RecommChild";
-
+import AdminRecomm from "./components/pages/Admin/AdminRecomm";
+import AddRecomm from "./components/pages/Admin/AddRecomm";
+import RemoveRecomm from "./components/pages/Admin/RemoveRecomm";
 
 const App = () => {
     
@@ -46,6 +48,9 @@ const App = () => {
           <Route path="/admin/piece" element={<AdminPiece />} />
           <Route path="/admin/addpiece" element={<AddPiece />} />
           <Route path="/admin/removepiece" element={<RemovePiece />} />
+          <Route path="/admin/recommendation" element={<AdminRecomm />} />
+          <Route path="/admin/addrecommendation" element={<AddRecomm />} />
+          <Route path="/admin/removerecommendation" element={<RemoveRecomm />} />
 
         </Route>
         <Route  element={<WithNav />}>

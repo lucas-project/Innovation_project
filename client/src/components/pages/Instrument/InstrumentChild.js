@@ -15,7 +15,7 @@ const InstrumentChild = () => {
 
     useEffect(()=>{
         axios
-        .get('http://localhost:3000/api/search/instrument/'+URL.state.URL)
+        .get('http://localhost:3000/api/search/instrument/'+URL.state)
         .then(res =>{
             setInfo(res.data);
             //console.log(infoRef.current);

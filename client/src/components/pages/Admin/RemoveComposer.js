@@ -39,7 +39,7 @@ const Removecomposer = () => {
         .delete('http://localhost:3000/api/composers/'+id,config)
         .then(res =>{
             console.log(res);
-            navigate('/admin/removecomposer');
+            navigate('/admin/composer');
             alert("Sucessfully removed composer!");
         })
     }
