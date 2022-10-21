@@ -12,41 +12,43 @@ import share from "./share";
 import save from "./saveFacebook";
 import {Helmet} from "react-helmet";
 import sharePic from "../../img/piece.png";
+import HomeFooterJoinUs from "../../home-footer-joinUs";
+import Footer from "../../Footer";
 
 const firstRow = {
     height:'600px',
 
-    background:'#a0ebde',
+    background:'#acbc8a',
     width:'100%'
 };
 const firstLeft = {
     height: '600px',
-    background: '#a7b0a0',
+    background: '#ecd189',
     width: '50%'
 }
 const firstRight = {
     height: '150px',
-    background: '#d89581',
+    background: '#e99469',
     width: '104.5%'
 }
 const firstRight2 = {
     height: '150px',
-    background: '#aeb435',
+    background: '#f2b476',
     width: '104.5%'
 }
 const thirdRow = {
     height: '150px',
-    background:'#a2348a',
+    background:'#db6b5c',
     width:'100%'
 }
 const down ={
     height:'100px',
-    background:'#e99469',
+    background:'#bc5952',
     width:'100%'
 }
 const downLeft ={
     height:'100px',
-    background:'#34a48c',
+    background:'#934948',
     width:'50%'
 }
 const imgWrapper ={
@@ -161,6 +163,8 @@ const Profile = () => {
             {/*            allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>*/}
             {/*    </Col>*/}
             {/*</Row>*/}
+            <br/><br/>
+
         </div>
     );
 };

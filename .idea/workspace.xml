@@ -1,15 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="7c003d22-b666-4e4f-82e9-be5f2c89ed56" name="Changes" comment="logout page added, username display fixed, login and logout button exchange not smooth but work if refresh">
-      <change afterPath="$PROJECT_DIR$/client/src/components/pages/Forum/scrollforum.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/components/pages/Forum/swiper.js" afterDir="false" />
+    <list default="true" id="7c003d22-b666-4e4f-82e9-be5f2c89ed56" name="Changes" comment="forum page css and contents selection done">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/client/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/client/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/pages/Forum/Forum.css" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/pages/Forum/Forum.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/pages/Forum/Forum.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/pages/Forum/Forum.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/pages/Composer/Profile.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/pages/Composer/Profile.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/pages/Forum/scrollforum.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/pages/Forum/scrollforum.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/pages/Home/Home.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/pages/Home/Home.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/pages/Repertoire/Repertoire.detail.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/pages/Repertoire/Repertoire.detail.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -111,6 +108,7 @@
       <workItem from="1666058890572" duration="764000" />
       <workItem from="1666061049286" duration="112000" />
       <workItem from="1666069124749" duration="16884000" />
+      <workItem from="1666320966703" duration="4663000" />
     </task>
     <task id="LOCAL-00001" summary="files restructured, all swipers fixed">
       <created>1663904598170</created>
@@ -329,7 +327,14 @@
       <option name="project" value="LOCAL" />
       <updated>1666268934772</updated>
     </task>
-    <option name="localTasksCounter" value="32" />
+    <task id="LOCAL-00032" summary="forum page css and contents selection done">
+      <created>1666311690513</created>
+      <option name="number" value="00032" />
+      <option name="presentableId" value="LOCAL-00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1666311690513</updated>
+    </task>
+    <option name="localTasksCounter" value="33" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -360,7 +365,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="independent styles applied to composer page, instrument page and repertoire page added" />
     <MESSAGE value="twitter and facebook api integration testing success" />
     <MESSAGE value="checkout point, to make composer page a album-like structure" />
     <MESSAGE value="connect with latest server side" />
@@ -385,6 +389,7 @@
     <MESSAGE value="facebook share button added, facebook comment button added, localhost not availiable for these function though, also seeking more share buttons" />
     <MESSAGE value="login session now store email as username, some css added to repertore.detail" />
     <MESSAGE value="logout page added, username display fixed, login and logout button exchange not smooth but work if refresh" />
-    <option name="LAST_COMMIT_MESSAGE" value="logout page added, username display fixed, login and logout button exchange not smooth but work if refresh" />
+    <MESSAGE value="forum page css and contents selection done" />
+    <option name="LAST_COMMIT_MESSAGE" value="forum page css and contents selection done" />
   </component>
 </project>

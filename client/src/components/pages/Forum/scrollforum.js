@@ -11,6 +11,8 @@ import {Navigation, Pagination} from "swiper";
 import {Helmet} from "react-helmet";
 import HomeFooterJoinUs from "../../home-footer-joinUs";
 import Footer from "../../Footer";
+import Row from "react-bootstrap/Row";
+import Col from "react-bootstrap/Col";
 const iframestyle = {
     border:"none",
     overflow:"hidden",
@@ -20,7 +22,7 @@ const iframestyle = {
 const titleS = {
     minWidth:"800px",
     width:"auto",
-    height:"40px",
+    height:"50px",
     background:"#f4544e",
     padding: ".5rem"
 }
@@ -28,11 +30,43 @@ const tiktokS = {
     maxWidth: "605px",
     minWidth: "325px"
 }
+const timelineS = {
+    minWidth:"800px",
+    width: "auto",
+    height: "auto",
+    justifyContent:"center",
+    margin:"auto",
+    padding:"10%"
+}
+const topS = {
+    width:"70%",
+    height:"auto",
+    justifyContent: "center",
+    padding:"5%",
+    margin:"auto"
+
+}
+const topSC = {
+    minWidth:"1000px",
+    width:"auto",
+    height:"400px"
+}
 
 export default function App() {
     return (
         <>
-            <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+            <br/><br/><br/>
+            <div style={titleS}><h3>Join our group and enjoy interate with others</h3></div>
+            <div>Welcome to our community</div>
+            <Row style={topSC}>
+                <Col style={topS}><iframe
+                    src="https://www.facebook.com/plugins/group.php?href=https%3A%2F%2Fwww.facebook.com%2Fgroups%2Fayearofrunning%2F&width=280&show_metadata=false&appId=407443791582428&height=239"
+                    width="400" height="450" style={iframestyle} scrolling="no" frameBorder="0"
+                    allowFullScreen="true"
+                    allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe></Col>
+                <Col style={topS}><h3>Welcome to join our group</h3><p>Our group welcomes all classical music lovers to communicate with each other, please feel free to join us, you can post any topic to communicate with each others, or if you have any questions you can also ask for help in our group.</p></Col>
+            </Row>
+
             <div style={titleS}><h3>Our facebook community</h3></div>
             <Swiper navigation={true} modules={[Navigation]} className="mySwiper" slidesPerView={1}
                     spaceBetween={33}
@@ -713,6 +747,14 @@ export default function App() {
                             allowFullScreen></iframe>
                 </SwiperSlide>
             </Swiper>
+            <div style={titleS}><h3>Check out our Twitter</h3></div>
+            <div style={timelineS}>
+                <a className="twitter-timeline"
+                   href="https://twitter.com/AppleMusic"
+                   data-tweet-limit="10">
+                    Tweets by @TwitterDev
+                </a>
+            </div>
             <br/><br/><br/><br/>
             <footer>
                 <HomeFooterJoinUs />
