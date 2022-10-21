@@ -17,21 +17,15 @@ const mystyle = {
 
 const iframeContainer = {
     position: "relative",
-    paddingBottom: "56.25%",
+    paddingBottom: "100%",
     paddingTop: "35px",
     height: "0",
     overflow: "hidden"
 }
 
 const iframestyle = {
-    position: "absolute",
-    display:"flex",
-    justifyContent:"center",
-    margin:"auto",
-    minWidth: "800px",
-    width:"auto",
-    height: "auto",
-    minHeight:"600px"
+    border:"none",
+    overflow:"hidden"
 }
 
 const fbtimeline = {
@@ -41,16 +35,26 @@ const fbtimeline = {
 
 const Forum = () => {
     return (
-        <div className="fb-post" style={{ position: "absolute", marginTop: "70px", fontSize: "16px"}}>
             <Container>
                 <Row>
                     <Col>
+
+                    </Col>
+                    <Col>
+
+                    </Col>
+                    <Col>
+
+                    </Col>
+                </Row>
+                <Row>
+                    <Col>
                         <div style={iframeContainer}>
-                        <iframe
-                        src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2F20531316728%2Fposts%2F10154009990506729%2F&width=500&show_text=true&height=274&appId"
-                        width="500" height="300" style={iframestyle} scrolling="no" frameBorder="0"
-                        allowFullScreen="true"
-                        allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe></div>
+                            <iframe
+                                src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Fwomensguitargroup%2Fphotos%2Fa.118775559658788%2F571896841013322%2F&show_text=true&width=500"
+                                width="500" height="589" style={iframestyle} scrolling="no"
+                                frameBorder="0" allowFullScreen="true"
+                                allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe></div>
                     </Col>
                     <Col>
                         <div style={iframeContainer}>
@@ -248,7 +252,7 @@ const Forum = () => {
                 <Row></Row>
                 <Row></Row>
             </Container>
-        </div>
+
     );
 };
 

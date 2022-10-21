@@ -1,13 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="7c003d22-b666-4e4f-82e9-be5f2c89ed56" name="Changes" comment="login session now store email as username, some css added to repertore.detail">
-      <change afterPath="$PROJECT_DIR$/client/src/components/pages/Authentication/logout.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/components/pages/NavbarItems2.js" afterDir="false" />
+    <list default="true" id="7c003d22-b666-4e4f-82e9-be5f2c89ed56" name="Changes" comment="logout page added, username display fixed, login and logout button exchange not smooth but work if refresh">
+      <change afterPath="$PROJECT_DIR$/client/src/components/pages/Forum/scrollforum.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/components/pages/Forum/swiper.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/client/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/client/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/home-topBar.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/home-topBar.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/pages/Navbar/Navbar.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/pages/Navbar/Navbar.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/pages/Forum/Forum.css" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/pages/Forum/Forum.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/pages/Forum/Forum.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/pages/Forum/Forum.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -52,6 +54,7 @@
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
+    <property name="ts.external.directory.path" value="X:\IDEA JET BRAINS\WebStorm 2021.3.1\plugins\JavaScriptLanguage\jsLanguageServicesImpl\external" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
@@ -319,7 +322,14 @@
       <option name="project" value="LOCAL" />
       <updated>1666260843034</updated>
     </task>
-    <option name="localTasksCounter" value="31" />
+    <task id="LOCAL-00031" summary="logout page added, username display fixed, login and logout button exchange not smooth but work if refresh">
+      <created>1666268934772</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1666268934772</updated>
+    </task>
+    <option name="localTasksCounter" value="32" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -350,7 +360,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="repertoire page and instrument page template added" />
     <MESSAGE value="independent styles applied to composer page, instrument page and repertoire page added" />
     <MESSAGE value="twitter and facebook api integration testing success" />
     <MESSAGE value="checkout point, to make composer page a album-like structure" />
@@ -375,6 +384,7 @@
     <MESSAGE value="composer page now added a button to check the composer's pieces, piece's css needed to be improved" />
     <MESSAGE value="facebook share button added, facebook comment button added, localhost not availiable for these function though, also seeking more share buttons" />
     <MESSAGE value="login session now store email as username, some css added to repertore.detail" />
-    <option name="LAST_COMMIT_MESSAGE" value="login session now store email as username, some css added to repertore.detail" />
+    <MESSAGE value="logout page added, username display fixed, login and logout button exchange not smooth but work if refresh" />
+    <option name="LAST_COMMIT_MESSAGE" value="logout page added, username display fixed, login and logout button exchange not smooth but work if refresh" />
   </component>
 </project>
