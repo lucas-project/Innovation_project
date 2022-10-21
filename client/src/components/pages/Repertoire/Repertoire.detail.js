@@ -102,7 +102,7 @@ const Profile = () => {
                     <div><h3>Piece details  - {Object.values(location.state.name)}</h3></div>
                     <Col md={6} style={firstLeft}>
                         {/*<div>image: {Object.values(location.state.image)}</div>*/}
-                        <div style={imgWrapper}><img src={pieces} alt="Repertoire picture not available" style={imgStyle}/></div>
+                        <div style={imgWrapper}><img src="/image/piece.jpg" alt="Repertoire picture not available" style={imgStyle}/></div>
                     </Col>
                     <Col md="auto" style={firstLeft}>
                         <Row style={firstRight}>

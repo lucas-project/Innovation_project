@@ -6,7 +6,7 @@ import Repertoire from "./components/pages/Repertoire/Repertoire.detail";
 
 import Instrument from "./components/pages/Instrument/Instrument";
 import Recommendation from "./components/pages/Recommendation/Recommendation";
-import Forum from "./components/pages/Forum/Forum";
+import Forum from "./components/pages/Forum/scrollforum";
 import Home from "./components/pages/Home/Home";
 import Sidebar from "./components/pages/Sidebar/Sidebar";
 import { Routes, Route, Link} from "react-router-dom";

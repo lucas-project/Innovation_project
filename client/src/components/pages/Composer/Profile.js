@@ -256,7 +256,7 @@ const Profile = () => {
 
                         {/*<img src={require(`${JSON.stringify(location.state.image)}`)}/>*/}
                         <div style={imageDiv}>
-                            <img src={placeholder} alt="composer avatar" style={{ width: 260, height: 280, margin:"auto" }}/>
+                            <img src="/image/placeholder.png" alt="composer avatar" style={{ width: 260, height: 280, margin:"auto" }}/>
                         </div>
                         {/*image source:https://stock.adobe.com/au/search?k=placeholder&asset_id=233462402*/}
 
