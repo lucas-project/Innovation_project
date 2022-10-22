@@ -10,7 +10,7 @@ router.get('/', async (req, res) => {
     res.send(pieces);
 });
 
-router.post('/', auth, async (req, res) => {
+router.post('/admin', auth, async (req, res) => {
     const { error } = validate(req.body);
     if (error) return res.status(400).send(error.details[0].message);
 
@@ -29,6 +29,7 @@ router.post('/', auth, async (req, res) => {
         recordingLink: req.body.recordingLink,
         publisher: req.body.publisher,
         scoreLink: req.body.scoreLink,
+        image: req.body.image
     });
     await piece.save();
 

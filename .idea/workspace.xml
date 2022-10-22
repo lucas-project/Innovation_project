@@ -1,12 +1,42 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="7c003d22-b666-4e4f-82e9-be5f2c89ed56" name="Changes" comment="forum page css and contents selection done">
+    <list default="true" id="7c003d22-b666-4e4f-82e9-be5f2c89ed56" name="Changes" comment="Final work, end of the Project.">
+      <change afterPath="$PROJECT_DIR$/client/src/WithNav.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/WithoutNav.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/img/adidas-logo.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/img/booking-logo.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/img/eventbrite-logo.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/img/lyft-logo.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/img/purple-intersect.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/img/surveymonkey-logo.svg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/client/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/client/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/pages/Admin/Admin.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/pages/Admin/Admin.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/pages/Authentication/login.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/pages/Authentication/login.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/pages/Authentication/logout.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/pages/Authentication/logout.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/pages/Composer/Composer.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/pages/Composer/Composer.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/pages/Composer/Profile-piece.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/pages/Composer/Profile-piece.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/src/components/pages/Composer/Profile.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/pages/Composer/Profile.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/pages/Forum/scrollforum.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/pages/Forum/scrollforum.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/pages/Home/Home.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/pages/Home/Home.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/pages/Instrument/Instrument.css" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/pages/Instrument/Instrument.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/pages/Instrument/Instrument.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/pages/Instrument/Instrument.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/pages/Instrument/InstrumentChild.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/pages/Instrument/InstrumentChild.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/pages/Recommendation/Recommendation.css" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/pages/Recommendation/Recommendation.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/pages/Recommendation/Recommendation.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/pages/Recommendation/Recommendation.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/pages/Recommendation/Recommendation1.css" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/pages/Recommendation/Recommendation1.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/src/components/pages/Repertoire/Repertoire.detail.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/pages/Repertoire/Repertoire.detail.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/pages/Repertoire/Repertoire.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/pages/Repertoire/Repertoire.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/pages/Search/Search.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/pages/Search/Search.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/img/ailis.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/img/ailis.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/img/placeholder.png" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/img/placeholder.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/models/piece.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/models/piece.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/routes/composers.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/routes/composers.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/routes/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/routes/pieces.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/routes/pieces.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/routes/recommends.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/routes/recommends.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/routes/search.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/routes/search.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -108,7 +138,12 @@
       <workItem from="1666058890572" duration="764000" />
       <workItem from="1666061049286" duration="112000" />
       <workItem from="1666069124749" duration="16884000" />
-      <workItem from="1666320966703" duration="4663000" />
+      <workItem from="1666320966703" duration="4850000" />
+      <workItem from="1666327965449" duration="15000" />
+      <workItem from="1666328397038" duration="2062000" />
+      <workItem from="1666336012995" duration="1179000" />
+      <workItem from="1666339537217" duration="1233000" />
+      <workItem from="1666407338615" duration="778000" />
     </task>
     <task id="LOCAL-00001" summary="files restructured, all swipers fixed">
       <created>1663904598170</created>
@@ -334,7 +369,14 @@
       <option name="project" value="LOCAL" />
       <updated>1666311690513</updated>
     </task>
-    <option name="localTasksCounter" value="33" />
+    <task id="LOCAL-00033" summary="Facebook group added, css final adjusted, ready to combine.">
+      <created>1666327502644</created>
+      <option name="number" value="00033" />
+      <option name="presentableId" value="LOCAL-00033" />
+      <option name="project" value="LOCAL" />
+      <updated>1666327502644</updated>
+    </task>
+    <option name="localTasksCounter" value="34" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -351,7 +393,7 @@
                   <entry key="branch">
                     <value>
                       <list>
-                        <option value="local-work-lucas" />
+                        <option value="origin/natalie" />
                       </list>
                     </value>
                   </entry>
@@ -365,8 +407,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="twitter and facebook api integration testing success" />
-    <MESSAGE value="checkout point, to make composer page a album-like structure" />
     <MESSAGE value="connect with latest server side" />
     <MESSAGE value="frontend combined" />
     <MESSAGE value="composers and pieces details page reached, more details needed to displayed,css need to be developed" />
@@ -390,6 +430,8 @@
     <MESSAGE value="login session now store email as username, some css added to repertore.detail" />
     <MESSAGE value="logout page added, username display fixed, login and logout button exchange not smooth but work if refresh" />
     <MESSAGE value="forum page css and contents selection done" />
-    <option name="LAST_COMMIT_MESSAGE" value="forum page css and contents selection done" />
+    <MESSAGE value="Facebook group added, css final adjusted, ready to combine." />
+    <MESSAGE value="Final work, end of the Project." />
+    <option name="LAST_COMMIT_MESSAGE" value="Final work, end of the Project." />
   </component>
 </project>

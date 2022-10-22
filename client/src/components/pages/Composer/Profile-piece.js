@@ -39,7 +39,7 @@ const InstrumentChild = () => {
                     return(
                         <div class="col col-4 d-flex justify-content-center">
                             <Card>
-                                <Card.Img variant="top" src={item.image} alt="Image for this piece"/>
+                                <Card.Img variant="top" src="/image/piece.jpg" alt="Image for this piece"/>
                                 <Card.Body class="card-body">
                                     <Card.Title>{item.name}</Card.Title>
                                     <Card.Text>

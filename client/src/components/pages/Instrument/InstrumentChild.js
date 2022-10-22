@@ -6,12 +6,22 @@ import Container from 'react-bootstrap/Container';
 import Card from 'react-bootstrap/Card';
 import Button from 'react-bootstrap/Button';
 import Row from 'react-bootstrap/Row';
+import { Link } from "react-router-dom";
+
 
 const InstrumentChild = () => {
     const URL = useLocation();
     console.log(URL.state,"data from child element");
     const [info,setInfo,infoRef] = useState([]);
     const [isLoading,setLoading,loadingRef] = useState(true);
+
+    const containerS={
+        minWidth:"1200px",
+        height:"auto",
+        justifyContent:"center",
+        paddingTop:"10%"
+    
+    }
 
     useEffect(()=>{
         axios
@@ -20,7 +30,7 @@ const InstrumentChild = () => {
             setInfo(res.data);
             //console.log(infoRef.current);
             console.log(infoRef.current);
-
+            console.log(URL.state.URL);  
             setLoading(false);
             console.log(loadingRef.current);
         })
@@ -32,14 +42,15 @@ const InstrumentChild = () => {
             return <div> Loading...</div>
         }
         return (
-        <Container style={{ position: "absolute", marginTop: "120px", fontSize: "20px" }}>
+        <Container style={containerS}>
           <Row class="d-flex row">
           {infoRef.current.map((item) =>{
+            //piece
                     console.log("mapped items");
                     return(
                     <div class="col col-4 d-flex justify-content-center">
                             <Card>
-                            <Card.Img variant="top" src={item.image} alt="Image for this piece"/>
+                            <Card.Img variant="top" src="/image/piece.jpg" alt="Image for this piece"/>
                             <Card.Body class="card-body">
                                 <Card.Title>{item.name}</Card.Title>
                                 <Card.Text>
@@ -51,10 +62,28 @@ const InstrumentChild = () => {
                                 Score Link: {item.scoreLink}.<br></br>
                                 </Card.Text>
                                 {/* <Link to='/recommendation/ailis'> */}
-                                <a href={item.recordingLink}>
+                                <Link
+                                    to={{pathname:`/api/pieces/${item._id}`,state:`${item._id}`}}
+                                    state={{
+                                        _id:item._id,
+                                        name: item.name,
+                                        composer:item.composer.name,
+                                        duration:item.duration,
+                                        publishyear:item.year,
+                                        instruments:item.instruments,
+                                        links:item.recordingLink,
+                                        publisher:item.publisher,
+                                        scorelink:item.scoreLink,
+                                        image:item.image
+
+                                    }}
+                                    key={item.name}
+                                    style={{ textDecoration: "none", color: "black" }}
+                                >
+                                {/* <a href={item.recordingLink}> */}
                                 <Button variant="primary" class="mt-auto btn">Explore now!</Button>
-                                </a>
-                                {/* </Link> */}
+                                {/* </a> */}
+                                </Link>
                             </Card.Body>
                             </Card>
                     </div> 

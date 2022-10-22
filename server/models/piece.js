@@ -10,7 +10,7 @@ const Piece = mongoose.model('Piece', new mongoose.Schema({
     },
     composer: {
         type: new mongoose.Schema({
-            came: {
+            name: {
                 type: String,
                 required: true,
                 minlength: 5,

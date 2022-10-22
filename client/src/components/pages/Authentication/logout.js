@@ -16,11 +16,12 @@ const Logout = () => {
         width: "40%",
         height: "20rem",
         justifyContent: "center",
-        background:"#ff3453",
+        background:"DarkSeaGreen",
         margin:"auto"
     }
     const titleS = {
-        marginLeft:"30%"
+        marginLeft:"30%",
+        paddingTop:"20%"
     }
 
     return (
@@ -32,11 +33,12 @@ const Logout = () => {
             </div>
             <div>
                 <Link
+                    
                     to={{pathname:'/api/auth'}}
-                ><p>Login in here</p></Link>
+                ><h5>Login in here</h5></Link>
                 <Link
                     to={{pathname:'/'}}
-                ><p>Return to homepage</p></Link>
+                ><h5>Return to homepage</h5></Link>
             </div>
 
             <footer>

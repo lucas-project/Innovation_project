@@ -1,6 +1,7 @@
 const _ = require('lodash');
 const { Piece } = require('../models/piece');
 const { Composer } = require('../models/composer');
+const { Recommend } = require('../models/recommend');
 const express = require('express');
 const router = express.Router();
 
@@ -45,19 +46,19 @@ router.get('/piece', async (req, res) => {
         result = await Piece.find(
             {
                 "$or": [
-                    {name: {$regex: reg1}},
-                    {instruments: {$regex: reg1}},
-                    {publisher: {$regex: reg1}},
+                    { name: { $regex: reg1 } },
+                    { instruments: { $regex: reg1 } },
+                    { publisher: { $regex: reg1 } },
                     //{"composer.name": {$elemMatch: {$regex: reg1}}},
                 ]
             }
         );
         result = result.concat(await Piece.aggregate([
-                { $unwind : "$composer"},
-                { $match :{"composer.name" :{ $regex:reg1} } },
+            { $unwind: "$composer" },
+            { $match: { "composer.name": { $regex: reg1 } } },
         ]))
 
-    }else if (!req.query.instrument) {
+    } else if (!req.query.instrument) {
         result = await Piece.find(
             {
                 "$and": [
@@ -97,6 +98,20 @@ router.get('/instrument/:instrument', async (req, res) => {
     result = await Piece.find(
         {
             instruments: { $regex: reg }
+        }
+    );
+
+
+    res.send(result);
+});
+
+router.get('/recommend/:title', async (req, res) => {
+
+    const reg = new RegExp(req.params.title, "i");
+
+    result = await Recommend.find(
+        {
+            title: { $regex: reg }
         }
     );
 

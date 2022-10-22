@@ -15,7 +15,21 @@ import Row from 'react-bootstrap/Row';
 import FluteImg from '../../../img/flute.jpg';
 import ClarinetImg from '../../../img/clarinet.jpg';
 import Container from 'react-bootstrap/Container';
+// import placeholder1 from '../../img/placeholder.png';
 
+const containerS={
+    minWidth:"1200px",
+    height:"auto",
+    justifyContent:"center"
+
+}
+
+const rowS={
+    minWidth:"1200",
+    width:"auto",
+    height:"auto",
+    justifyContent:"center"
+}
 
 const Search = () => {
     const navigate = useNavigate();
@@ -255,40 +269,61 @@ Dropdown
                 </div>
             </div>
         </StyledSearch>
-        <Container style={{ position: "absolute", marginTop: "120px", fontSize: "20px" }}>
+        <Container style={containerS}>
+            <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
           <Row class="d-flex row">
             {arrayRef.current[0] === "composer" ? (
                 infoRef.current.map((item) =>{
                     console.log("mapped items");
                     return(
-                        <div class="col col-4 d-flex justify-content-center">
+                        //composer
+                    
+                            <div class="col col-4 d-flex justify-content-center">
                         {/* <div style={{ position: "absolute", margin: "170px", fontSize: "20px" }}> */}
                             <Card>
-                            <Card.Img variant="top" src={item.image} alt="Image of the composer."/>
+                            <Card.Img variant="top" src="/image/placeholder.png" alt="Image of the composer."/>
                             <Card.Body class="card-body">
                                 <Card.Title>{item.name}</Card.Title>
                                 <Card.Text>
                                 Nationality: {item.nationality}.<br></br>
                                 Date: {item.date}.<br></br>
                                 Personal website: {item.website}.<br></br>
-                                Biography: {item.biography}.<br></br>
+                                Biography: {item.biography.substring(0, 200)}.<br></br>
                                 </Card.Text>
                                 {/* <Link to='/recommendation/ailis'> */}
-                                <Link to = {`/api/composers/${item.id}`}>
-                                <Button variant="primary" class="mt-auto btn" >View more details.</Button>
+                                {/* <Link to = {`/api/composers/${item.id}`}> */}
+                                <Link
+                                to={{pathname:`/api/composers/${item._id}`}}
+                                state={{
+                                    _id:item._id,
+                                    name: item.name,
+                                    nationality:item.nationality,
+                                    DOB:item.DOB,
+                                    website:item.website,
+                                    biography:item.biography,
+                                    image:item.image
+
+                                }}
+                                key={item.name}
+                                style={{ textDecoration: "none", color: "black" }}
+                                >
+                                <Button variant="primary" class="mt-auto btn">View more details.</Button>
                                 </Link>
                             </Card.Body>
                             </Card>
                         {/* </div> */}
-                        </div> 
+                        
+                        </div>
+                        
                     )
                 })
                 ):(info.map((item) =>{
                     return(
+                        //piece
                         <div class="col col-4 d-flex justify-content-center">
                         {/* <div style={{ position: "absolute", margin: "170px", fontSize: "20px" }}> */}
                             <Card>
-                            <Card.Img variant="top" src={item.image} alt="Image for this piece"/>
+                            <Card.Img variant="top" src="/image/piece.jpg" alt="Image for this piece"/>
                             <Card.Body class="card-body">
                                 <Card.Title>{item.name}</Card.Title>
                                 <Card.Text>
@@ -299,11 +334,28 @@ Dropdown
                                 Publisher: {item.publisher}.<br></br>
                                 Score Link: {item.scoreLink}.<br></br>
                                 </Card.Text>
-                                {/* <Link to='/recommendation/ailis'> */}
-                                <a href={item.recordingLink}>
+                                <Link
+                                    to={{pathname:`/api/pieces/${item._id}`,state:`${item._id}`}}
+                                    state={{
+                                        _id:item._id,
+                                        name: item.name,
+                                        composer:item.composer.name,
+                                        duration:item.duration,
+                                        publishyear:item.year,
+                                        instruments:item.instruments,
+                                        links:item.recordingLink,
+                                        publisher:item.publisher,
+                                        scorelink:item.scoreLink,
+                                        image:item.image
+
+                                    }}
+                                    key={item.name}
+                                    style={{ textDecoration: "none", color: "black" }}
+                                >
+                                {/* <a href={item.recordingLink}> */}
                                 <Button variant="primary" class="mt-auto btn">Explore now!</Button>
-                                </a>
-                                {/* </Link> */}
+                                {/* </a> */}
+                                </Link>
                             </Card.Body>
                             </Card>
                         {/* </div> */}

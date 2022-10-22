@@ -77,7 +77,7 @@ export default function Create() {
         alert("Successfully login as "+sessionStorage.getItem("email"))
         setForm({ email: "", password: ""});
         if (responseJSON.token!=""){
-            navigate("/");
+            navigate("/admin");
         }else{
             alert("login failed");
         }
