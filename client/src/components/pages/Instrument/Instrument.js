@@ -19,6 +19,7 @@ import "./Instrument.css";
 import { useNavigate } from "react-router-dom";
 import InstrumentChild from "../../pages/Instrument/InstrumentChild";
 import Carousel from 'react-bootstrap/Carousel';
+import Footer from "../../Footer";
 
 const Instrument = () => {
 
@@ -463,6 +464,11 @@ A soprano oboe measures roughly 65 cm (25+1⁄2 in) long, with metal keys, a con
           </Carousel.Caption>
         </Carousel.Item>
       </Carousel>
+      <br/><br></br><br></br><br></br><br></br><br></br>
+        <footer>
+
+        <Footer />
+      </footer>
       </div>
 
 

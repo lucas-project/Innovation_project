@@ -85,7 +85,7 @@ const Admin = () => {
       </Container>
     </Navbar>
     <div style={{ 
-      backgroundImage: `url(${background})`,width:"100%",height:"750px"}}>
+      backgroundImage: `url(${background})`,width:"110%",height:"800px",backgroundRepeat: "no-repeat"}}>
 
     </div>
     </>

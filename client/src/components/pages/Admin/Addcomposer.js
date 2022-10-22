@@ -157,7 +157,7 @@ const Addcomposer = () => {
         </Navbar.Offcanvas>
       </Container>
     </Navbar>
-        <Form>
+        <Form style={{paddingLeft:"10%",paddingRight:"10%"}}>
             <Form.Group className="mb-3" controlId="formBasicEmail">
                 <Form.Label>Name</Form.Label>
                 <Form.Control type="name" placeholder="Enter Name" onChange={(e)=>inputItems(e.target.value,"name")}/>

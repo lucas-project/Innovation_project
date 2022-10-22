@@ -135,7 +135,7 @@ const Admincomposer = () => {
                             <img
                                 // src={"https://via.placeholder.com/168x118.png"}
                                 // src={album.image}
-                                src={composerP}
+                                src="/image/placeholder.png"
                                 alt={`data thumbnail`}
                                 style={imgStyle}
                             />

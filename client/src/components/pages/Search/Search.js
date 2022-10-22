@@ -270,6 +270,7 @@ Dropdown
             </div>
         </StyledSearch>
         <Container style={containerS}>
+        <br></br><br></br><br></br><br></br><br></br>
           <Row class="d-flex row">
             {arrayRef.current[0] === "composer" ? (
                 infoRef.current.map((item) =>{
@@ -278,6 +279,7 @@ Dropdown
                         //composer
                     
                             <div class="col col-4 d-flex justify-content-center">
+                                
                         {/* <div style={{ position: "absolute", margin: "170px", fontSize: "20px" }}> */}
                             <Card>
                             <Card.Img variant="top" src="/image/placeholder.png" alt="Image of the composer."/>
@@ -285,7 +287,7 @@ Dropdown
                                 <Card.Title>{item.name}</Card.Title>
                                 <Card.Text>
                                 Nationality: {item.nationality}.<br></br>
-                                Date: {item.date}.<br></br>
+                                Date: {item.DOB}.<br></br>
                                 Personal website: {item.website}.<br></br>
                                 Biography: {item.biography.substring(0, 200)}.<br></br>
                                 </Card.Text>

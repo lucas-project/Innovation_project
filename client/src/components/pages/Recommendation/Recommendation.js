@@ -8,6 +8,7 @@ import "./Recommendation.css";
 import { useNavigate } from "react-router-dom";
 import useState from 'react-usestateref';
 import axios from "axios";
+import Footer from "../../Footer";
 
 //the button to be added (for search related piece of the author)
 
@@ -82,6 +83,11 @@ const Recommendation = () => {
     </>
       ))}
       </Row><br></br>
+      <br/><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br>
+        <footer>
+
+        <Footer />
+      </footer>
     </Container>
         
     );

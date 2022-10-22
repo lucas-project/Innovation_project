@@ -189,7 +189,7 @@ const Addcomposer = () => {
       </Container>
     </Navbar>
 
-        <Form>
+        <Form style={{paddingLeft:"10%",paddingRight:"10%"}}>
             <Form.Select onChange={(e)=>inputItems(e.target.value,"id")}>
             <option>Select the composer</option>
             {composer.map(item => (

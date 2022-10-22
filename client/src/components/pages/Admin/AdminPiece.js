@@ -127,7 +127,7 @@ const AdminPiece = () => {
                     >
                         <Card className="albums-card">
                             <img
-                                src={pieces}
+                                src="/image/piece.jpg"
                                 // src={album.image}
                                 // image source: https://maxmaraliving.com.au/team/terry/image-placeholder/
                                 alt={`data thumbnail`}

@@ -138,7 +138,7 @@ const AddRecomm = () => {
         </Navbar.Offcanvas>
       </Container>
     </Navbar>
-        <Form >
+        <Form style={{paddingLeft:"10%",paddingRight:"10%"}}>
             <Form.Group className="mb-3" controlId="formBasicEmail">
                 <Form.Label>Title</Form.Label>
                 <Form.Control type="title" placeholder="Enter Title" onChange={(e)=>inputItems(e.target.value,"title")}/>
