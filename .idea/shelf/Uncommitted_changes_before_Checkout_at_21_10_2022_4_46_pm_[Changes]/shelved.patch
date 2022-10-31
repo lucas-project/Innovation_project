@@ -1,0 +1,39 @@
+Index: .idea/workspace.xml
+===================================================================
+diff --git a/.idea/workspace.xml b/.idea/workspace.xml
+--- a/.idea/workspace.xml	
++++ b/.idea/workspace.xml	
+@@ -20,7 +20,6 @@
+       <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_rebase__Changes_6.xml" beforeDir="false" />
+       <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_rebase__Changes_7.xml" beforeDir="false" />
+       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/server/routes/recommends.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/routes/recommends.js" afterDir="false" />
+     </list>
+     <option name="SHOW_DIALOG" value="false" />
+     <option name="HIGHLIGHT_CONFLICTS" value="true" />
+@@ -78,7 +77,8 @@
+       <workItem from="1666061524155" duration="907000" />
+       <workItem from="1666070144103" duration="2133000" />
+       <workItem from="1666072484700" duration="1203000" />
+-      <workItem from="1666308290952" duration="497000" />
++      <workItem from="1666308290952" duration="1102000" />
++      <workItem from="1666330446923" duration="450000" />
+     </task>
+     <task id="LOCAL-00001" summary="Change the composer schema">
+       <created>1664696726089</created>
+@@ -185,7 +185,14 @@
+       <option name="project" value="LOCAL" />
+       <updated>1666073356041</updated>
+     </task>
+-    <option name="localTasksCounter" value="16" />
++    <task id="LOCAL-00016" summary="add delete function to recommendation  table">
++      <created>1666308795828</created>
++      <option name="number" value="00016" />
++      <option name="presentableId" value="LOCAL-00016" />
++      <option name="project" value="LOCAL" />
++      <updated>1666308795828</updated>
++    </task>
++    <option name="localTasksCounter" value="17" />
+     <servers />
+   </component>
+   <component name="TypeScriptGeneratedFilesManager">

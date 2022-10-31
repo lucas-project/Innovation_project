@@ -49,7 +49,6 @@ router.get('/piece', async (req, res) => {
                     { name: { $regex: reg1 } },
                     { instruments: { $regex: reg1 } },
                     { publisher: { $regex: reg1 } },
-                    //{"composer.name": {$elemMatch: {$regex: reg1}}},
                 ]
             }
         );
@@ -101,9 +100,9 @@ router.get('/instrument/:instrument', async (req, res) => {
         }
     );
 
-
     res.send(result);
 });
+
 
 router.get('/recommend/:title', async (req, res) => {
 
@@ -114,7 +113,6 @@ router.get('/recommend/:title', async (req, res) => {
             title: { $regex: reg }
         }
     );
-
 
     res.send(result);
 });
