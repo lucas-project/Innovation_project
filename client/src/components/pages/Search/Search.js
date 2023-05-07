@@ -36,21 +36,14 @@ const Search = () => {
     const [searchArray, setSearchArray,arrayRef] = useState(["composer","","",""]);
     const [URL,setURL,URLRef] = useState([""]);
     const [info,setInfo,infoRef] = useState([]);
-    // const [searchby,setSearchby,searchbyRef] =useState([]);
     const [inputarea,setInputarea,inputRef] = useState([]);
-    // const [filterInput1, setFilterInput1] = useState('');
-    // const [filterInput2, setFilterInput2] = useState('');
-    // const [searchBy, setSearchBy] = useState('Any');
-    // const onInputCommitHandler(){
-
-    // }
+    const [open, setOpen] = useState(false);
     const searchItems = (searchValue,type) => {
         let newSearchArray;
         if (type === "searchInput"){
             newSearchArray = [...searchArray];
             newSearchArray[1] = searchValue;
             setSearchArray(newSearchArray);
-            // setFilteredOptions(searchValue);
         }
         if (type === "filterInput1"){
             newSearchArray = [...searchArray];
@@ -75,93 +68,30 @@ const Search = () => {
             newSearchArray[4] = "";
             newSearchArray[0] = searchValue;
             setSearchArray(newSearchArray);
-            console.log("recognize search by");
-        }
-        console.log(searchValue,type,searchArray[0],searchArray);
-        // APIData.filter((item) => {
-        //     return Object.values(item).join('').toLowerCase().includes(searchInput.toLowerCase())
-        // })
-            
+        }          
     };
-    const onClickSearchHandler = () => {
+    const generateSearchURL = (newValue) => {
+        if(newValue[0] === "composer"){
+            setURL(`${newValue[0]}?key=${newValue[1]}&nationality=${newValue[2]}`);
+        }
+        else{
+            setURL(`${newValue[0]}?key=${newValue[1]}&instrument=${newValue[3]}&publisher=${newValue[4]}`)//piece?key=input&instrument=filter2&publisher=filter3
+        }
+    };
+    const onClickSearchHandler = async () => {
         generateSearchURL(arrayRef.current);
-        // setSearchby(searchArray[0],()=>{console.log("searchby is",searchby)});
-        console.log("clicked search",URLRef.current);
-        // useEffect(() =>{
             axios
             .get('http://localhost:3000/api/search/'+URLRef.current
-            //     .get('http://localhost:3000/api'+URL,{
-            // params:{
-            //     input:searchArray[0],
-            //     filter:searchArray[1],
-            //     searchby:searchArray[2]
-            // }
-        // }
         )
             .then(res =>{
                 setInfo(res.data);
-                console.log(infoRef.current,"this is info");
-                    console.log(res);
-                    console.log(res.data);
-                    console.log(res.data.name);
-                    console.log(res.status);
-                    console.log(res.statusText);
             })
             .catch(err =>{
                 console.log("Error from getting data: "+err)
             })
             navigate(URLRef.current);
-        // });
-    };
-    const generateSearchURL = (newValue) => {
-        if(newValue[0] === "composer"){
-        setURL(`${newValue[0]}?key=${newValue[1]}&nationality=${newValue[2]}`);
-        // setURL(prevState =>{
-        //     const newState = computeUpdatedState(prevState);
-        //     return newState;//composer?key=input&nationality=filter1
-
-        // });
-        }
-        else{
-        setURL(`${newValue[0]}?key=${newValue[1]}&instrument=${newValue[3]}&publisher=${newValue[4]}`)//piece?key=input&instrument=filter2&publisher=filter3
-        }
-    
-        // const URL = `/${newValue[0]}?key=${newValue[0]}/${newValue[1]}`;//searchby input filter
-        // setURL(URL);
-        console.log(newValue,searchArray,URLRef.current,"generate URL");
-        
-        //componentDidMount(URL);
     };
     
-    
-
-    // const filterItems1 = (filterValue1) => {
-    //     setFilterInput1(filterValue1);
-    //     console.log(filterValue1); 
-    // }
-    // const filterItems2 = (filterValue2) => {
-    //     setFilterInput2(filterValue2);
-    //     console.log(filterValue2); 
-    // }
-
-    const [open, setOpen] = useState(false);
-
-    // onSearchClick (searchInput,filterInput1,filterInput2,searchBy) = [
-    //     searchInput,
-    //     filterInput1,
-    //     filterInput2,
-    //     searchBy
-    // ]
-    // {
-    //     axios
-    //     .get('http://localhost:3000/Search/'+ '?keywords=' + searchInput + '+' + filterInput1 + '+' + filterInput2 + '?Searchby=' + searchBy)
-    //     .then(res => {
-    //         console.log("Print-API-response: " + res.data);
-    //         setAPIData(res.data);
-    //       })
-    //   }
-    // const [selectedItem, setSelectedItem] = useState(null);
-    // const [query, searchItems] = useState("");
     return (
     <><StyledSearch>
             <div class="container mt-2">
@@ -171,45 +101,13 @@ const Search = () => {
                             <h5>Search to explore the greatest female composers</h5>
                             <div class="row g-3 mt-2">
                                 <div class="col-md-3 dropdown">
-                                    {/* <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-Dropdown
-</button> */}
-                                    {/* id="dropdown-basic-button" title="Search By Any"  */}
-                                    {/* <div class="dropdown-menu" aria-labelledby="dropdownMenu2">
-<button class="dropdown-item" type="button" value={searchBy} onClick={() => setSearchBy("Name")}>By Name</button>
-<button class="dropdown-item" type="button" value={searchBy} onClick={() => setSearchBy("Name")}>By Piece</button>
-<button class="dropdown-item" type="button" value={searchBy} onClick={() => setSearchBy("Name")}>By Year of Piece</button>
-</div> */}
-                                    {/* <DropdownButton id="dropdown-item-button" title="Search By Any">
-<Dropdown.Item as="button" value={searchBy} onClick={() => setSearchBy("Name")}>By Name</Dropdown.Item>
-<Dropdown.Item value={searchBy} onClick={() => setSearchBy("Piece")}>By Piece</Dropdown.Item>
-<Dropdown.Item value={searchBy} onClick={() => setSearchBy("Year")}>By Year of Piece</Dropdown.Item>
-</DropdownButton>
-<DropdownButton id="dropdown-item-button" title="Search By Any">
-<Dropdown.Item  value={searchBy} onSelect={() => setSearchBy("Name")}>By Name</Dropdown.Item>
-<Dropdown.Item >By Piece</Dropdown.Item>
-<Dropdown.Item href="#/a">By Year of Pieceee</Dropdown.Item>
-</DropdownButton> */}
                                     <Form.Select aria-label="Default select example" onClick={(e) => searchItems(e.target.value, "searchBy")}>
                                         <option value="composer">Search By Composer</option>
                                         <option value="piece">Search By Piece</option>
-                                        {/* <option value="Year">Search By Year Of Piece</option> */}
                                     </Form.Select>
                                 </div>
-                                {/* <div>
-<Dropdown >
-<Dropdown.Toggle variant="success" id="dropdown-basic">
-{selectedItem?selectedItem:"Select a country"}
-</Dropdown.Toggle>
-<Dropdown.Menu>
-<Dropdown.Item onSelect={()=>setSelectedItem("aaa")}>aaa</Dropdown.Item>
-</Dropdown.Menu>
-</Dropdown>
-</div> */}
+                                
                                 <div class="col-md-6" >
-                                    {/* // onChange={() => setSearchInput(searchInput)}  */}
-                                    {/* onChange={(e) => searchItems(e.target.value)}  */}
-                                    {/* options={options} */}
                                     <input type="text" class="form-control" onChange={(e) => searchItems(e.target.value, "searchInput")} placeholder="Enter keywords..." />
                                 </div>
                                 <div class="col-md-3">
@@ -227,7 +125,6 @@ Dropdown
                                 <Collapse in={open}>
                                     <div id="advancedSearch">
                                         <div class="card card-body">
-                                            
                                                     {arrayRef.current[0] === "piece" ?(
                                                     <div class="row">
                                                     <div class="col-md-4">
@@ -254,12 +151,6 @@ Dropdown
                                                     </div>
                                                     )
                                                     }
-                                                    {/* <input type="text" placeholder="Nationality" class="form-control" onChange={(e) => searchItems(e.target.value, "filterInput1")} /> */}
-                                                
-                                                {/* <div class="col-md-6">
-                                                    <input type="text" class="form-control" placeholder="Instrument" onChange={(e) => searchItems(e.target.value, "filterInput2")} />
-                                                </div> */}
-                                            
                                         </div>
                                     </div>
                                 </Collapse>
@@ -276,11 +167,7 @@ Dropdown
                 infoRef.current.map((item) =>{
                     console.log("mapped items");
                     return(
-                        //composer
-                    
                             <div class="col col-4 d-flex justify-content-center">
-                                
-                        {/* <div style={{ position: "absolute", margin: "170px", fontSize: "20px" }}> */}
                             <Card>
                             <Card.Img variant="top" src="/image/placeholder.png" alt="Image of the composer."/>
                             <Card.Body class="card-body">
@@ -291,8 +178,6 @@ Dropdown
                                 Personal website: {item.website}.<br></br>
                                 Biography: {item.biography.substring(0, 200)}.<br></br>
                                 </Card.Text>
-                                {/* <Link to='/recommendation/ailis'> */}
-                                {/* <Link to = {`/api/composers/${item.id}`}> */}
                                 <Link
                                 to={{pathname:`/api/composers/${item._id}`}}
                                 state={{
@@ -311,18 +196,14 @@ Dropdown
                                 <Button variant="primary" class="mt-auto btn">View more details.</Button>
                                 </Link>
                             </Card.Body>
-                            </Card>
-                        {/* </div> */}
-                        
+                            </Card>                        
                         </div>
                         
                     )
                 })
                 ):(info.map((item) =>{
                     return(
-                        //piece
                         <div class="col col-4 d-flex justify-content-center">
-                        {/* <div style={{ position: "absolute", margin: "170px", fontSize: "20px" }}> */}
                             <Card>
                             <Card.Img variant="top" src="/image/piece.jpg" alt="Image for this piece"/>
                             <Card.Body class="card-body">
@@ -353,61 +234,18 @@ Dropdown
                                     key={item.name}
                                     style={{ textDecoration: "none", color: "black" }}
                                 >
-                                {/* <a href={item.recordingLink}> */}
                                 <Button variant="primary" class="mt-auto btn">Explore now!</Button>
-                                {/* </a> */}
                                 </Link>
                             </Card.Body>
                             </Card>
-                        {/* </div> */}
                         </div> 
                     )
                     })
                 )
-            }
-          {/* {info.map(item => (
-            <div class="col col-3 d-flex justify-content-center">
-             <div style={{ position: "absolute", margin: "170px", fontSize: "20px" }}>
-                <Card>
-                <Card.Img variant="top" src={FluteImg} alt="https://www.classical-music.com/features/works/the-best-flute-solos-in-orchestral-works/"/>
-                <Card.Body class="card-body">
-                    <Card.Title>{item.name}</Card.Title>
-                    <Card.Text>
-                    {item.nationality}
-                    </Card.Text>
-                    <Link to='/recommendation/ailis'>
-                    <Button variant="primary" class="mt-auto btn" >View more details.</Button>
-                    </Link>
-                </Card.Body>
-                </Card>
-             </div>
-        </div>
-      ))} */}
-            
+            }            
           </Row><br></br>
-        </Container>
-
-
-             {/* /* <div>
-                 <Card.Group itemsPerRow={3} style={{ marginTop: 20 }}>
-                 
-                            <Card>
-                                <Card.Content>
-                                    <Card.Header>{info.name}</Card.Header>
-                                    <Card.Description>
-                                        {info.date}
-                                        {/* {item.nationality} 
-                                    </Card.Description>
-                                </Card.Content>
-                            </Card>
-                </Card.Group>
-            </div> */}
-            {/* // <div>
-            //     <h1>{info.name}</h1>
-            //     <h1>{info.date}</h1>
-            //     <h1>{info.nationality}</h1>
-            // </div> */}
-            </>
+        </Container>            
+        </>
     );
 };
 
